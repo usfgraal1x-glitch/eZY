@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VAULTIX STORE — Game Top-Ups & Gift Cards</title>
-<meta name="description" content="Vaultix Store — game top-ups, gift cards and PlayStation services for Egypt and the Gulf. Order via WhatsApp, pay with local methods.">
+<meta name="description" content="Vaultix Store — game top-ups, gift cards and PlayStation services for Egypt and the Gulf. Fast delivery, pay with local methods.">
 <meta property="og:title" content="VAULTIX STORE — Game Top-Ups & Gift Cards">
-<meta property="og:description" content="Game top-ups, gift cards and PlayStation services for Egypt and the Gulf, ordered straight through WhatsApp.">
+<meta property="og:description" content="Game top-ups, gift cards and PlayStation services for Egypt and the Gulf, with fast delivery straight to you.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -4828,10 +4828,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <span class="mbn-icon">🛒<span class="mbn-badge" id="mbnCartCount">0</span></span>
     <span class="mbn-label">Cart</span>
   </button>
-  <a href="https://wa.me/201211057733" target="_blank" class="mbn-item">
-    <span class="mbn-icon">💬</span>
-    <span class="mbn-label">WhatsApp</span>
-  </a>
   <a href="#policy" class="mbn-item">
     <span class="mbn-icon">📋</span>
     <span class="mbn-label">Policy</span>
@@ -4843,166 +4839,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 <!-- live-notif removed: fake purchase popups are a credibility liability -->
 <!-- FLOAT BTNS -->
 <div id="particles"><canvas id="pcanvas"></canvas></div>
-<div class="float-btns">
-  <a href="https://wa.me/201211057733" target="_blank" class="float-btn wa">
-    <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
-  </a>
-</div>
-
-<!-- SUPPORT CHAT WIDGET -->
-<button type="button" id="supportChatToggle" class="support-chat-toggle" onclick="toggleSupportChat()" aria-label="Chat with support">
-  <svg id="supportChatIconOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-  <svg id="supportChatIconClose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M18 6L6 18M6 6l12 12"/></svg>
-</button>
-<div id="supportChatPanel" class="support-chat-panel" style="display:none;" role="dialog" aria-label="Support chat">
-  <div class="support-chat-head">
-    <div class="support-chat-head-avatar">V</div>
-    <div>
-      <div class="support-chat-head-name">Vaultix Support</div>
-      <div class="support-chat-head-status"><span class="support-chat-dot"></span> Typically replies in minutes</div>
-    </div>
-  </div>
-  <div id="supportChatBody" class="support-chat-body">
-    <div class="support-chat-msg bot">👋 Hey! I'm here to help with orders, delivery times, or anything else. What do you need?</div>
-  </div>
-  <div id="supportChatQuick" class="support-chat-quick">
-    <button type="button" onclick="supportChatQuickReply('Where is my order?')">📦 Where's my order?</button>
-    <button type="button" onclick="supportChatQuickReply('How long does delivery take?')">⏱️ Delivery time?</button>
-    <button type="button" onclick="supportChatQuickReply('I need help with a payment issue.')">💳 Payment issue</button>
-  </div>
-  <form id="supportChatForm" class="support-chat-input-row" onsubmit="sendSupportChatMessage(event)">
-    <input type="text" id="supportChatInput" placeholder="Type your message…" autocomplete="off">
-    <button type="submit" aria-label="Send">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
-    </button>
-  </form>
-</div>
-
-<style>
-/* ── SUPPORT CHAT WIDGET ── */
-.support-chat-toggle{
-  position:fixed;bottom:1.8rem;right:1.5rem;z-index:898;width:56px;height:56px;border-radius:50%;
-  background:var(--gold);color:#000;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 24px rgba(166,77,255,0.45);transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);
-}
-.support-chat-toggle:hover{transform:scale(1.08);box-shadow:0 6px 30px rgba(166,77,255,0.65);}
-.support-chat-toggle svg{width:24px;height:24px;}
-.support-chat-toggle.has-shifted{ bottom:6.4rem; }
-@media (max-width:640px){ .support-chat-toggle{bottom:1rem;right:0.8rem;width:50px;height:50px;} }
-
-.support-chat-panel{
-  position:fixed;bottom:6.4rem;right:1.5rem;z-index:899;width:340px;max-width:calc(100vw - 2rem);
-  height:460px;max-height:70vh;background:var(--bg2);border:1px solid var(--border-gold);border-radius:14px;
-  box-shadow:0 12px 48px rgba(0,0,0,0.6);display:flex;flex-direction:column;overflow:hidden;
-  animation:supportChatIn 0.22s cubic-bezier(0.16,1,0.3,1);
-}
-@keyframes supportChatIn{from{opacity:0;transform:translateY(16px) scale(0.97);}to{opacity:1;transform:translateY(0) scale(1);}}
-@media (max-width:640px){ .support-chat-panel{right:0.8rem;bottom:5.4rem;width:calc(100vw - 1.6rem);} }
-
-.support-chat-head{display:flex;align-items:center;gap:0.7rem;padding:0.9rem 1rem;border-bottom:1px solid var(--border);background:var(--bg3);}
-.support-chat-head-avatar{
-  width:36px;height:36px;border-radius:50%;background:var(--gold);color:#000;font-family:'Bebas Neue',cursive;
-  font-size:1.2rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;
-}
-.support-chat-head-name{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:0.92rem;color:var(--text);}
-.support-chat-head-status{font-family:'Space Mono',monospace;font-size:0.65rem;color:var(--green);display:flex;align-items:center;gap:0.35rem;}
-.support-chat-dot{width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;box-shadow:0 0 6px var(--green);}
-
-.support-chat-body{flex:1;overflow-y:auto;padding:0.9rem 1rem;display:flex;flex-direction:column;gap:0.55rem;}
-.support-chat-msg{
-  max-width:82%;padding:0.55rem 0.75rem;border-radius:12px;font-family:'Rajdhani',sans-serif;font-size:0.85rem;
-  line-height:1.4;word-wrap:break-word;
-}
-.support-chat-msg.bot{align-self:flex-start;background:var(--bg3);color:var(--text);border-bottom-left-radius:3px;}
-.support-chat-msg.user{align-self:flex-end;background:var(--gold);color:#000;border-bottom-right-radius:3px;}
-
-.support-chat-quick{display:flex;flex-wrap:wrap;gap:0.4rem;padding:0 1rem 0.7rem;}
-.support-chat-quick button{
-  font-family:'Rajdhani',sans-serif;font-size:0.72rem;font-weight:600;background:transparent;color:var(--gold);
-  border:1px solid var(--border-gold);border-radius:20px;padding:0.35rem 0.7rem;cursor:pointer;transition:all 0.2s;
-}
-.support-chat-quick button:hover{background:rgba(166,77,255,0.12);}
-
-.support-chat-input-row{display:flex;gap:0.5rem;padding:0.7rem 0.8rem;border-top:1px solid var(--border);background:var(--bg3);}
-.support-chat-input-row input{
-  flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:0.55rem 0.9rem;
-  color:var(--text);font-family:'Rajdhani',sans-serif;font-size:0.85rem;
-}
-.support-chat-input-row input:focus{outline:none;border-color:var(--border-gold);}
-.support-chat-input-row button{
-  width:38px;height:38px;border-radius:50%;background:var(--gold);color:#000;border:none;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.2s;
-}
-.support-chat-input-row button:hover{transform:scale(1.08);}
-.support-chat-input-row button svg{width:16px;height:16px;}
-</style>
-
-<script>
-(function(){
-  var WHATSAPP_NUMBER = '201211057733';
-
-  window.toggleSupportChat = function(){
-    var panel = document.getElementById('supportChatPanel');
-    var openIcon = document.getElementById('supportChatIconOpen');
-    var closeIcon = document.getElementById('supportChatIconClose');
-    var isOpen = panel.style.display === 'flex';
-    panel.style.display = isOpen ? 'none' : 'flex';
-    openIcon.style.display = isOpen ? 'block' : 'none';
-    closeIcon.style.display = isOpen ? 'none' : 'block';
-    if(!isOpen){
-      var input = document.getElementById('supportChatInput');
-      setTimeout(function(){ input.focus(); }, 150);
-    }
-  };
-
-  function addChatMessage(text, from){
-    var body = document.getElementById('supportChatBody');
-    var msg = document.createElement('div');
-    msg.className = 'support-chat-msg ' + (from === 'user' ? 'user' : 'bot');
-    msg.textContent = text;
-    body.appendChild(msg);
-    body.scrollTop = body.scrollHeight;
-  }
-
-  function routeToWhatsApp(text){
-    var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
-    setTimeout(function(){
-      addChatMessage("I've opened WhatsApp with your message ready to send — Robert will pick it up from there and reply directly. 💬", 'bot');
-      document.getElementById('supportChatQuick').style.display = 'none';
-      window.open(url, '_blank', 'noopener');
-    }, 500);
-  }
-
-  window.supportChatQuickReply = function(text){
-    addChatMessage(text, 'user');
-    routeToWhatsApp(text);
-  };
-
-  window.sendSupportChatMessage = function(evt){
-    evt.preventDefault();
-    var input = document.getElementById('supportChatInput');
-    var text = input.value.trim();
-    if(!text) return;
-    addChatMessage(text, 'user');
-    input.value = '';
-    routeToWhatsApp(text);
-  };
-
-  // Nudge the toggle button up on small screens when the mobile bottom nav is present,
-  // so the two floating controls never overlap.
-  function adjustForMobileNav(){
-    var mbn = document.querySelector('.mobile-bottom-nav');
-    var toggle = document.getElementById('supportChatToggle');
-    if(mbn && toggle && window.innerWidth <= 768){
-      toggle.classList.add('has-shifted');
-    } else if(toggle){
-      toggle.classList.remove('has-shifted');
-    }
-  }
-  window.addEventListener('resize', adjustForMobileNav);
-  document.addEventListener('DOMContentLoaded', adjustForMobileNav);
-})();
-</script>
 
 <!-- NAV -->
 <nav id="siteNav">
@@ -5019,7 +4855,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <a href="#policy">Policy</a>
   </div>
   <div style="display:flex;align-items:center;gap:0.8rem;">
-    <a href="https://wa.me/201211057733" target="_blank" class="nav-wa"><span class="icon-img sm brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/whatsapp.svg');--icon-color:#25D366;" role="img" aria-label="WA"></span> Order Now</a>
+    <a href="#products" class="nav-wa">Order Now</a>
     <button class="search-nav-btn" onclick="openSearch()" aria-label="Search products">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
     </button>
@@ -5054,7 +4890,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   <a href="#why" onclick="toggleHam()">Why Us</a>
   <a href="#contact" onclick="toggleHam()">Contact</a>
   <a href="#policy" onclick="toggleHam()">Policy</a>
-  <a href="https://wa.me/201211057733" target="_blank" style="color:var(--green);">WhatsApp Order</a>
+  <a href="#products" style="color:var(--green);">Shop Now</a>
   <button onclick="openSearch();toggleHam();" style="background:transparent;border:1px solid var(--border-gold);color:var(--gold);padding:0.6rem 1rem;font-family:'Bebas Neue',cursive;font-size:1rem;letter-spacing:0.15em;cursor:pointer;border-radius:2px;text-align:left;display:flex;align-items:center;gap:0.5rem;">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
     Search Products
@@ -5085,9 +4921,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="ts"><span class="ts-n"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/letsencrypt.svg');--icon-color:#ffffff;" role="img" aria-label="secure"></span></span><span class="ts-l">Secure</span></div>
     </div>
     <div class="hero-btns">
-      <a href="https://wa.me/201211057733" target="_blank" class="btn-primary">
-        <svg viewBox="0 0 24 24" fill="#000" width="18" height="18"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
-        WhatsApp Us
+      <a href="#products" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Shop Now
       </a>
       <button class="btn-sec" onclick="openCart()">
         <span class="icon-img sm brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/woocommerce.svg');--icon-color:#96588a;" role="img" aria-label="cart"></span> View Cart (<span id="heroCartCount">0</span>)
@@ -5338,9 +5174,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     </div>
   </div>
   <div class="home-cta-row">
-    <a href="https://wa.me/201211057733" target="_blank" class="btn-primary">
-      <svg viewBox="0 0 24 24" fill="#000" width="16" height="16"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
-      WhatsApp Us
+    <a href="#products" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      Shop Now
     </a>
     <a href="#products" class="btn-sec">See All Products</a>
   </div>
@@ -5358,7 +5194,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="home-feature">
       <span class="hf-icon">🕒</span>
       <div class="hf-title">24/7 Support</div>
-      <div class="hf-sub">Always online and responding on WhatsApp</div>
+      <div class="hf-sub">Always online and responding fast</div>
     </div>
     <div class="home-feature">
       <span class="hf-icon">🔒</span>
@@ -5628,7 +5464,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
                 <span class="calc-eq">— your offer</span>
                 <button class="add-btn boost-cta-btn" title="Add to cart" aria-label="Add to cart" onclick="addBoostToCart()">+ Add to Cart</button>
               </div>
-              <div class="calc-note">Not happy with the suggested price? Enter your own offer — we'll confirm it with you on WhatsApp before starting. Full account credentials (or a temp password) are needed only for the duration of the boost.</div>
+              <div class="calc-note">Not happy with the suggested price? Enter your own offer — we'll confirm it with you before starting. Full account credentials (or a temp password) are needed only for the duration of the boost.</div>
             </div>
           </div>
           <style>
@@ -5906,7 +5742,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
                 }
                 var price = computeBoostPrice(fromIdx, toIdx, mode);
                 out.textContent = price + ' EGP';
-                note.textContent = 'Based on ' + BOOST_TIERS[fromIdx].name + ' → ' + BOOST_TIERS[toIdx].name + ' (' + (mode === 'reload' ? 'Reload' : 'Battle Royale') + '). Feel free to offer your own price below — we\'ll confirm on WhatsApp.';
+                note.textContent = 'Based on ' + BOOST_TIERS[fromIdx].name + ' → ' + BOOST_TIERS[toIdx].name + ' (' + (mode === 'reload' ? 'Reload' : 'Battle Royale') + '). Feel free to offer your own price below — we\'ll confirm it with you.';
                 offerIn.value = price;
               };
               window.addBoostToCart = function(){
@@ -6692,7 +6528,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
                 <div class="pr-right"><div class="pr-price gold">2,036.00 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Assassin\'s Creed Odyssey (Steam)','🖥️',2036.00,'EGP')">+</button></div>
               </div>
             </div>
-            <div style="margin-top:1rem;" class="calc-note">💬 More titles available! Message us on WhatsApp for any game not listed.</div>
+            <div style="margin-top:1rem;" class="calc-note">💬 More titles available! Contact us for any game not listed.</div>
           </div>
         </div>
       </div>
@@ -6969,7 +6805,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
           <div style="display:flex;flex-direction:column;gap:0.6rem;">
             <div style="display:flex;gap:0.7rem;align-items:flex-start;">
               <span style="font-family:'Bebas Neue',cursive;font-size:1.1rem;color:rgba(255,70,85,0.5);flex-shrink:0;line-height:1;">01</span>
-              <span style="font-family:'Rajdhani',sans-serif;font-size:0.82rem;color:var(--muted);">Add VP package to cart &amp; place order via WhatsApp</span>
+              <span style="font-family:'Rajdhani',sans-serif;font-size:0.82rem;color:var(--muted);">Add VP package to cart &amp; check out</span>
             </div>
             <div style="display:flex;gap:0.7rem;align-items:flex-start;">
               <span style="font-family:'Bebas Neue',cursive;font-size:1.1rem;color:rgba(255,70,85,0.5);flex-shrink:0;line-height:1;">02</span>
@@ -6983,7 +6819,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
         </div>
 
         <!-- CTA -->
-        <a href="https://wa.me/201211057733?text=I%20want%20to%20buy%20Valorant%20Points%20VP" target="_blank"
+        <a href="#products"
           style="
             display:flex;align-items:center;justify-content:center;gap:0.6rem;
             padding:0.9rem;
@@ -6997,7 +6833,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
           onmouseover="this.style.boxShadow='0 0 40px rgba(255,70,85,0.6)';this.style.transform='translateY(-2px)'"
           onmouseout="this.style.boxShadow='0 0 20px rgba(255,70,85,0.3)';this.style.transform='translateY(0)'"
         >
-          <svg viewBox="0 0 24 24" fill="#fff" width="16" height="16"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
           ORDER VALORANT POINTS
         </a>
 
@@ -7019,7 +6855,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="why-item" data-n="02"><span class="wi-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="var(--gold)"><path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z"/></svg></span><div class="wi-title">Instant Delivery</div><p class="wi-text">Orders processed within minutes. No waiting, ever.</p></div>
     <div class="why-item" data-n="03"><span class="wi-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></span><div class="wi-title">100% Safe &amp; Legit</div><p class="wi-text">All products sourced legitimately. Your account stays fully protected.</p></div>
     <div class="why-item" data-n="04"><span class="wi-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="var(--gold)"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></span><div class="wi-title">Best Prices Egypt</div><p class="wi-text">Competitive EGP rates. Transparent pricing, no hidden fees.</p></div>
-    <div class="why-item" data-n="05"><span class="wi-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="#25D366"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg></span><div class="wi-title">24/7 Support</div><p class="wi-text">Always online on WhatsApp. Message any time, any day.</p></div>
+    <div class="why-item" data-n="05"><span class="wi-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold,#A64DFF)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><div class="wi-title">24/7 Support</div><p class="wi-text">Always online and ready to help. Message any time, any day.</p></div>
     <div class="why-item" data-n="06"><span class="wi-icon"><span class="icon-img lg brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Games"></span></span><div class="wi-title">All Major Games</div><p class="wi-text">Fortnite, Steam, PlayStation, Roblox, PUBG, Valorant &amp; more — all in one place.</p></div>
   </div>
 </section>
@@ -7063,7 +6899,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="review-card">
       <span class="review-game-badge">PSN</span>
       <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="review-text">"$25 PSN card for a great price, and delivery was instant. The WhatsApp support is super responsive. Highly recommend to any gamer in Egypt!"</p>
+      <p class="review-text">"$25 PSN card for a great price, and delivery was instant. The support is super responsive. Highly recommend to any gamer in Egypt!"</p>
       <div class="review-author">
         <div class="review-avatar">O</div>
         <div>
@@ -7089,7 +6925,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="review-card">
       <span class="review-game-badge">PUBG</span>
       <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="review-text">"Got 600 UC for PUBG and it was the easiest purchase ever. Clear pricing, fast delivery, and they even confirmed via WhatsApp. 10/10 service."</p>
+      <p class="review-text">"Got 600 UC for PUBG and it was the easiest purchase ever. Clear pricing, fast delivery, and they even confirmed my order right away. 10/10 service."</p>
       <div class="review-author">
         <div class="review-avatar">K</div>
         <div>
@@ -7126,11 +6962,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   <div class="contact-inner">
     <div class="sec-ey" style="justify-content:center;display:flex;">// Get In Touch</div>
     <h2>Lock In <span>With Us</span> <svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(166,77,255,0.8)" style="vertical-align:middle;"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></h2>
-    <p>Ready to order? Message Robert on WhatsApp for instant service. We're always here.</p>
+    <p>Ready to order? Browse our products for instant service. We're always here.</p>
     <div class="contact-cards">
-      <a href="https://wa.me/201211057733" target="_blank" class="ccard wa">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
-        WhatsApp · 01211057733
+      <a href="#products" class="ccard wa">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Shop Now
       </a>
       <a href="javascript:void(0)" onclick="openTrackOrder()" class="ccard">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
@@ -7191,12 +7027,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 
     <div class="faq-item" style="border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.5rem;background:var(--bg2);">
       <div class="faq-q" style="font-family:'Bebas Neue',cursive;font-size:1.15rem;color:var(--gold);margin-bottom:0.5rem;">Is Vaultix Store legit?</div>
-      <div class="faq-a" style="font-size:0.95rem;color:var(--text);line-height:1.6;">Yes — every order is confirmed and delivered over WhatsApp directly with Robert, so you always know who you're dealing with.</div>
+      <div class="faq-a" style="font-size:0.95rem;color:var(--text);line-height:1.6;">Yes — every order is confirmed and delivered directly by our team, so you always know who you're dealing with.</div>
     </div>
 
     <div class="faq-item" style="border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.5rem;background:var(--bg2);">
       <div class="faq-q" style="font-family:'Bebas Neue',cursive;font-size:1.15rem;color:var(--gold);margin-bottom:0.5rem;">How does delivery actually work?</div>
-      <div class="faq-a" style="font-size:0.95rem;color:var(--text);line-height:1.6;">Once your payment is confirmed, most digital items (Steam cards, UC, etc.) are delivered within 5 minutes via WhatsApp. V-Bucks are delivered within 10 minutes after payment is confirmed and the required codes are provided. Physical items (controllers, keyboards, headsets) ship in 1–3 business days with tracking info sent to you directly.</div>
+      <div class="faq-a" style="font-size:0.95rem;color:var(--text);line-height:1.6;">Once your payment is confirmed, most digital items (Steam cards, UC, etc.) are delivered within 5 minutes. V-Bucks are delivered within 10 minutes after payment is confirmed and the required codes are provided. Physical items (controllers, keyboards, headsets) ship in 1–3 business days with tracking info sent to you directly.</div>
     </div>
 
     <div class="faq-item" style="border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.5rem;background:var(--bg2);">
@@ -7206,7 +7042,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 
     <div class="faq-item" style="border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.5rem;background:var(--bg2);">
       <div class="faq-q" style="font-family:'Bebas Neue',cursive;font-size:1.15rem;color:var(--gold);margin-bottom:0.5rem;">What if my code doesn't work or I don't receive my item?</div>
-      <div class="faq-a" style="font-size:0.95rem;color:var(--text);line-height:1.6;">Message us immediately on WhatsApp with your order reference. If the issue is on our end — wrong code, missing delivery — we'll fix it or refund you. This is the one exception to our no-refund policy, and we take it seriously.</div>
+      <div class="faq-a" style="font-size:0.95rem;color:var(--text);line-height:1.6;">Contact us immediately with your order reference. If the issue is on our end — wrong code, missing delivery — we'll fix it or refund you. This is the one exception to our no-refund policy, and we take it seriously.</div>
     </div>
 
     <div class="faq-item" style="border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.5rem;background:var(--bg2);">
@@ -7378,9 +7214,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="footer-logo" style="display:flex;align-items:center;"><img data-dupe-of="ic1" alt="Vaultix Store" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" style="height:30px;width:auto;object-fit:contain;" loading="lazy" decoding="async"></div>
     <p style="margin-top:0.3rem;"><span style="color:#00b67a;font-size:0.9rem;">★</span> Premium Gaming Store · Egypt · 2000+ Verified Purchases</p>
   </div>
-  <p>© 2025 VAULTIX STORE · WhatsApp: 01211057733</p>
+  <p>© 2025 VAULTIX STORE</p>
   <div style="margin-top:0.8rem;padding-top:0.8rem;border-top:1px solid rgba(166,77,255,0.12);text-align:center;width:100%;">
-    <a href="https://wa.me/201211057733" target="_blank" rel="noopener" style="font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">
+    <a href="#products" style="font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">
       🎧 Gaming Peripherals · Controllers · Keyboards · Mice · Headsets
     </a>
     <br>
@@ -7410,7 +7246,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     </div>
     <button class="checkout-btn" onclick="showPolicyFirst()">
       <svg viewBox="0 0 24 24" fill="#000" width="18" height="18"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
-      CONFIRM ORDER VIA WHATSAPP
+      CONFIRM ORDER
     </button>
   </div>
 </div>
@@ -7456,7 +7292,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
         <input class="form-input" type="text" id="custName" placeholder="Enter your full name">
       </div>
       <div class="form-group">
-        <label class="form-label">// WhatsApp / Phone Number *</label>
+        <label class="form-label">// Phone Number *</label>
         <input class="form-input" type="tel" id="custPhone" placeholder="+20 XXX XXX XXXX">
       </div>
       <div class="form-group">
@@ -7541,13 +7377,13 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       </div>
       <button class="send-btn" id="sendOrderBtn" onclick="sendOrder()">
         <svg viewBox="0 0 24 24" fill="#000" width="18" height="18"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
-        <span id="sendOrderBtnLabel">SEND ORDER TO WHATSAPP</span>
+        <span id="sendOrderBtnLabel">SEND ORDER</span>
       </button>
       <button class="copy-order-btn" onclick="copyOrderMessage()" type="button">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
         Copy Order Details
       </button>
-      <div class="copy-hint">WhatsApp didn't open? Copy your order and send it to us directly.</div>
+      <div class="copy-hint">Want a copy of your order for your records? Use the button above.</div>
     </div>
   </div>
 </div>
@@ -7557,7 +7393,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   <div class="success-box">
     <span class="success-icon" style="font-size:0;"><svg width="56" height="56" viewBox="0 0 24 24" style="display:inline-block;"><circle cx="12" cy="12" r="11" fill="rgba(0,230,100,0.15)" stroke="#00E664" stroke-width="1.5"/><path d="M7 12l4 4 6-7" stroke="#00E664" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     <div class="success-title">ORDER SENT!</div>
-    <div class="success-text">Your order has been sent to WhatsApp!<br>We'll confirm and deliver within minutes.<br><br>Thank you for choosing VAULTIX STORE 🐆</div>
+    <div class="success-text">Your order has been received!<br>We'll confirm and deliver within minutes.<br><br>Thank you for choosing VAULTIX STORE 🐆</div>
     <div class="success-ref" id="successRef"></div>
     <a href="https://www.instagram.com/p/DchEKwDqtna/?stkn=eGs5M3ZyN29xam9j" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin:1rem 0 0;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:0.03em;color:var(--gold);border:1px solid var(--gold);padding:0.7rem 1rem;border-radius:6px;text-decoration:none;font-size:0.9rem;">★ Loved your order? Rate us on Instagram</a>
     <button class="success-close" onclick="closeSuccess()">DONE</button>
@@ -8078,7 +7914,7 @@ if (EMAILJS_CONFIGURED && typeof emailjs !== 'undefined') emailjs.init({ publicK
 
 
 // Fires the order emails in the background — never blocks or delays the
-// WhatsApp redirect or the success modal. Always sends the owner
+// success modal. Always sends the owner
 // notification; only sends the customer confirmation if they gave an email.
 function sendOrderEmails({ ref, name, phone, email, game, itemsText, total }) {
   if (!EMAILJS_CONFIGURED || typeof emailjs === 'undefined') return;
@@ -9240,7 +9076,7 @@ function openCheckout() {
   const sendBtn = document.getElementById('sendOrderBtn');
   const sendLabel = document.getElementById('sendOrderBtnLabel');
   if (sendBtn) { sendBtn.disabled = false; sendBtn.style.pointerEvents = ''; sendBtn.style.opacity = ''; }
-  if (sendLabel) sendLabel.textContent = 'SEND ORDER TO WHATSAPP';
+  if (sendLabel) sendLabel.textContent = 'SEND ORDER';
   // Reset payment proof upload field from any previous order.
   const proofInput = document.getElementById('custPaymentProof');
   const proofPreviewWrap = document.getElementById('paymentProofPreviewWrap');
@@ -9382,7 +9218,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Uploads the payment screenshot to Supabase Storage (bucket "payment-proofs")
 // and attaches its public URL to the order record. Runs in the background —
-// never blocks the WhatsApp redirect. Requires that bucket to exist in
+// never blocks or delays checkout. Requires that bucket to exist in
 // Supabase (Storage → New bucket → name it exactly "payment-proofs", Public)
 // and a `payment_proof` text column on the `orders` table.
 async function uploadPaymentProof(orderRef) {
@@ -9420,18 +9256,6 @@ function sendOrder() {
     if (label) label.textContent = 'Processing Order…';
   }
 
-  // Open WhatsApp IMMEDIATELY, still inside the click's user-gesture context.
-  // (Doing this after an `await` — e.g. the Supabase insert below — causes iOS
-  // Safari and most mobile Chrome builds to silently block the popup, since it
-  // no longer counts as a direct response to the tap. Since WhatsApp is the
-  // primary order channel, that used to mean some orders never actually left
-  // the page. Opening first, then saving to the backend, fixes that.)
-  const waWin = window.open(`https://wa.me/201211057733?text=${encodeURIComponent(msg)}`, '_blank');
-  if (!waWin) {
-    // Extremely rare fallback if the browser blocks it anyway: navigate directly.
-    window.location.href = `https://wa.me/201211057733?text=${encodeURIComponent(msg)}`;
-  }
-
   // GA4 purchase event (no-op until GA_MEASUREMENT_ID above is set)
   if (typeof window.gtag === 'function') {
     window.gtag('event', 'purchase', {
@@ -9446,7 +9270,7 @@ function sendOrder() {
   uploadPaymentProof(currentOrderRef);
 
   // Send order emails (owner notification + optional customer confirmation),
-  // in the background — never delays or risks the WhatsApp redirect above.
+  // in the background.
   sendOrderEmails({
     ref: currentOrderRef,
     name: document.getElementById('custName').value.trim(),
@@ -9458,7 +9282,7 @@ function sendOrder() {
   });
 
   // Save the order to the backend (if connected) so it shows up in the admin panel.
-  // This now happens in the background and never delays or risks the WhatsApp redirect.
+  // This now happens in the background.
   if (typeof BACKEND_CONFIGURED !== 'undefined' && BACKEND_CONFIGURED) {
     sb.from('orders').insert({
       id: currentOrderRef,
@@ -9527,14 +9351,14 @@ async function trackOrder() {
   const resultEl = document.getElementById('trackResult');
   if (!ref) { resultEl.innerHTML = '<span style="color:var(--a-danger,#ff5c5c);">Enter your order reference.</span>'; return; }
   if (typeof BACKEND_CONFIGURED === 'undefined' || !BACKEND_CONFIGURED) {
-    resultEl.innerHTML = '<span style="color:var(--a-danger,#ff5c5c);">Tracking is temporarily unavailable — message us on WhatsApp with your reference instead.</span>';
+    resultEl.innerHTML = '<span style="color:var(--a-danger,#ff5c5c);">Tracking is temporarily unavailable — please contact us with your reference instead.</span>';
     return;
   }
   resultEl.innerHTML = 'Searching…';
   try {
     const { data, error } = await sb.from('orders').select('*').eq('id', ref).single();
     if (error || !data) {
-      resultEl.innerHTML = `<span style="color:var(--a-danger,#ff5c5c);">No order found with reference "${ref}". Double-check it or message us on WhatsApp.</span>`;
+      resultEl.innerHTML = `<span style="color:var(--a-danger,#ff5c5c);">No order found with reference "${ref}". Double-check it or contact us for help.</span>`;
       return;
     }
     const statusColors = { Pending: 'var(--a-warn,#f5c842)', Processing: '#00D4FF', Delivered: 'var(--green,#25D366)', Cancelled: 'var(--a-danger,#ff5c5c)' };
@@ -9554,7 +9378,7 @@ async function trackOrder() {
         <div style="margin-top:0.6rem;color:var(--muted);font-size:0.75rem;">${items.join(', ')}</div>
       </div>`;
   } catch (e) {
-    resultEl.innerHTML = '<span style="color:var(--a-danger,#ff5c5c);">Something went wrong — try again or message us on WhatsApp.</span>';
+    resultEl.innerHTML = '<span style="color:var(--a-danger,#ff5c5c);">Something went wrong — try again or contact us for help.</span>';
   }
 }
 
@@ -9954,8 +9778,8 @@ function jumpToProduct(tabId, el, idx) {
 
 // Live purchase notifications removed — fabricated social proof is a
 // deceptive-advertising liability and undermines trust once noticed.
-// Reintroduce only with real order events (e.g. pulled from actual
-// WhatsApp orders/order log), never invented names.
+// Reintroduce only with real order events (e.g. pulled from your actual
+// order log), never invented names.
 
 // ═══ DUPLICATE ICON HYDRATION ═══
 // Small product/payment icons are stored once in the DOM (the element
@@ -10002,7 +9826,7 @@ window.switchTab = function(id, btn) {
 // No longer auto-increments a fabricated number every few seconds —
 // that's the same fake-social-proof pattern as the purchase popups
 // that were removed. Update this figure manually from real order data
-// (e.g. WhatsApp order log) when you have it; it now just displays
+// when you have it; it now just displays
 // whatever is in the markup, static, until you wire it up for real.
 
 // ══ PRODUCT GALLERY — 2–4 clean product shots, cycles only on hover ══
@@ -10497,15 +10321,12 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
         on focus (checkout form, search bars) — forced to 16px.
      2. Several UI labels were sized at 6–8px (mobile bottom nav
         labels, badges, trust-strip captions) — unreadable on a phone.
-     3. The floating support-chat button only avoided the mobile
-        bottom nav bar below 640px; 641–768px devices (phablets,
-        small tablets) had the button sitting on top of the nav bar.
-     4. Full-screen overlays used 100vh, which on mobile browsers is
+     3. Full-screen overlays used 100vh, which on mobile browsers is
         taller than the visible area (address bar), clipping content
         or leaving dead space — switched to dvh with a vh fallback.
-     5. A few controls (search clear button, product-tab clear
+     4. A few controls (search clear button, product-tab clear
         button) were under the ~44px comfortable tap-target size.
-     6. Horizontal scrollers were missing momentum scrolling / a
+     5. Horizontal scrollers were missing momentum scrolling / a
         hidden scrollbar on iOS.
      Loaded last so it reliably wins the cascade over earlier rules
      of equal specificity, without having to touch the original CSS.
@@ -10517,7 +10338,7 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
     input[type="text"],input[type="email"],input[type="tel"],
     input[type="password"],input[type="number"],input[type="url"],
     input[type="search"],textarea,select,
-    .form-input,.ps-input,.calc-in,#searchInput,#supportChatInput,
+    .form-input,.ps-input,.calc-in,#searchInput,
     #globalSearch,#productSearch,#orderSearch{
       font-size:16px!important;
     }
@@ -10532,22 +10353,7 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
     .trust-strip .ts-l{font-size:0.52rem!important;}
   }
 
-  /* 3. Support-chat toggle/panel: clear the mobile bottom nav across
-     the full range it's visible (≤768px), not just ≤640px. */
-  @media(max-width:768px){
-    .support-chat-toggle{bottom:4.7rem!important;}
-    .support-chat-toggle.has-shifted{bottom:4.7rem!important;}
-    .support-chat-panel{bottom:8.2rem!important;max-height:min(70vh,60dvh);}
-  }
-  @media(max-width:640px){
-    .support-chat-toggle{right:0.8rem!important;width:50px;height:50px;}
-    .support-chat-panel{right:0.8rem!important;}
-  }
-  @media(max-width:768px){
-    .support-chat-toggle{padding-bottom:env(safe-area-inset-bottom,0);}
-  }
-
-  /* 4. Full-height overlays: prefer dvh (actual visible viewport on
+  /* 3. Full-height overlays: prefer dvh (actual visible viewport on
      mobile) and fall back to vh for browsers that don't support it. */
   @media(max-width:768px){
     .cart-drawer,#searchOverlay{
@@ -10580,31 +10386,187 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
   @media(max-width:768px){
     .pr-name,.form-input{overflow-wrap:anywhere;}
   }
-
-  /* FLOATING WHATSAPP BUTTON */
-  .wa-fab{
+</style><!-- ═══ AI CHAT WIDGET ═══ -->
+<style>
+  #aiChatToggle{
     position:fixed;right:1.1rem;bottom:1.1rem;z-index:999;
     width:58px;height:58px;border-radius:50%;
-    background:#25D366;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    border:none;cursor:pointer;
     display:flex;align-items:center;justify-content:center;
-    text-decoration:none;
-    box-shadow:0 4px 14px rgba(0,0,0,0.4),0 0 0 4px rgba(166,77,255,0.35),0 0 22px rgba(166,77,255,0.45);
+    box-shadow:0 4px 14px rgba(0,0,0,0.4),0 0 22px rgba(166,77,255,0.45);
     transition:transform 0.2s,box-shadow 0.2s;
-    animation:wa-fab-pulse 2.6s ease-in-out infinite;
   }
-  .wa-fab:hover{transform:scale(1.08);box-shadow:0 6px 18px rgba(0,0,0,0.45),0 0 0 5px rgba(166,77,255,0.5),0 0 28px rgba(166,77,255,0.6);}
-  .wa-fab .icon-img{width:30px;height:30px;}
-  @keyframes wa-fab-pulse{
-    0%,100%{box-shadow:0 4px 14px rgba(0,0,0,0.4),0 0 0 4px rgba(166,77,255,0.35),0 0 22px rgba(166,77,255,0.45);}
-    50%{box-shadow:0 4px 14px rgba(0,0,0,0.4),0 0 0 7px rgba(166,77,255,0.18),0 0 30px rgba(166,77,255,0.65);}
+  #aiChatToggle:hover{transform:scale(1.08);box-shadow:0 6px 18px rgba(0,0,0,0.45),0 0 28px rgba(166,77,255,0.6);}
+  #aiChatToggle svg{width:28px;height:28px;}
+  #aiChatToggle .close-icon{display:none;}
+  #aiChatToggle.open .chat-icon{display:none;}
+  #aiChatToggle.open .close-icon{display:block;}
+
+  #aiChatPanel{
+    position:fixed;right:1.1rem;bottom:5.3rem;z-index:998;
+    width:min(360px,calc(100vw - 2.2rem));
+    height:min(520px,70vh);
+    background:var(--bg2);border:1px solid var(--border-gold);border-radius:14px;
+    display:flex;flex-direction:column;overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+    opacity:0;transform:translateY(20px) scale(0.96);pointer-events:none;
+    transition:opacity 0.25s ease,transform 0.25s ease;
   }
-  @media(max-width:480px){
-    .wa-fab{width:52px;height:52px;right:0.85rem;bottom:0.85rem;}
-    .wa-fab .icon-img{width:26px;height:26px;}
+  #aiChatPanel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+
+  #aiChatHead{
+    padding:0.9rem 1.1rem;background:var(--bg3);border-bottom:1px solid var(--border);
+    display:flex;align-items:center;gap:0.6rem;
+  }
+  #aiChatHead .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);flex-shrink:0;}
+  #aiChatHead .title{font-family:'Bebas Neue',cursive;letter-spacing:0.08em;font-size:1.05rem;color:var(--text);}
+  #aiChatHead .sub{font-family:'Rajdhani',sans-serif;font-size:0.7rem;color:var(--muted);}
+
+  #aiChatMsgs{
+    flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:0.7rem;
+    scrollbar-width:thin;
+  }
+  .aic-msg{max-width:85%;padding:0.55rem 0.8rem;border-radius:10px;font-family:'Rajdhani',sans-serif;font-size:0.88rem;line-height:1.45;word-wrap:break-word;white-space:pre-wrap;}
+  .aic-msg.bot{align-self:flex-start;background:var(--bg3);color:var(--text);border:1px solid var(--border);}
+  .aic-msg.user{align-self:flex-end;background:var(--gold-dim);color:var(--text);border:1px solid var(--border-gold);}
+  .aic-msg.typing{display:flex;gap:4px;align-items:center;padding:0.7rem 0.9rem;}
+  .aic-msg.typing span{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:aic-bounce 1.2s infinite ease-in-out;}
+  .aic-msg.typing span:nth-child(2){animation-delay:0.15s;}
+  .aic-msg.typing span:nth-child(3){animation-delay:0.3s;}
+  @keyframes aic-bounce{0%,60%,100%{transform:translateY(0);opacity:0.5;}30%{transform:translateY(-4px);opacity:1;}}
+
+  #aiChatForm{display:flex;gap:0.5rem;padding:0.8rem;border-top:1px solid var(--border);background:var(--bg3);}
+  #aiChatInput{
+    flex:1;background:var(--bg);border:1px solid var(--border);border-radius:8px;
+    padding:0.6rem 0.8rem;color:var(--text);font-family:'Rajdhani',sans-serif;font-size:0.9rem;
+    outline:none;resize:none;
+  }
+  #aiChatInput:focus{border-color:var(--gold);}
+  #aiChatSend{
+    background:var(--gold);border:none;border-radius:8px;width:40px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;cursor:pointer;transition:opacity 0.2s;
+  }
+  #aiChatSend:disabled{opacity:0.5;cursor:not-allowed;}
+  #aiChatSend svg{width:18px;height:18px;}
+
+  @media(max-width:768px){
+    #aiChatToggle{bottom:4.7rem;}
+    #aiChatPanel{bottom:8.9rem;height:min(60vh,480px);}
   }
 </style>
-<a href="https://wa.me/201211057733" target="_blank" rel="noopener" class="wa-fab" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
-  <span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/whatsapp.svg');--icon-color:#ffffff;" role="img" aria-hidden="true"></span>
-</a>
+
+<button id="aiChatToggle" aria-label="Chat with us">
+  <svg class="chat-icon" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+  <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+</button>
+
+<div id="aiChatPanel">
+  <div id="aiChatHead">
+    <span class="dot"></span>
+    <div>
+      <div class="title">VAULTIX ASSISTANT</div>
+      <div class="sub">Ask about products, prices &amp; orders</div>
+    </div>
+  </div>
+  <div id="aiChatMsgs"></div>
+  <form id="aiChatForm">
+    <textarea id="aiChatInput" rows="1" placeholder="Type a message…" autocomplete="off"></textarea>
+    <button type="submit" id="aiChatSend" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+    </button>
+  </form>
+</div>
+
+<script>
+(function(){
+  var WORKER_URL = 'https://vaultix-chatbot.usfgraal1x.workers.dev/';
+  var toggle = document.getElementById('aiChatToggle');
+  var panel = document.getElementById('aiChatPanel');
+  var msgsEl = document.getElementById('aiChatMsgs');
+  var form = document.getElementById('aiChatForm');
+  var input = document.getElementById('aiChatInput');
+  var sendBtn = document.getElementById('aiChatSend');
+
+  var history = []; // {role:'user'|'assistant', text:string}
+  var opened = false;
+
+  function addMsg(role, text){
+    var el = document.createElement('div');
+    el.className = 'aic-msg ' + (role === 'user' ? 'user' : 'bot');
+    el.textContent = text;
+    msgsEl.appendChild(el);
+    msgsEl.scrollTop = msgsEl.scrollHeight;
+    return el;
+  }
+
+  function addTyping(){
+    var el = document.createElement('div');
+    el.className = 'aic-msg bot typing';
+    el.innerHTML = '<span></span><span></span><span></span>';
+    msgsEl.appendChild(el);
+    msgsEl.scrollTop = msgsEl.scrollHeight;
+    return el;
+  }
+
+  toggle.addEventListener('click', function(){
+    opened = !opened;
+    toggle.classList.toggle('open', opened);
+    panel.classList.toggle('open', opened);
+    if (opened && history.length === 0){
+      addMsg('assistant', "Hey! 👋 I'm the VAULTIX assistant. Ask me about our games, gift cards, boosting services, or how ordering works!");
+      history.push({role:'assistant', text:"Hey! I'm the VAULTIX assistant. Ask me about our games, gift cards, boosting services, or how ordering works!"});
+    }
+    if (opened) setTimeout(function(){ input.focus(); }, 260);
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var text = input.value.trim();
+    if (!text) return;
+
+    addMsg('user', text);
+    history.push({role:'user', text: text});
+    input.value = '';
+    input.style.height = 'auto';
+    sendBtn.disabled = true;
+
+    var typingEl = addTyping();
+
+    fetch(WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: history })
+    })
+    .then(function(res){ return res.json(); })
+    .then(function(data){
+      typingEl.remove();
+      var reply = data.reply || data.error || "Sorry, something went wrong. Please try again.";
+      addMsg('assistant', reply);
+      history.push({role:'assistant', text: reply});
+    })
+    .catch(function(){
+      typingEl.remove();
+      addMsg('assistant', "Sorry, I'm having trouble connecting right now. Please try again in a moment.");
+    })
+    .finally(function(){
+      sendBtn.disabled = false;
+    });
+  });
+
+  input.addEventListener('input', function(){
+    input.style.height = 'auto';
+    input.style.height = Math.min(input.scrollHeight, 100) + 'px';
+  });
+
+  input.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' && !e.shiftKey){
+      e.preventDefault();
+      form.dispatchEvent(new Event('submit', {cancelable:true}));
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
