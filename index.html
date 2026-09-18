@@ -1,4 +1,4 @@
-z<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -686,6 +686,10 @@ textarea.form-input{resize:vertical;min-height:65px;}
 .pay-info{}
 .pay-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.9rem;font-weight:700;color:var(--text);}
 .pay-desc{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.72rem;color:var(--muted);}
+.pay-copy-btn{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;margin-left:.35rem;width:20px;height:20px;padding:0;border:none;background:transparent;color:var(--muted);cursor:pointer;border-radius:4px;transition:color .15s,background .15s;}
+.pay-copy-btn:hover{color:var(--gold);background:rgba(255,184,140,0.08);}
+.pay-desc a{color:var(--gold);text-decoration:underline;}
+.pay-desc a:hover{color:var(--gold2);}
 .pay-number{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.774rem;color:var(--gold);}
 .send-btn{
   width:100%;padding:0.95rem;
@@ -4815,6 +4819,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   #trackChatSend:active{transform:scale(.94);}
   #trackChatSend:disabled{opacity:.45;cursor:not-allowed;transform:none;}
   #trackChatSend svg{width:16px;height:16px;}
+  #trackChatAttach{flex-shrink:0;width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:var(--bg);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .15s,color .15s;padding:0;}
+  #trackChatAttach:hover{border-color:var(--gold);color:var(--gold);}
+  #trackChatAttach svg{width:17px;height:17px;}
+  .tc-img{display:block;max-width:180px;max-height:180px;border-radius:10px;margin-bottom:.35rem;cursor:pointer;border:1px solid var(--border);}
+  .oc-img{display:block;max-width:200px;max-height:200px;border-radius:8px;margin-bottom:.35rem;cursor:pointer;}
 </style>
 
 <style>
@@ -5625,7 +5634,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
   <div class="home-cats-grid">
     <div class="home-cat-tile" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTab('fortnite');}" onclick="goToTab('fortnite')">
       <span class="home-cat-badge" style="background:rgba(0,212,255,.16);border-color:rgba(0,212,255,.4);">
-        <span class="home-cat-icon icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/fortnite.svg');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
+        <span class="home-cat-icon icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
       </span>
       <div class="home-cat-label">V-Bucks</div>
     </div>
@@ -5667,7 +5676,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
     </div>
     <div class="home-cat-tile" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTab('software');}" onclick="goToTab('software')">
       <span class="home-cat-badge" style="background:rgba(0,188,242,.16);border-color:rgba(0,188,242,.4);">
-        <span class="home-cat-icon icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/windows.svg');--icon-color:#00BCF2;" role="img" aria-label="Apps &amp; Subscriptions"></span>
+        <span class="home-cat-icon icon-img brand-icon-mask" style="--icon-src:url('images/icon-windows.png');--icon-color:#00BCF2;" role="img" aria-label="Apps &amp; Subscriptions"></span>
       </span>
       <div class="home-cat-label">Apps &amp; Subs</div>
     </div>
@@ -5720,7 +5729,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
       </div>
       <div class="deal-card-body">
         <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.3rem;">
-          <span class="deal-game-icon brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/fortnite.svg');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
+          <span class="deal-game-icon brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
           <span class="deal-game-label">Fortnite</span>
         </div>
         <div class="deal-name">2,400 V-Bucks</div>
@@ -5750,7 +5759,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
   <div class="tabs-wrap" style="margin-top:1.5rem;">
     <div class="tabs-scroll-wrap">
     <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('fortnite',this)" title="Fortnite"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/fortnite.svg');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span></button>
+      <button class="tab-btn active" onclick="switchTab('fortnite',this)" title="Fortnite"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span></button>
       <button class="tab-btn" onclick="switchTab('steam',this)" title="Steam"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></button>
       <button class="tab-btn" onclick="switchTab('psn',this)" title="PlayStation"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/playstation.svg');--icon-color:#ffffff;" role="img" aria-label="PlayStation"></span></button>
       <button class="tab-btn" onclick="switchTab('roblox',this)" title="Roblox"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></button>
@@ -5766,7 +5775,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         <span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam Games"></span>
         <span style="position:absolute;bottom:2px;right:2px;font-size:0.737rem;font-weight:900;letter-spacing:0.02em;background:var(--gold);color:#0a0a0a;border-radius:3px;padding:0 2px;line-height:1.3;">GM</span>
       </button>
-      <button class="tab-btn" onclick="switchTab('software',this)" title="Software"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/windows.svg');--icon-color:#00BCF2;" role="img" aria-label="Software"></span></button>
+      <button class="tab-btn" onclick="switchTab('software',this)" title="Software"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-windows.png');--icon-color:#00BCF2;" role="img" aria-label="Software"></span></button>
       <button class="tab-btn" onclick="switchTab('valorant',this)" title="VALORANT" style="color:#FF4655;border-bottom-color:transparent;">
         <span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/valorant.svg');--icon-color:#FF4655;" role="img" aria-label="VALORANT"></span>
       </button>
@@ -5785,12 +5794,12 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         <div class="game-bg-overlay"></div>
         <!-- Fortnite panel header: logo beside title -->
         <div class="game-panel-header">
-          <span class="game-logo brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/fortnite.svg');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
+          <span class="game-logo brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
           <div class="game-header-text">
             <div class="game-header-name">Fortnite</div>
             <div class="game-header-sub">V-Bucks · Gift &amp; Direct</div>
           </div>
-          <span class="game-logo-sub brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/fortnite.svg');--icon-color:#00D4FF;" role="img" aria-label="V-Bucks"></span>
+          <span class="game-logo-sub brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="V-Bucks"></span>
         </div>
 
         <!-- ══ FORTNITE SUB-CATEGORY TABS ══ -->
@@ -5836,7 +5845,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
 
         <div class="game-panel-inner">
           <div style="grid-column:1 / -1;display:none;" data-fnsub="bundles">
-            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/fortnite.svg');--icon-color:#00D4FF;" role="img" aria-label="Bundle"></span> Featured Bundle <span class="badge badge-red">LIMITED</span></div>
+            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Bundle"></span> Featured Bundle <span class="badge badge-red">LIMITED</span></div>
             <div class="price-rows">
               <div class="price-row" onclick="addToCart('Mainframe Break Pack','🕵️',450,'L.E')">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img src="images/icon-fortnite-mainframe-pack.jpg" alt="Mainframe Break Pack" style="width:260px;height:150px;object-fit:cover;border-radius:10px;flex-shrink:0;box-shadow:0 8px 20px rgba(0,0,0,0.55);" loading="lazy" decoding="async"></span><div class="pr-name">Mainframe Break Pack <span class="sale-tag best">★ LIMITED TIME</span><br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;line-height:1.5;">800 V-Bucks · Zoe Clash Outfit (LEGO Style) · Sgt. Shiba Back Bling · Beep &amp; Boop Pickaxe · Sticker 'Em Up Wrap<br>Zoe Clash &amp; Sgt. Shiba are done playing by the rules — grab the full glitch-hacker fit, the pickaxe that breaks the mainframe, and a wrap to match, all in one drop before it's pulled from the shop. Instant delivery, gift or direct.</span></div></div>
@@ -5847,7 +5856,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
 
           <!-- ══ ACCOUNT RANK BOOSTING ══ -->
           <div style="grid-column:1 / -1;display:none;" data-fnsub="boosting">
-            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/fortnite.svg');--icon-color:#00D4FF;" role="img" aria-label="Boosting"></span> Account Rank Boosting <span class="badge badge-blue">MAKE AN OFFER</span></div>
+            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Boosting"></span> Account Rank Boosting <span class="badge badge-blue">MAKE AN OFFER</span></div>
             <div class="boost-box">
               <div class="boost-lbl">// Tell us your rank, your goal, and what you want to pay</div>
               <div class="boost-grid">
@@ -6329,7 +6338,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
           <div style="grid-column:1 / -1;" data-fnsub="vbucks">
           <div class="vb-carousel-track" id="vbColumnsCarousel">
           <div>
-            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/fortnite.svg');--icon-color:#00D4FF;" role="img" aria-label="Gift"></span> Gift Prices <span class="badge badge-red">GIFT</span></div>
+            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Gift"></span> Gift Prices <span class="badge badge-red">GIFT</span></div>
             <!-- Gift V-Bucks Calculator -->
             <div class="calc-box" style="margin-bottom:0.8rem;">
               <div class="calc-lbl">// Gift V-Bucks Calculator — 1,000 VB = 270 L.E</div>
@@ -6361,7 +6370,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
             </div>
           </div>
           <div>
-            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/fortnite.svg');--icon-color:#00D4FF;" role="img" aria-label="VBucks"></span> Normal V-Bucks <span class="badge badge-gold">DIRECT</span></div>
+            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="VBucks"></span> Normal V-Bucks <span class="badge badge-gold">DIRECT</span></div>
             <div class="price-rows">
 <div class="price-row" onclick="addToCart('Crew Pack','🎯',250,'L.E')">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img id="ic3" src="images/icon-fortnite-crew-pack.jpg" alt="Fortnite Crew" style="width:260px;height:96px;object-fit:cover;border-radius:10px;flex-shrink:0;box-shadow:0 8px 20px rgba(0,0,0,0.55);" loading="lazy" decoding="async"></span><div class="pr-name">Crew Pack <span class="sale-tag best">★ BEST SELLER</span><br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;line-height:1.5;">Battle Pass · Rocket Pass · LEGO Pass · Music Pass · OG Pass · 1,000 V-Bucks · Skin + Pickaxe + Backbling</span></div></div>
@@ -7094,7 +7103,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         <div class="game-bg" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80');opacity:0.14;background-size:cover;background-position:center;"></div>
         <div class="game-bg-overlay" style="background:linear-gradient(to right,rgba(5,5,16,0.98) 50%,rgba(5,5,16,0.75) 100%);"></div>
         <div class="game-panel-header">
-          <span class="game-logo brand-icon-mask" style="filter:drop-shadow(0 0 16px rgba(0,188,242,0.7));--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/windows.svg');--icon-color:#00BCF2;" role="img" aria-label="Software"></span>
+          <span class="game-logo brand-icon-mask" style="filter:drop-shadow(0 0 16px rgba(0,188,242,0.7));--icon-src:url('images/icon-windows.png');--icon-color:#00BCF2;" role="img" aria-label="Software"></span>
           <div class="game-header-text">
             <div class="game-header-name" style="background:linear-gradient(135deg,#00BCF2,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Software & Apps</div>
             <div class="game-header-sub">Subscriptions · Licenses · Activation Keys</div>
@@ -7362,7 +7371,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
             </div>
             <div style="display:flex;gap:0.7rem;align-items:flex-start;">
               <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.1rem;color:rgba(255,70,85,0.5);flex-shrink:0;line-height:1;">02</span>
-              <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.82rem;color:var(--muted);">Pay via InstaPay / Telda</span>
+              <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.82rem;color:var(--muted);">Pay via InstaPay / Telda / Vodafone Cash / PayPal</span>
             </div>
             <div style="display:flex;gap:0.7rem;align-items:flex-start;">
               <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.1rem;color:rgba(255,70,85,0.5);flex-shrink:0;line-height:1;">03</span>
@@ -7543,8 +7552,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.4rem;letter-spacing:0.05em;color:var(--gold);">Telda</div>
       </div>
       <div style="font-size:0.95rem;color:var(--text);line-height:2;">
-        <div><span style="color:var(--muted);">Number:</span> <strong>01211057733</strong></div>
-        <div><span style="color:var(--muted);">Username:</span> <strong>@ctrlfnrobert</strong></div>
+        <div><span style="color:var(--muted);">Username:</span> <strong>@nokia714</strong><button type="button" class="pay-copy-btn" onclick="copyPayValue(this,'@nokia714')" aria-label="Copy Telda username" title="Copy" style="width:22px;height:22px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button></div>
       </div>
       <div style="margin-top:1rem;font-size:0.85rem;color:var(--gold2);background:var(--gold-dim);border:1px solid var(--border-gold);border-radius:4px;padding:0.5rem 0.75rem;">+5 EGP tax added on Telda payments</div>
     </div>
@@ -7555,9 +7563,29 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.4rem;letter-spacing:0.05em;color:var(--gold);">Instapay</div>
       </div>
       <div style="font-size:0.95rem;color:var(--text);line-height:2;">
-        <div><span style="color:var(--muted);">Number:</span> <strong>01211057733</strong></div>
-        <div><span style="color:var(--muted);">Name:</span> <strong>Robert</strong></div>
+        <div><span style="color:var(--muted);">Send to:</span> <strong>hoda714@instapay</strong><button type="button" class="pay-copy-btn" onclick="copyPayValue(this,'hoda714@instapay')" aria-label="Copy InstaPay ID" title="Copy" style="width:22px;height:22px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button></div>
       </div>
+    </div>
+
+    <div style="border:1px solid var(--border-gold);border-radius:8px;padding:1.5rem;background:var(--bg2);position:relative;overflow:hidden;">
+      <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
+        <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.777rem;letter-spacing:0.2em;color:var(--bg);background:var(--gold);padding:0.25rem 0.6rem;border-radius:3px;font-weight:700;">03</span>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.4rem;letter-spacing:0.05em;color:var(--gold);">Vodafone Cash</div>
+      </div>
+      <div style="font-size:0.95rem;color:var(--text);line-height:2;">
+        <div><span style="color:var(--muted);">Number:</span> <strong>01097117174</strong><button type="button" class="pay-copy-btn" onclick="copyPayValue(this,'01097117174')" aria-label="Copy Vodafone Cash number" title="Copy" style="width:22px;height:22px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button></div>
+      </div>
+    </div>
+
+    <div style="border:1px solid var(--border-gold);border-radius:8px;padding:1.5rem;background:var(--bg2);position:relative;overflow:hidden;">
+      <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
+        <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.777rem;letter-spacing:0.2em;color:var(--bg);background:var(--gold);padding:0.25rem 0.6rem;border-radius:3px;font-weight:700;">04</span>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.4rem;letter-spacing:0.05em;color:var(--gold);">PayPal</div>
+      </div>
+      <div style="font-size:0.95rem;color:var(--text);line-height:2;">
+        <div><span style="color:var(--muted);">Link:</span> <a href="https://paypal.me/kind2x" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:underline;font-weight:700;">paypal.me/kind2x</a><button type="button" class="pay-copy-btn" onclick="copyPayValue(this,'https://paypal.me/kind2x')" aria-label="Copy PayPal link" title="Copy" style="width:22px;height:22px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button></div>
+      </div>
+      <div style="margin-top:1rem;font-size:0.85rem;color:var(--gold2);background:var(--gold-dim);border:1px solid var(--border-gold);border-radius:4px;padding:0.5rem 0.75rem;">USD payments — priced at the live exchange rate</div>
     </div>
 
   </div>
@@ -7605,7 +7633,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
 
     <div class="faq-item" style="border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.5rem;background:var(--bg2);">
       <div class="faq-q" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem;color:var(--gold);margin-bottom:0.5rem;">Is my payment information safe?</div>
-      <div class="faq-a" style="font-size:0.95rem;color:var(--text);line-height:1.6;">We don't store your payment details — you pay directly via InstaPay or Telda to our listed accounts, and there's no card data passing through our site.</div>
+      <div class="faq-a" style="font-size:0.95rem;color:var(--text);line-height:1.6;">We don't store your payment details — you pay directly via InstaPay, Telda, Vodafone Cash or PayPal to our listed accounts, and there's no card data passing through our site.</div>
     </div>
 
     <div class="faq-item" style="border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.5rem;background:var(--bg2);">
@@ -7858,7 +7886,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
       <!-- FORTNITE FIELDS — shown only when cart has Fortnite / V-Bucks items -->
       <div id="fortniteFields" style="display:none;">
         <div style="display:flex;align-items:center;gap:0.6rem;padding:0.7rem 1rem;background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.25);border-left:3px solid #00D4FF;margin-bottom:1rem;border-radius:2px;">
-          <span class="brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/fortnite.svg');--icon-color:#00D4FF;width:16px;height:16px;display:inline-block;" role="img" aria-label="Fortnite"></span>
+          <span class="brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;width:16px;height:16px;display:inline-block;" role="img" aria-label="Fortnite"></span>
           <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.774rem;letter-spacing:0.15em;color:#00D4FF;text-transform:uppercase;">Fortnite Item — Username Required</span>
         </div>
         <div class="form-group">
@@ -7906,7 +7934,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         <div class="pay-method selected" onclick="selectPay(this,'InstaPay')">
           <input type="radio" name="pm" checked aria-label="Pay with InstaPay">
           <div class="pay-logo" style="background:#fff;"><img id="ic5" src="images/icon-instapay.jpg" alt="InstaPay" style="width:100%;height:100%;object-fit:contain;padding:4px;box-sizing:border-box;" loading="lazy" decoding="async"></div>
-          <div class="pay-info"><div class="pay-name">InstaPay</div><div class="pay-desc">Send to: <strong style="color:var(--text)">Robert</strong></div><div class="pay-number">📱 01211057733</div></div>
+          <div class="pay-info"><div class="pay-name">InstaPay</div><div class="pay-desc">Send to: <strong style="color:var(--text)">hoda714@instapay</strong><button type="button" class="pay-copy-btn" onclick="event.stopPropagation();copyPayValue(this,'hoda714@instapay')" aria-label="Copy InstaPay ID" title="Copy"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button></div></div>
         </div>
         <div class="pay-method" onclick="selectPay(this,'Telda')">
           <input type="radio" name="pm" aria-label="Pay with Telda">
@@ -7916,7 +7944,28 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
               <text x="90" y="68" text-anchor="middle" font-family="Arial Black,Helvetica Neue,sans-serif" font-weight="900" font-size="44" fill="#ffffff" letter-spacing="-1">telda</text>
             </svg>
           </div>
-          <div class="pay-info"><div class="pay-name">Telda</div><div class="pay-desc">Send to: <strong style="color:var(--text)">Robert</strong></div><div class="pay-number">📱 @ctrlfnrobert</div></div>
+          <div class="pay-info"><div class="pay-name">Telda</div><div class="pay-desc">Send to: <strong style="color:var(--text)">@nokia714</strong><button type="button" class="pay-copy-btn" onclick="event.stopPropagation();copyPayValue(this,'@nokia714')" aria-label="Copy Telda username" title="Copy"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button></div></div>
+        </div>
+        <div class="pay-method" onclick="selectPay(this,'Vodafone Cash')">
+          <input type="radio" name="pm" aria-label="Pay with Vodafone Cash">
+          <div class="pay-logo">
+            <svg viewBox="0 0 180 108" xmlns="http://www.w3.org/2000/svg">
+              <rect width="180" height="108" rx="16" fill="#e60000"/>
+              <text x="90" y="50" text-anchor="middle" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-weight="800" font-size="26" fill="#ffffff">vodafone</text>
+              <text x="90" y="82" text-anchor="middle" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-weight="700" font-size="26" fill="#ffffff" letter-spacing="4">CASH</text>
+            </svg>
+          </div>
+          <div class="pay-info"><div class="pay-name">Vodafone Cash</div><div class="pay-desc">Send to: <strong style="color:var(--text)">01097117174</strong><button type="button" class="pay-copy-btn" onclick="event.stopPropagation();copyPayValue(this,'01097117174')" aria-label="Copy Vodafone Cash number" title="Copy"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button></div></div>
+        </div>
+        <div class="pay-method" onclick="selectPay(this,'PayPal')">
+          <input type="radio" name="pm" aria-label="Pay with PayPal">
+          <div class="pay-logo" style="background:#fff;">
+            <svg viewBox="0 0 180 108" xmlns="http://www.w3.org/2000/svg">
+              <rect width="180" height="108" rx="16" fill="#ffffff"/>
+              <text x="90" y="66" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-style="italic" font-size="36" fill="#003087">Pay<tspan fill="#009cde">Pal</tspan></text>
+            </svg>
+          </div>
+          <div class="pay-info"><div class="pay-name">PayPal</div><div class="pay-desc">Send to: <a href="https://paypal.me/kind2x" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" style="font-weight:800;">paypal.me/kind2x</a><button type="button" class="pay-copy-btn" onclick="event.stopPropagation();copyPayValue(this,'https://paypal.me/kind2x')" aria-label="Copy PayPal link" title="Copy"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button></div></div>
         </div>
       </div>
       <div class="form-group">
@@ -7993,6 +8042,10 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         </div>
         <div id="trackChatMsgs"></div>
         <div id="trackChatForm">
+          <input id="trackChatImgInput" type="file" accept="image/*" style="display:none;" onchange="sendTrackChatImage(this)">
+          <button id="trackChatAttach" type="button" onclick="document.getElementById('trackChatImgInput').click()" aria-label="Attach photo" title="Attach a photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a5.5 5.5 0 0 1-7.78-7.78l9.19-9.19a3.5 3.5 0 0 1 4.95 4.95l-9.2 9.19a1.5 1.5 0 0 1-2.12-2.12l8.49-8.48"/></svg>
+          </button>
           <input id="trackChatInput" type="text" placeholder="Say something…" maxlength="500" onkeydown="if(event.key==='Enter'){event.preventDefault();sendTrackChatMsg();}">
           <button id="trackChatSend" onclick="sendTrackChatMsg()" type="button" aria-label="Send message">
             <svg viewBox="0 0 24 24" fill="none" stroke="#0a0e13" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
@@ -8495,6 +8548,10 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         <div>
           <div id="ocdMsgs"></div>
           <div id="ocdForm">
+            <input id="ocdImgInput" type="file" accept="image/*" style="display:none;" onchange="sendOrderChatImage(this)">
+            <button type="button" class="btn-ghost rounded px-3 text-sm" onclick="document.getElementById('ocdImgInput').click()" aria-label="Attach photo" title="Attach a photo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a5.5 5.5 0 0 1-7.78-7.78l9.19-9.19a3.5 3.5 0 0 1 4.95 4.95l-9.2 9.19a1.5 1.5 0 0 1-2.12-2.12l8.49-8.48"/></svg>
+            </button>
             <input id="ocdInput" type="text" placeholder="Say something…" maxlength="500" onkeydown="if(event.key==='Enter'){event.preventDefault();sendOrderChatMsg();}">
             <button class="btn-primary rounded px-4 text-sm" onclick="sendOrderChatMsg()" type="button">Send</button>
           </div>
@@ -9918,6 +9975,33 @@ function selectPay(el, name) {
   selectedPayment = name;
 }
 
+// Copies a payment method's number/username/link to the clipboard when its
+// little copy icon is tapped. Mirrors the Clipboard-API-first, execCommand-
+// fallback pattern used by copyOrderMessage()/copyOrderRef() elsewhere.
+function copyPayValue(btn, text) {
+  const done = function () { showToast('Copied!', '📋'); };
+  const fallbackCopy = function () {
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.focus(); ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      done();
+    } catch (e) {
+      showToast('Could not copy — select it manually', '⚠️');
+    }
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+}
+
 function buildOrderMessage() {
   const name = document.getElementById('custName').value.trim();
   const phone = document.getElementById('custPhone').value.trim();
@@ -9951,9 +10035,13 @@ function buildOrderMessage() {
 
   let payInstructions = '';
   if (selectedPayment === 'InstaPay') {
-    payInstructions = `💳 *Payment:* InstaPay → *01211057733* (Robert)\n📸 Please send a screenshot of the transaction after paying.\n`;
+    payInstructions = `💳 *Payment:* InstaPay → *hoda714@instapay*\n📸 Please send a screenshot of the transaction after paying.\n`;
   } else if (selectedPayment === 'Telda') {
-    payInstructions = `💳 *Payment:* Telda → *@ctrlfnrobert* (Robert) — +5 EGP tax\n📸 Please send a screenshot of the transaction after paying.\n`;
+    payInstructions = `💳 *Payment:* Telda → *@nokia714* — +5 EGP tax\n📸 Please send a screenshot of the transaction after paying.\n`;
+  } else if (selectedPayment === 'Vodafone Cash') {
+    payInstructions = `💳 *Payment:* Vodafone Cash → *01097117174*\n📸 Please send a screenshot of the transaction after paying.\n`;
+  } else if (selectedPayment === 'PayPal') {
+    payInstructions = `💳 *Payment:* PayPal → *paypal.me/kind2x*\n📸 Please send a screenshot of the transaction after paying.\n`;
   }
 
   if (!currentOrderRef) { currentOrderRef = generateOrderRef(); document.getElementById('orderRefDisplay').textContent = currentOrderRef; }
@@ -10009,9 +10097,13 @@ document.addEventListener('DOMContentLoaded', function () {
 // never blocks or delays checkout. Requires that bucket to exist in
 // Supabase (Storage → New bucket → name it exactly "payment-proofs", Public)
 // and a `payment_proof` text column on the `orders` table.
-async function uploadPaymentProof(orderRef) {
-  const input = document.getElementById('custPaymentProof');
-  const file = input && input.files && input.files[0];
+//
+// It also auto-posts the same screenshot as the first buyer message in that
+// order's chat (order_messages, with an `attachment_url` column — see the
+// schema note above sendTrackChatImage below), so the moment anyone — the
+// customer or the admin — opens the chat for this order reference, the
+// payment screenshot is already sitting there.
+async function uploadPaymentProof(orderRef, file) {
   if (!file || !BACKEND_CONFIGURED) return;
   try {
     const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
@@ -10022,6 +10114,13 @@ async function uploadPaymentProof(orderRef) {
     const publicUrl = data && data.publicUrl;
     if (publicUrl) {
       await sb.from('orders').update({ payment_proof: publicUrl }).eq('id', orderRef);
+      const { error: msgError } = await sb.from('order_messages').insert({
+        order_id: orderRef,
+        sender: 'buyer',
+        message: '📸 Payment screenshot',
+        attachment_url: publicUrl
+      });
+      if (msgError) console.error('Could not auto-post payment screenshot into order chat:', msgError);
     }
   } catch (e) {
     console.error('Payment proof upload error:', e);
@@ -10054,8 +10153,14 @@ function sendOrder() {
     });
   }
 
-  // Upload the payment screenshot (if attached) in the background.
-  uploadPaymentProof(currentOrderRef);
+  // Grab the payment-proof file and freeze the order ref now — both the file
+  // input and `currentOrderRef` get reset further down before the order-insert
+  // promise below resolves, so the deferred .then() needs its own copies.
+  const proofFile = (function(){
+    const el = document.getElementById('custPaymentProof');
+    return (el && el.files && el.files[0]) || null;
+  })();
+  const orderRefForProof = currentOrderRef;
 
   // Send order emails (owner notification + optional customer confirmation),
   // in the background.
@@ -10082,7 +10187,11 @@ function sendOrder() {
       status: 'Pending',
       date: new Date().toISOString().slice(0,10)
     }).then(({ error }) => {
-      if (error) console.error('Order was not saved to the backend:', error);
+      if (error) { console.error('Order was not saved to the backend:', error); return; }
+      // Only upload the screenshot (and auto-post it into the order chat) once
+      // the order row actually exists — order_messages.order_id and
+      // orders.payment_proof both depend on this row being there first.
+      uploadPaymentProof(orderRefForProof, proofFile);
     });
   }
 
@@ -10226,6 +10335,36 @@ async function trackOrder() {
 // foreign key into `orders` and silently rejects made-up ids.
 function isGuestChatId(id) { return typeof id === 'string' && id.indexOf('GUEST-') === 0; }
 
+// Which table/column a chat id (order ref or GUEST- id) reads and writes to.
+// Shared by both the customer-side and admin-side chat, and by the image
+// attachment helpers below.
+function chatTarget(id) {
+  return isGuestChatId(id)
+    ? { table: 'general_chat_messages', field: 'thread_id' }
+    : { table: 'order_messages', field: 'order_id' };
+}
+
+// Uploads a chat-attached photo to the same public "payment-proofs" bucket
+// used for checkout screenshots (kept under a chat/ prefix), and returns its
+// public URL, or null on failure. Requires an `attachment_url` text column
+// on both `order_messages` and `general_chat_messages`:
+//   alter table order_messages add column attachment_url text;
+//   alter table general_chat_messages add column attachment_url text;
+async function uploadChatImage(id, file) {
+  if (!file || !BACKEND_CONFIGURED) return null;
+  try {
+    const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
+    const path = `chat/${id}-${Date.now()}-${Math.random().toString(36).slice(2,7)}.${ext}`;
+    const { error: uploadError } = await sb.storage.from('payment-proofs').upload(path, file);
+    if (uploadError) { console.error('Chat image upload failed:', uploadError); return null; }
+    const { data } = sb.storage.from('payment-proofs').getPublicUrl(path);
+    return (data && data.publicUrl) || null;
+  } catch (e) {
+    console.error('Chat image upload error:', e);
+    return null;
+  }
+}
+
 let trackChatOrderId = null;
 let trackChatChannel = null;
 let trackChatPoll = null;
@@ -10285,9 +10424,12 @@ function renderTrackChatMsgs(list) {
   const wasNearBottom = wrap.scrollTop + wrap.clientHeight >= wrap.scrollHeight - 60;
   wrap.innerHTML = list.map(m => {
     const isBuyer = m.sender === 'buyer';
+    const img = m.attachment_url ? `<a href="${safeUrl(m.attachment_url)}" target="_blank" rel="noopener noreferrer"><img src="${safeUrl(m.attachment_url)}" alt="Attachment" class="tc-img" loading="lazy"></a>` : '';
+    const textMsg = m.message ? `<div class="tc-msg">${esc(m.message)}</div>` : '';
     return `<div class="tc-row ${isBuyer ? 'buyer' : 'seller'}">
       <div class="tc-label">${isBuyer ? 'You' : 'eZy'}</div>
-      <div class="tc-msg">${esc(m.message)}</div>
+      ${img}
+      ${textMsg}
       <div class="tc-time">${esc(fmtChatTime(m.created_at))}</div>
     </div>`;
   }).join('');
@@ -10307,6 +10449,23 @@ async function sendTrackChatMsg() {
   btn.disabled = false;
   if (!error) loadTrackChat(trackChatOrderId, true);
   else input.value = text;
+}
+// Customer picks a photo from the paperclip button in the track/support
+// chat — uploads it and sends it as its own message, same flow as text.
+async function sendTrackChatImage(fileInput) {
+  const file = fileInput.files && fileInput.files[0];
+  fileInput.value = '';
+  if (!file || !trackChatOrderId) return;
+  if (typeof BACKEND_CONFIGURED === 'undefined' || !BACKEND_CONFIGURED) return;
+  const btn = document.getElementById('trackChatAttach');
+  if (btn) btn.disabled = true;
+  const url = await uploadChatImage(trackChatOrderId, file);
+  if (btn) btn.disabled = false;
+  if (!url) { showToast('Could not send the photo — try again.', '⚠️'); return; }
+  const t = chatTarget(trackChatOrderId);
+  const { error } = await sb.from(t.table).insert({ [t.field]: trackChatOrderId, sender: 'buyer', message: '', attachment_url: url });
+  if (!error) loadTrackChat(trackChatOrderId, true);
+  else showToast('Could not send the photo — try again.', '⚠️');
 }
 
 // ═══ ORDER DETAIL / CHAT (admin side — Eldorado-style order page) ═══
@@ -10404,7 +10563,11 @@ async function loadOrderChat(id, silent) {
 function renderOrderChatMsgs(list) {
   const wrap = document.getElementById('ocdMsgs');
   wrap.innerHTML = list.length
-    ? list.map(m => `<div class="oc-msg ${m.sender === 'seller' ? 'seller' : 'buyer'}">${esc(m.message)}</div>`).join('')
+    ? list.map(m => {
+        const img = m.attachment_url ? `<a href="${safeUrl(m.attachment_url)}" target="_blank" rel="noopener noreferrer"><img src="${safeUrl(m.attachment_url)}" alt="Attachment" class="oc-img" loading="lazy"></a>` : '';
+        const text = m.message ? esc(m.message) : '';
+        return `<div class="oc-msg ${m.sender === 'seller' ? 'seller' : 'buyer'}">${img}${text}</div>`;
+      }).join('')
     : '<div class="text-xs text-muted-dim" style="padding:1rem;">No messages yet.</div>';
   wrap.scrollTop = wrap.scrollHeight;
 }
@@ -10418,6 +10581,20 @@ async function sendOrderChatMsg() {
     ? await sb.from('general_chat_messages').insert({ thread_id: ocdOrderId, sender: 'seller', message: text })
     : await sb.from('order_messages').insert({ order_id: ocdOrderId, sender: 'seller', message: text });
   if (error) { toast('Could not send message: ' + error.message, 'error'); return; }
+  loadOrderChat(ocdOrderId, true);
+}
+// Admin picks a photo from the paperclip button in the order/support chat —
+// uploads it and sends it as its own message, same flow as text.
+async function sendOrderChatImage(fileInput) {
+  const file = fileInput.files && fileInput.files[0];
+  fileInput.value = '';
+  if (!file || !ocdOrderId) return;
+  if (!BACKEND_CONFIGURED) { toast('Chat unavailable — backend not configured', 'error'); return; }
+  const url = await uploadChatImage(ocdOrderId, file);
+  if (!url) { toast('Could not upload the image', 'error'); return; }
+  const t = chatTarget(ocdOrderId);
+  const { error } = await sb.from(t.table).insert({ [t.field]: ocdOrderId, sender: 'seller', message: '', attachment_url: url });
+  if (error) { toast('Could not send image: ' + error.message, 'error'); return; }
   loadOrderChat(ocdOrderId, true);
 }
 
@@ -10441,7 +10618,7 @@ async function loadGeneralChats() {
       return `<button type="button" onclick="openOrderDetail('${esc(id)}')" class="table-row w-full text-left flex items-center justify-between gap-3 px-5 py-4 border-b border-hair">
         <div style="min-width:0;">
           <div class="font-display" style="font-weight:700;">${esc(id)}</div>
-          <div class="text-muted text-sm" style="margin-top:.2rem;max-width:480px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${t.last.sender === 'seller' ? 'You: ' : ''}${esc(t.last.message)}</div>
+          <div class="text-muted text-sm" style="margin-top:.2rem;max-width:480px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${t.last.sender === 'seller' ? 'You: ' : ''}${esc(t.last.message) || (t.last.attachment_url ? '📷 Photo' : '')}</div>
         </div>
         <div class="text-muted-dim text-xs font-mono" style="flex-shrink:0;">${esc(fmtChatTime(t.last.created_at))}</div>
       </button>`;
@@ -12922,6 +13099,41 @@ body.ezy-locked #toast{
     #FFF1E4 0%, #FFFFFF 30%, #FFD9BE 60%, #EFB65C 100%) !important;
   box-shadow: 0 4px 18px rgba(255,184,140,0.45),
               inset 0 1px 0 rgba(255,255,255,0.7) !important;
+}
+
+/* ─── 12e. PRICE BLOCK TITLE — WRAP INSTEAD OF OVERLAP ─────────────
+   ".price-block-title" is a no-wrap flex row (icon + heading text +
+   badge). At mobile widths "Normal V-Bucks" plus the "DIRECT" badge
+   don't fit on one line, and with no flex-wrap the badge collided
+   with the heading instead of dropping below it. */
+@media (max-width: 768px){
+  .price-block-title{
+    flex-wrap: wrap !important;
+    row-gap: 0.35rem !important;
+    font-size: 1.05rem !important;
+    letter-spacing: 0.07em !important;
+  }
+}
+
+/* ─── 12f. BOTTOM CLEARANCE FOR THE LAST PRICE ROW ──────────────────
+   The stacked #backToTop / #aiChatToggle column sits fixed above the
+   bottom nav, but the last price row in a list could still end up
+   directly behind it since the tab content had no extra clearance
+   reserved for that column's height. */
+@media (max-width: 768px){
+  .tab-content{
+    padding-bottom: calc(var(--bnav-h) + var(--safe-b) + 52px + 44px + 2.5rem) !important;
+  }
+}
+
+/* ─── 12g. BREATHING ROOM PASS ──────────────────────────────────────
+   General mobile density pass: a little more vertical rhythm between
+   stacked price rows and between major sections so the page doesn't
+   read as cramped. */
+@media (max-width: 768px){
+  .price-row + .price-row{ margin-top: 0.35rem !important; }
+  .price-block-title{ margin-top: 1.4rem !important; margin-bottom: 1rem !important; }
+  section{ padding-top: 2.2rem !important; padding-bottom: 2.2rem !important; }
 }
 
 /* ─── 13. VERY NARROW PHONES (≤360px) ─────────────────────────────  */
