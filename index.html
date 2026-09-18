@@ -5410,7 +5410,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         Shop Now
       </a>
       <button class="btn-sec" onclick="openCart()">
-        <span class="icon-img sm brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/woocommerce.svg');--icon-color:#96588a;" role="img" aria-label="cart"></span> View Cart (<span id="heroCartCount">0</span>)
+        <svg class="icon-img sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="cart" style="color:#96588a;vertical-align:-3px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> View Cart (<span id="heroCartCount">0</span>)
       </button>
     </div>
   </div>
@@ -6171,6 +6171,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
                 }
                 var price = computeBoostPrice(fromIdx, toIdx, mode);
                 out.textContent = price + ' EGP';
+                if(window.reapplyEzyCurrency) window.reapplyEzyCurrency();
                 note.textContent = 'Based on ' + BOOST_TIERS[fromIdx].name + ' → ' + BOOST_TIERS[toIdx].name + ' (' + (mode === 'reload' ? 'Reload' : 'Battle Royale') + '). Feel free to offer your own price below — we\'ll confirm it with you.';
                 offerIn.value = price;
               };
@@ -9759,6 +9760,7 @@ function updatePsnPrice() {
   const amount = document.getElementById('psnAmount').value;
   const price = PSN_PRICES[region][amount];
   document.getElementById('psnPriceDisplay').textContent = price.toLocaleString() + ' EGP';
+  if(window.reapplyEzyCurrency) window.reapplyEzyCurrency();
 }
 function addPsnCardToCart() {
   const region = document.getElementById('psnRegion').value;
@@ -9862,6 +9864,7 @@ function updateCartUI() {
     });
   }
   total.textContent = getTotal().toLocaleString() + ' EGP';
+  if(window.reapplyEzyCurrency) window.reapplyEzyCurrency();
 }
 
 function flashCart() {
@@ -9966,6 +9969,7 @@ function refreshModalTotal() {
   if (vipRow) {
     vipRow.style.display = vipProcessing ? 'flex' : 'none';
   }
+  if(window.reapplyEzyCurrency) window.reapplyEzyCurrency();
 }
 
 function selectPay(el, name) {
@@ -10686,6 +10690,7 @@ function calcGiftVb(){
   var vb = parseFloat(document.getElementById('giftVbIn').value)||0;
   var egp = Math.round((vb/1000)*270);
   document.getElementById('giftVbOut').textContent = egp.toLocaleString()+' L.E';
+  if(window.reapplyEzyCurrency) window.reapplyEzyCurrency();
 }
 function addGiftVbCalc(){
   var vb = parseFloat(document.getElementById('giftVbIn').value)||0;
@@ -10695,11 +10700,13 @@ function addGiftVbCalc(){
 function calcSteam() {
   const v = parseFloat(document.getElementById('steamIn').value) || 0;
   document.getElementById('steamOut').textContent = Math.round(v*68).toLocaleString() + ' EGP';
+  if(window.reapplyEzyCurrency) window.reapplyEzyCurrency();
 }
 function calcRobux() {
   const v = parseFloat(document.getElementById('robuxIn').value) || 0;
   const r = parseFloat(document.querySelector('input[name="rtype"]:checked').value);
   document.getElementById('robuxOut').textContent = Math.round((v/100)*r).toLocaleString() + ' EGP';
+  if(window.reapplyEzyCurrency) window.reapplyEzyCurrency();
 }
 
 // ═══ POLICY MODAL ═══
@@ -12002,7 +12009,7 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
   var RATES = {EGP:1, USD:51.8, SAR:13.81, AED:14.10, KWD:168.35, QAR:14.23, BHD:137.77, OMR:134.72, JOD:73.06, EUR:59.42, GBP:69.93};
   var SYMBOL = {EGP:'EGP', USD:'$', SAR:'SAR', AED:'AED', KWD:'KWD', QAR:'QAR', BHD:'BHD', OMR:'OMR', JOD:'JOD', EUR:'€', GBP:'£'};
 
-  var PRICE_SELECTOR = '.pr-price,.deal-old,.deal-new,.vp-card-price,.credit-price,.ci-price,.fn-shop-price,.fn-shop-le-price,.acc-opt-price';
+  var PRICE_SELECTOR = '.pr-price,.deal-old,.deal-new,.vp-card-price,.credit-price,.ci-price,.fn-shop-price,.fn-shop-le-price,.acc-opt-price,.calc-res,.cart-total-val,.os-total-val,#psnPriceDisplay';
   var priceEls = [];
 
   function tagPriceElements(){
@@ -12034,6 +12041,18 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
       el.textContent = formatAmount(egp, code);
     });
   }
+
+  // Several prices on the page (cart total, order-summary lines, the
+  // gift/steam/robux calculators, the PSN price display) are written
+  // in EGP directly by their own JS whenever they update, which wipes
+  // out any currency conversion applied to them. Anything that sets
+  // one of those elements' text should call this afterward so the
+  // shopper's chosen currency stays in sync instead of silently
+  // reverting to EGP.
+  window.reapplyEzyCurrency = function(){
+    tagPriceElements();
+    applyCurrency(localStorage.getItem(STORAGE_KEY) || 'EGP');
+  };
 
   function setCurrency(code){
     if(!RATES[code]) code = 'EGP';
