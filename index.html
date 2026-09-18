@@ -25,7 +25,8 @@
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=1920&q=85">
+<link rel="preload" as="image" media="(max-width:768px)" href="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=900&q=80">
+<link rel="preload" as="image" media="(min-width:769px)" href="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=1920&q=85">
 <link rel="dns-prefetch" href="https://cdn.cloudflare.steamstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 <!-- v74 PERF: Tailwind is used ONLY by the admin dashboard, which is behind a
@@ -3833,46 +3834,6 @@ body {
 .fs-img-wrap img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1);}
 
 /* ── REVIEWS SECTION ── */
-#reviews{padding:4rem 3rem;background:linear-gradient(180deg,var(--bg2) 0%,var(--bg) 100%);border-top:1px solid var(--border);position:relative;overflow:hidden;}
-#reviews::before{
-  content:'REVIEWS';position:absolute;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:18vw;
-  color:rgba(255,184,140,0.02);top:50%;left:50%;transform:translate(-50%,-50%);
-  pointer-events:none;letter-spacing:0.2em;white-space:nowrap;
-}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;}
-@media(max-width:900px){.reviews-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:500px){.reviews-grid{grid-template-columns:1fr;}}
-.review-card{
-  background:rgba(13,13,26,0.9);border:1px solid rgba(255,255,255,0.06);
-  border-radius:8px;padding:1.3rem 1.2rem;position:relative;overflow:hidden;
-  transition:all 0.3s;
-}
-.review-card:hover{border-color:rgba(255,184,140,0.25);background:rgba(26,26,26,0.95);}
-.review-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,var(--gold),rgba(255,184,140,0.2),transparent);
-  transform:scaleX(0);transform-origin:left;transition:transform 0.35s;
-}
-.review-card:hover::before{transform:scaleX(1);}
-.review-stars{display:flex;gap:2px;margin-bottom:0.7rem;}
-.review-stars span{color:var(--gold);font-size:0.85rem;}
-.review-text{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.9rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;font-style:italic;}
-.review-author{display:flex;align-items:center;gap:0.65rem;}
-.review-avatar{
-  width:36px;height:36px;border-radius:50%;background:rgba(255,184,140,0.1);
-  border:1px solid rgba(255,184,140,0.2);display:flex;align-items:center;justify-content:center;
-  font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1rem;color:var(--gold);flex-shrink:0;
-}
-.review-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.88rem;font-weight:700;color:var(--text);}
-.review-verified{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.731rem;letter-spacing:0.12em;color:var(--green);text-transform:uppercase;margin-top:0.1rem;}
-.review-game-badge{
-  position:absolute;top:0.8rem;right:0.8rem;
-  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.729rem;letter-spacing:0.1em;
-  padding:0.15rem 0.45rem;border-radius:2px;color:var(--muted);
-  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);
-  text-transform:uppercase;
-}
-
 /* ── LIVE PURCHASE NOTIFICATION ── */
 #live-notif{
   position:fixed;bottom:6rem;left:1.2rem;z-index:800;
@@ -4013,7 +3974,7 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;back
 #tab-valorant .game-bg{background-image:url('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=1400&q=75')!important;background-size:cover!important;background-position:center!important;filter:brightness(0.4) saturate(1.2)!important;}
 #tab-software .game-bg{background-image:url('https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?w=1600&q=90')!important;background-size:cover!important;background-position:center!important;filter:brightness(0.25) saturate(0.6) hue-rotate(180deg)!important;}
 .game-bg-overlay{background:linear-gradient(to right,rgba(18,18,18,0.98) 0%,rgba(18,18,18,0.92) 40%,rgba(18,18,18,0.7) 70%,rgba(18,18,18,0.4) 100%)!important;}
-.price-row{position:relative;overflow:hidden;transition:all 0.3s cubic-bezier(0.23,1,0.32,1)!important;}
+.price-row{position:relative;overflow:hidden;transition:transform 0.3s cubic-bezier(0.23,1,0.32,1),background 0.3s cubic-bezier(0.23,1,0.32,1),border-color 0.3s cubic-bezier(0.23,1,0.32,1),box-shadow 0.3s cubic-bezier(0.23,1,0.32,1)!important;}
 .price-row::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.025),transparent);transition:left 0.5s ease;pointer-events:none;}
 .price-row:hover::after{left:150%;}
 .add-btn{box-shadow:0 2px 12px rgba(255,184,140,0.3)!important;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1)!important;}
@@ -4079,8 +4040,14 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 .float-btn{box-shadow:0 4px 20px rgba(0,0,0,0.6)!important;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1)!important;}
 .float-btn:hover{transform:scale(1.15)!important;box-shadow:0 8px 30px rgba(0,0,0,0.7),0 0 20px rgba(37,211,102,0.3)!important;}
 .fs-bg{background-image:url('https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=1920&q=85')!important;background-size:cover!important;background-position:center!important;filter:brightness(0.15) saturate(0.6) hue-rotate(180deg)!important;}
+/* Mobile gets a ~900px source for these full-bleed backgrounds instead of
+   the 1920px desktop one — same crop/filter, a fraction of the bytes. Both
+   are already heavily darkened, so the resolution drop isn't visible. */
+@media(max-width:768px){
+  .hero-bg{background-image:url('https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=900&q=80')!important;}
+  .fs-bg{background-image:url('https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=900&q=80')!important;}
+}
 #why{background:rgba(8,8,18,0.98)!important;}
-#reviews{background:linear-gradient(180deg,rgba(10,10,22,0.99) 0%,rgba(6,6,14,0.99) 100%)!important;}
 .game-panel-header::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--gold),rgba(255,184,140,0.1),transparent);opacity:0.6;}
 .pr-price.gold{box-shadow:0 0 8px rgba(255,184,140,0.2)!important;}
 .pr-price.red{box-shadow:0 0 8px rgba(255,45,85,0.2)!important;}
@@ -7425,101 +7392,6 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
 
 <!-- CONTACT -->
 
-<!-- REVIEWS -->
-<section id="reviews" class="reveal">
-  <div class="sec-header" style="padding:0 0 0 0;">
-    <div class="sec-ey">// Real Customers · Verified Orders</div>
-    <div class="sec-h2">What Gamers Say</div>
-  </div>
-  <div class="reviews-grid">
-
-    <div class="review-card">
-      <span class="review-game-badge">Fortnite</span>
-      <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="review-text">"Bought 13,500 V-Bucks and received the code in literally 3 minutes. Cheapest price in Egypt, no doubt. Will be back every season!"</p>
-      <div class="review-author">
-        <div class="review-avatar">A</div>
-        <div>
-          <div class="review-name">Ahmed K.</div>
-          <div class="review-verified">✓ Verified Purchase</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <span class="review-game-badge">Steam</span>
-      <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="review-text">"Ordered a $50 Steam card on a Friday night, code came in under 5 minutes. Price is unbeatable. eZy is my go-to for all gaming top-ups."</p>
-      <div class="review-author">
-        <div class="review-avatar">M</div>
-        <div>
-          <div class="review-name">Mohamed R.</div>
-          <div class="review-verified">✓ Verified Purchase</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <span class="review-game-badge">PSN</span>
-      <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="review-text">"$25 PSN card for a great price, and delivery was instant. The support is super responsive. Highly recommend to any gamer in Egypt!"</p>
-      <div class="review-author">
-        <div class="review-avatar">O</div>
-        <div>
-          <div class="review-name">Omar S.</div>
-          <div class="review-verified">✓ Verified Purchase</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <span class="review-game-badge">Roblox</span>
-      <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="review-text">"My kids always need Robux and eZy gives the best rates. Trusted and fast every single time. Already recommended to 5 friends!"</p>
-      <div class="review-author">
-        <div class="review-avatar">Y</div>
-        <div>
-          <div class="review-name">Ahmed K.</div>
-          <div class="review-verified">✓ Verified Purchase</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <span class="review-game-badge">PUBG</span>
-      <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="review-text">"Got 600 UC for PUBG and it was the easiest purchase ever. Clear pricing, fast delivery, and they even confirmed my order right away. 10/10 service."</p>
-      <div class="review-author">
-        <div class="review-avatar">K</div>
-        <div>
-          <div class="review-name">Karim A.</div>
-          <div class="review-verified">✓ Verified Purchase</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <span class="review-game-badge">Steam</span>
-      <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="review-text">"Used eZy 4 times now. Every time — instant delivery, great price, professional service. This is how a gaming store should work. Amazing!"</p>
-      <div class="review-author">
-        <div class="review-avatar">S</div>
-        <div>
-          <div class="review-name">Sara M.</div>
-          <div class="review-verified">✓ Verified Purchase</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <div style="text-align:center;margin-top:2rem;">
-    <a href="https://www.instagram.com/p/DchEKwDqtna/?stkn=eGs5M3ZyN29xam9j" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-weight:600;letter-spacing:0.05em;color:var(--gold);border:1px solid var(--gold);padding:0.7rem 1.4rem;border-radius:4px;text-decoration:none;">
-      ★ Leave Us a Review
-    </a>
-  </div>
-
-</section>
-
 <section id="contact">
   <div class="contact-bg-text">EZY</div>
   <div class="contact-inner">
@@ -7635,11 +7507,6 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
     <div class="faq-item" style="border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.5rem;background:var(--bg2);">
       <div class="faq-q" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem;color:var(--gold);margin-bottom:0.5rem;">Is my payment information safe?</div>
       <div class="faq-a" style="font-size:0.95rem;color:var(--text);line-height:1.6;">We don't store your payment details — you pay directly via InstaPay, Telda, Vodafone Cash or PayPal to our listed accounts, and there's no card data passing through our site.</div>
-    </div>
-
-    <div class="faq-item" style="border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.5rem;background:var(--bg2);">
-      <div class="faq-q" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem;color:var(--gold);margin-bottom:0.5rem;">Can I trust the reviews on this page?</div>
-      <div class="faq-a" style="font-size:0.95rem;color:var(--text);line-height:1.6;">Fair question — they're real customers, but we know testimonials on our own site aren't independently verifiable. We're working on building out reviews on Google and Facebook so you can check us there too.</div>
     </div>
 
   </div>
@@ -10835,13 +10702,19 @@ document.addEventListener('keydown', function(e){
 })();
 
 // ═══ SCROLL REVEAL ═══
+// price-row and policy-rule are deliberately excluded: they live inside
+// product tabs and the policy modal, which start display:none. An
+// IntersectionObserver can never fire on a display:none element, so
+// switching tabs left most prices stuck invisible until the shopper
+// happened to scroll past their exact position again. Product prices
+// and policy text should just be there immediately — no fade gate.
 (function(){
   var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
     });
   },{threshold:0.08});
-  document.querySelectorAll('.why-item,.price-row,.ccard,.policy-rule,.ts').forEach(function(el){
+  document.querySelectorAll('.why-item,.ccard,.ts').forEach(function(el){
     el.classList.add('reveal');
     obs.observe(el);
   });
@@ -12308,7 +12181,6 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
 
   /* Hero trust strip + reviews section + flash-deal banner */
   html[data-theme="light"] .ts{background:var(--bg3)!important;}
-  html[data-theme="light"] #reviews{background:linear-gradient(180deg,var(--bg2) 0%,var(--bg) 100%)!important;}
   html[data-theme="light"] #flash-deal-bar{background:linear-gradient(90deg,var(--bg3),#FBE3D3,var(--bg3))!important;border-bottom:1px solid var(--border-gold)!important;box-shadow:none!important;}
   html[data-theme="light"] .fd-text{color:var(--text)!important;}
 
