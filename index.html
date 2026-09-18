@@ -431,6 +431,14 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
    is a quiet safety net: if the mask source ever fails to load, this shows
    as a small rounded color chip instead of a broken-image glyph or a harsh
    solid square. */
+
+:root{
+  --ic-vbucks:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cpath fill-rule=%27evenodd%27 d=%27M50 3a47 47 0 1 0 0 94a47 47 0 1 0 0-94ZM50 11a39 39 0 1 1 0 78a39 39 0 1 1 0-78ZM27 29h15l8 27l8-27h15L57 73H43Z%27/%3E%3C/svg%3E");
+  --ic-windows:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cpath d=%27M6 6h41v41H6ZM53 6h41v41H53ZM6 53h41v41H6ZM53 53h41v41H53Z%27/%3E%3C/svg%3E");
+}
+
+:root{--ic-fortnite:url("data:image/png;base64,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");}
+.brand-icon-mask.fn-logo{-webkit-mask-image:none!important;mask-image:none!important;background:var(--ic-fortnite) center/cover no-repeat!important;border-radius:22%!important;}
 .brand-icon-mask{
   display:inline-block;
   background-color:var(--icon-color,currentColor);
@@ -5089,6 +5097,13 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
  .media-fallback{background:linear-gradient(135deg,var(--bg3),var(--bg2));}
 .media-fallback::after{content:"eZy";color:var(--muted);font-size:.8rem;letter-spacing:.18em;}
 </style>
+<script>
+/* eZy lite mode: decorative always-on animations and blurs are turned off on
+   phones, touch devices, low-memory/low-core devices and reduced-motion users. */
+(function(){try{var d=document.documentElement,m=window.matchMedia,n=navigator;
+var lite=(m&&(m('(max-width:900px)').matches||m('(hover:none)').matches||m('(prefers-reduced-motion:reduce)').matches))||(n.deviceMemory&&n.deviceMemory<=4)||(n.hardwareConcurrency&&n.hardwareConcurrency<=4);
+if(lite)d.classList.add('lite');}catch(e){}})();
+</script>
 </head>
 <body>
 <a class="skip-link" href="#products">Skip to products</a>
@@ -5601,7 +5616,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
   <div class="home-cats-grid">
     <div class="home-cat-tile" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTab('fortnite');}" onclick="goToTab('fortnite')">
       <span class="home-cat-badge" style="background:rgba(0,212,255,.16);border-color:rgba(0,212,255,.4);">
-        <span class="home-cat-icon icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
+        <span class="home-cat-icon icon-img brand-icon-mask fn-logo" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
       </span>
       <div class="home-cat-label">V-Bucks</div>
     </div>
@@ -5643,7 +5658,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
     </div>
     <div class="home-cat-tile" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTab('software');}" onclick="goToTab('software')">
       <span class="home-cat-badge" style="background:rgba(0,188,242,.16);border-color:rgba(0,188,242,.4);">
-        <span class="home-cat-icon icon-img brand-icon-mask" style="--icon-src:url('images/icon-windows.png');--icon-color:#00BCF2;" role="img" aria-label="Apps &amp; Subscriptions"></span>
+        <span class="home-cat-icon icon-img brand-icon-mask" style="--icon-src:var(--ic-windows);--icon-color:#00BCF2;" role="img" aria-label="Apps &amp; Subscriptions"></span>
       </span>
       <div class="home-cat-label">Apps &amp; Subs</div>
     </div>
@@ -5696,7 +5711,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
       </div>
       <div class="deal-card-body">
         <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.3rem;">
-          <span class="deal-game-icon brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
+          <span class="deal-game-icon brand-icon-mask fn-logo" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
           <span class="deal-game-label">Fortnite</span>
         </div>
         <div class="deal-name">2,400 V-Bucks</div>
@@ -5726,7 +5741,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
   <div class="tabs-wrap" style="margin-top:1.5rem;">
     <div class="tabs-scroll-wrap">
     <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('fortnite',this)" title="Fortnite"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span></button>
+      <button class="tab-btn active" onclick="switchTab('fortnite',this)" title="Fortnite"><span class="icon-img brand-icon-mask fn-logo" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span></button>
       <button class="tab-btn" onclick="switchTab('steam',this)" title="Steam"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></button>
       <button class="tab-btn" onclick="switchTab('psn',this)" title="PlayStation"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/playstation.svg');--icon-color:#ffffff;" role="img" aria-label="PlayStation"></span></button>
       <button class="tab-btn" onclick="switchTab('roblox',this)" title="Roblox"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></button>
@@ -5742,7 +5757,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         <span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam Games"></span>
         <span style="position:absolute;bottom:2px;right:2px;font-size:0.737rem;font-weight:900;letter-spacing:0.02em;background:var(--gold);color:#0a0a0a;border-radius:3px;padding:0 2px;line-height:1.3;">GM</span>
       </button>
-      <button class="tab-btn" onclick="switchTab('software',this)" title="Software"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-windows.png');--icon-color:#00BCF2;" role="img" aria-label="Software"></span></button>
+      <button class="tab-btn" onclick="switchTab('software',this)" title="Software"><span class="icon-img brand-icon-mask" style="--icon-src:var(--ic-windows);--icon-color:#00BCF2;" role="img" aria-label="Software"></span></button>
       <button class="tab-btn" onclick="switchTab('valorant',this)" title="VALORANT" style="color:#FF4655;border-bottom-color:transparent;">
         <span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/valorant.svg');--icon-color:#FF4655;" role="img" aria-label="VALORANT"></span>
       </button>
@@ -5761,12 +5776,12 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         <div class="game-bg-overlay"></div>
         <!-- Fortnite panel header: logo beside title -->
         <div class="game-panel-header">
-          <span class="game-logo brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
+          <span class="game-logo brand-icon-mask fn-logo" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="Fortnite"></span>
           <div class="game-header-text">
             <div class="game-header-name">Fortnite</div>
             <div class="game-header-sub">V-Bucks · Gift &amp; Direct</div>
           </div>
-          <span class="game-logo-sub brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="V-Bucks"></span>
+          <span class="game-logo-sub brand-icon-mask" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="V-Bucks"></span>
         </div>
 
         <!-- ══ FORTNITE SUB-CATEGORY TABS ══ -->
@@ -5812,7 +5827,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
 
         <div class="game-panel-inner">
           <div style="grid-column:1 / -1;display:none;" data-fnsub="bundles">
-            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Bundle"></span> Featured Bundle <span class="badge badge-red">LIMITED</span></div>
+            <div class="price-block-title"><span class="icon-img brand-icon-mask fn-logo" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="Bundle"></span> Featured Bundle <span class="badge badge-red">LIMITED</span></div>
             <div class="price-rows">
               <div class="price-row" onclick="addToCart('Mainframe Break Pack','🕵️',450,'L.E')">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img src="images/icon-fortnite-mainframe-pack.jpg" alt="Mainframe Break Pack" style="width:260px;height:150px;object-fit:cover;border-radius:10px;flex-shrink:0;box-shadow:0 8px 20px rgba(0,0,0,0.55);" loading="lazy" decoding="async"></span><div class="pr-name">Mainframe Break Pack <span class="sale-tag best">★ LIMITED TIME</span><br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;line-height:1.5;">800 V-Bucks · Zoe Clash Outfit (LEGO Style) · Sgt. Shiba Back Bling · Beep &amp; Boop Pickaxe · Sticker 'Em Up Wrap<br>Zoe Clash &amp; Sgt. Shiba are done playing by the rules — grab the full glitch-hacker fit, the pickaxe that breaks the mainframe, and a wrap to match, all in one drop before it's pulled from the shop. Instant delivery, gift or direct.</span></div></div>
@@ -5823,7 +5838,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
 
           <!-- ══ ACCOUNT RANK BOOSTING ══ -->
           <div style="grid-column:1 / -1;display:none;" data-fnsub="boosting">
-            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Boosting"></span> Account Rank Boosting <span class="badge badge-blue">MAKE AN OFFER</span></div>
+            <div class="price-block-title"><span class="icon-img brand-icon-mask fn-logo" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="Boosting"></span> Account Rank Boosting <span class="badge badge-blue">MAKE AN OFFER</span></div>
             <div class="boost-box">
               <div class="boost-lbl">// Tell us your rank, your goal, and what you want to pay</div>
               <div class="boost-grid">
@@ -6306,7 +6321,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
           <div style="grid-column:1 / -1;" data-fnsub="vbucks">
           <div class="vb-carousel-track" id="vbColumnsCarousel">
           <div>
-            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="Gift"></span> Gift Prices <span class="badge badge-red">GIFT</span></div>
+            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="Gift"></span> Gift Prices <span class="badge badge-red">GIFT</span></div>
             <!-- Gift V-Bucks Calculator -->
             <div class="calc-box" style="margin-bottom:0.8rem;">
               <div class="calc-lbl">// Gift V-Bucks Calculator — 1,000 VB = 270 L.E</div>
@@ -6338,7 +6353,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
             </div>
           </div>
           <div>
-            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;" role="img" aria-label="VBucks"></span> Normal V-Bucks <span class="badge badge-gold">DIRECT</span></div>
+            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="VBucks"></span> Normal V-Bucks <span class="badge badge-gold">DIRECT</span></div>
             <div class="price-rows">
 <div class="price-row" onclick="addToCart('Crew Pack','🎯',250,'L.E')">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img id="ic3" src="images/icon-fortnite-crew-pack.jpg" alt="Fortnite Crew" style="width:260px;height:96px;object-fit:cover;border-radius:10px;flex-shrink:0;box-shadow:0 8px 20px rgba(0,0,0,0.55);" loading="lazy" decoding="async"></span><div class="pr-name">Crew Pack <span class="sale-tag best">★ BEST SELLER</span><br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;line-height:1.5;">Battle Pass · Rocket Pass · LEGO Pass · Music Pass · OG Pass · 1,000 V-Bucks · Skin + Pickaxe + Backbling</span></div></div>
@@ -7071,7 +7086,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
         <div class="game-bg" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80');opacity:0.14;background-size:cover;background-position:center;"></div>
         <div class="game-bg-overlay" style="background:linear-gradient(to right,rgba(5,5,16,0.98) 50%,rgba(5,5,16,0.75) 100%);"></div>
         <div class="game-panel-header">
-          <span class="game-logo brand-icon-mask" style="filter:drop-shadow(0 0 16px rgba(0,188,242,0.7));--icon-src:url('images/icon-windows.png');--icon-color:#00BCF2;" role="img" aria-label="Software"></span>
+          <span class="game-logo brand-icon-mask" style="filter:drop-shadow(0 0 16px rgba(0,188,242,0.7));--icon-src:var(--ic-windows);--icon-color:#00BCF2;" role="img" aria-label="Software"></span>
           <div class="game-header-text">
             <div class="game-header-name" style="background:linear-gradient(135deg,#00BCF2,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Software & Apps</div>
             <div class="game-header-sub">Subscriptions · Licenses · Activation Keys</div>
@@ -7754,7 +7769,7 @@ html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box
       <!-- FORTNITE FIELDS — shown only when cart has Fortnite / V-Bucks items -->
       <div id="fortniteFields" style="display:none;">
         <div style="display:flex;align-items:center;gap:0.6rem;padding:0.7rem 1rem;background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.25);border-left:3px solid #00D4FF;margin-bottom:1rem;border-radius:2px;">
-          <span class="brand-icon-mask" style="--icon-src:url('images/icon-vbucks.png');--icon-color:#00D4FF;width:16px;height:16px;display:inline-block;" role="img" aria-label="Fortnite"></span>
+          <span class="brand-icon-mask fn-logo" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;width:16px;height:16px;display:inline-block;" role="img" aria-label="Fortnite"></span>
           <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.774rem;letter-spacing:0.15em;color:#00D4FF;text-transform:uppercase;">Fortnite Item — Username Required</span>
         </div>
         <div class="form-group">
@@ -9562,6 +9577,16 @@ function sortGearSection(mode, selectEl) {
     }
   });
 }
+// getPrice(key, fallback): price lookup used by the PUBG UC buttons. It was
+// referenced in the markup but never defined, so those buttons threw and did
+// nothing. Optional overrides can be supplied via window.PRICE_OVERRIDES.
+function getPrice(key, fallback) {
+  try {
+    var o = window.PRICE_OVERRIDES;
+    if (o && o[key] != null && !isNaN(Number(o[key]))) return Number(o[key]);
+  } catch (e) {}
+  return fallback;
+}
 function addToCart(name, icon, price, currency, type) {
   const isPhysical = type === 'physical';
   const isFortnite = isFortniteItemName(name, type);
@@ -9977,9 +10002,11 @@ document.addEventListener('DOMContentLoaded', function () {
 async function uploadPaymentProof(orderRef, file) {
   if (!file || !BACKEND_CONFIGURED) return;
   try {
-    const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
+    const blob = await compressImage(file);
+    const isJpg = blob !== file;
+    const ext = isJpg ? 'jpg' : ((file.name.split('.').pop() || 'jpg').toLowerCase());
     const path = `${orderRef}.${ext}`;
-    const { error: uploadError } = await sb.storage.from('payment-proofs').upload(path, file, { upsert: true });
+    const { error: uploadError } = await sb.storage.from('payment-proofs').upload(path, blob, { upsert: true, contentType: isJpg ? 'image/jpeg' : (file.type || undefined) });
     if (uploadError) { console.error('Payment proof upload failed:', uploadError); return; }
     const { data } = sb.storage.from('payment-proofs').getPublicUrl(path);
     const publicUrl = data && data.publicUrl;
@@ -10221,12 +10248,46 @@ function chatTarget(id) {
 // on both `order_messages` and `general_chat_messages`:
 //   alter table order_messages add column attachment_url text;
 //   alter table general_chat_messages add column attachment_url text;
+// Shrinks a photo to a web-friendly JPEG (max 1280px, ~150-300 KB) before it
+// is uploaded. Phone photos are often 3-10 MB (or HEIC) and the chat re-renders
+// every few seconds, so big images never finished loading and looked "missing".
+async function compressImage(file, maxSide, quality) {
+  maxSide = maxSide || 1280; quality = quality || 0.82;
+  try {
+    if (!file || !/^image\//.test(file.type || '')) return file;
+    let bmp;
+    if (window.createImageBitmap) {
+      try { bmp = await createImageBitmap(file, { imageOrientation: 'from-image' }); } catch (e) { bmp = null; }
+    }
+    if (!bmp) {
+      bmp = await new Promise((res, rej) => {
+        const url = URL.createObjectURL(file); const im = new Image();
+        im.onload = () => { URL.revokeObjectURL(url); res(im); };
+        im.onerror = () => { URL.revokeObjectURL(url); rej(new Error('decode')); };
+        im.src = url;
+      });
+    }
+    const w0 = bmp.width || bmp.naturalWidth, h0 = bmp.height || bmp.naturalHeight;
+    const k = Math.min(1, maxSide / Math.max(w0, h0));
+    const c = document.createElement('canvas');
+    c.width = Math.max(1, Math.round(w0 * k)); c.height = Math.max(1, Math.round(h0 * k));
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height);
+    ctx.drawImage(bmp, 0, 0, c.width, c.height);
+    if (bmp.close) bmp.close();
+    const blob = await new Promise(r => c.toBlob(r, 'image/jpeg', quality));
+    return (blob && blob.size < file.size) || (blob && file.size > 900000) ? blob : file;
+  } catch (e) { return file; }
+}
+
 async function uploadChatImage(id, file) {
   if (!file || !BACKEND_CONFIGURED) return null;
   try {
-    const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
+    const blob = await compressImage(file);
+    const isJpg = blob !== file;
+    const ext = isJpg ? 'jpg' : ((file.name.split('.').pop() || 'jpg').toLowerCase());
     const path = `chat/${id}-${Date.now()}-${Math.random().toString(36).slice(2,7)}.${ext}`;
-    const { error: uploadError } = await sb.storage.from('payment-proofs').upload(path, file);
+    const { error: uploadError } = await sb.storage.from('payment-proofs').upload(path, blob, { contentType: isJpg ? 'image/jpeg' : (file.type || undefined), cacheControl: '31536000' });
     if (uploadError) { console.error('Chat image upload failed:', uploadError); return null; }
     const { data } = sb.storage.from('payment-proofs').getPublicUrl(path);
     return (data && data.publicUrl) || null;
@@ -10264,7 +10325,7 @@ function stopTrackChat() {
 }
 async function loadTrackChat(ref, silent) {
   const wrap = document.getElementById('trackChatMsgs');
-  if (!silent) wrap.innerHTML = '<div class="text-xs" style="color:var(--muted,#999);padding:.5rem;">Loading…</div>';
+  if (!silent) { wrap.dataset.sig = ''; wrap.innerHTML = '<div class="text-xs" style="color:var(--muted,#999);padding:.5rem;">Loading…</div>'; }
   try {
     const q = isGuestChatId(ref)
       ? sb.from('general_chat_messages').select('*').eq('thread_id', ref).order('created_at', { ascending: true })
@@ -10286,16 +10347,20 @@ function fmtChatTime(iso) {
 function renderTrackChatMsgs(list) {
   const wrap = document.getElementById('trackChatMsgs');
   if (!list.length) {
+    wrap.dataset.sig = '';
     wrap.innerHTML = `<div id="trackChatEmpty">
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--muted,#999)" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
       <span>No messages yet — say hi and we'll get back to you.</span>
     </div>`;
     return;
   }
+  const sig = list.map(m => (m.id || '') + '|' + (m.created_at || '') + '|' + (m.message || '') + '|' + (m.attachment_url || '')).join('~');
+  if (wrap.dataset.sig === sig) return;
+  wrap.dataset.sig = sig;
   const wasNearBottom = wrap.scrollTop + wrap.clientHeight >= wrap.scrollHeight - 60;
   wrap.innerHTML = list.map(m => {
     const isBuyer = m.sender === 'buyer';
-    const img = m.attachment_url ? `<a href="${safeUrl(m.attachment_url)}" target="_blank" rel="noopener noreferrer"><img src="${safeUrl(m.attachment_url)}" alt="Attachment" class="tc-img" loading="lazy"></a>` : '';
+    const img = m.attachment_url ? `<a href="${safeUrl(m.attachment_url)}" target="_blank" rel="noopener noreferrer"><img src="${safeUrl(m.attachment_url)}" alt="Attachment" class="tc-img" decoding="async" onerror="this.style.display='none';this.parentNode.insertAdjacentText('beforeend','📷 Open photo')" ></a>` : '';
     const textMsg = m.message ? `<div class="tc-msg">${esc(m.message)}</div>` : '';
     return `<div class="tc-row ${isBuyer ? 'buyer' : 'seller'}">
       <div class="tc-label">${isBuyer ? 'You' : 'eZy'}</div>
@@ -10332,11 +10397,11 @@ async function sendTrackChatImage(fileInput) {
   if (btn) btn.disabled = true;
   const url = await uploadChatImage(trackChatOrderId, file);
   if (btn) btn.disabled = false;
-  if (!url) { showToast('Could not send the photo — try again.', '⚠️'); return; }
+  if (!url) { showToast('Could not upload the photo — check your connection and try again.', '⚠️'); return; }
   const t = chatTarget(trackChatOrderId);
   const { error } = await sb.from(t.table).insert({ [t.field]: trackChatOrderId, sender: 'buyer', message: '', attachment_url: url });
   if (!error) loadTrackChat(trackChatOrderId, true);
-  else showToast('Could not send the photo — try again.', '⚠️');
+  else { console.error('Chat photo insert failed:', error); showToast('Photo uploaded but could not be posted (chat table needs the attachment_url column).', '⚠️'); }
 }
 
 // ═══ ORDER DETAIL / CHAT (admin side — Eldorado-style order page) ═══
@@ -10419,7 +10484,7 @@ function renderOrderDetailShell(o) {
 async function loadOrderChat(id, silent) {
   const wrap = document.getElementById('ocdMsgs');
   if (!BACKEND_CONFIGURED) { wrap.innerHTML = '<div class="text-xs text-muted-dim" style="padding:1rem;">Chat needs the Supabase backend configured.</div>'; return; }
-  if (!silent) wrap.innerHTML = '<div class="text-xs text-muted-dim" style="padding:1rem;">Loading…</div>';
+  if (!silent) { wrap.dataset.sig = ''; wrap.innerHTML = '<div class="text-xs text-muted-dim" style="padding:1rem;">Loading…</div>'; }
   try {
     const q = isGuestChatId(id)
       ? sb.from('general_chat_messages').select('*').eq('thread_id', id).order('created_at', { ascending: true })
@@ -10433,9 +10498,12 @@ async function loadOrderChat(id, silent) {
 }
 function renderOrderChatMsgs(list) {
   const wrap = document.getElementById('ocdMsgs');
+  const sig = list.map(m => (m.id || '') + '|' + (m.created_at || '') + '|' + (m.message || '') + '|' + (m.attachment_url || '')).join('~');
+  if (wrap.dataset.sig === sig) return;
+  wrap.dataset.sig = sig;
   wrap.innerHTML = list.length
     ? list.map(m => {
-        const img = m.attachment_url ? `<a href="${safeUrl(m.attachment_url)}" target="_blank" rel="noopener noreferrer"><img src="${safeUrl(m.attachment_url)}" alt="Attachment" class="oc-img" loading="lazy"></a>` : '';
+        const img = m.attachment_url ? `<a href="${safeUrl(m.attachment_url)}" target="_blank" rel="noopener noreferrer"><img src="${safeUrl(m.attachment_url)}" alt="Attachment" class="oc-img" decoding="async" onerror="this.style.display='none';this.parentNode.insertAdjacentText('beforeend','📷 Open photo')" ></a>` : '';
         const text = m.message ? esc(m.message) : '';
         return `<div class="oc-msg ${m.sender === 'seller' ? 'seller' : 'buyer'}">${img}${text}</div>`;
       }).join('')
@@ -11888,10 +11956,16 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
   function tagPriceElements(){
     priceEls = [];
     document.querySelectorAll(PRICE_SELECTOR).forEach(function(el){
-      var raw = el.dataset.egpText || el.textContent;
+      // If the text is exactly what WE last wrote (a converted label), keep the
+      // remembered EGP original. If page code wrote new text since (cart total,
+      // checkout total, calculators...), that new text IS the new original.
+      // Previously the first-ever text was cached forever, so totals stuck at 0.
+      var raw = el.textContent;
+      if(el.dataset.egpText && el.dataset.ezyShown === raw) raw = el.dataset.egpText;
       var m = raw.match(/([\d,]+(?:\.\d+)?)\s*(?:L\.E|EGP)/i);
       if(!m) return;
-      if(!el.dataset.egpText) el.dataset.egpText = raw; // remember the original EGP text once
+      el.dataset.egpText = raw;
+      el.dataset.ezyShown = el.textContent;
       el.dataset.egpValue = m[1].replace(/,/g, '');
       priceEls.push(el);
     });
@@ -11908,10 +11982,11 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
 
   function applyCurrency(code){
     priceEls.forEach(function(el){
-      if(code === 'EGP'){ el.textContent = el.dataset.egpText; return; }
+      if(code === 'EGP'){ el.textContent = el.dataset.egpText; el.dataset.ezyShown = el.textContent; return; }
       var egp = parseFloat(el.dataset.egpValue);
       if(isNaN(egp)) return;
       el.textContent = formatAmount(egp, code);
+      el.dataset.ezyShown = el.textContent;
     });
   }
 
@@ -13391,5 +13466,22 @@ body.ezy-locked #toast{
 })();
 </script>
 
+<style id="ezy-lite">
+/* LITE MODE — only active when <html class="lite"> (see script in <head>) */
+html.lite body{animation:none!important;}
+html.lite body::before,html.lite body::after{animation:none!important;}
+html.lite .add-btn{animation:none!important;}
+html.lite .add-btn::after{display:none!important;animation:none!important;}
+html.lite .mdot,html.lite .live-dot,html.lite .scan-line,html.lite .panel-corner,
+html.lite .game-panel::before,html.lite .game-panel::after,html.lite .calc-box::before,
+html.lite .policy-footer-bar,html.lite footer,html.lite .badge,html.lite .logo,html.lite #siteNav::before,html.lite #siteNav::after{animation:none!important;}
+html.lite .pr-price.gold,html.lite .ts-n,html.lite .fs-price,html.lite .hero h1 .store,html.lite .hero-text-shimmer{animation:none!important;}
+html.lite .price-rows,html.lite .why-item,html.lite .ccard,html.lite .ts,html.lite .tabs-wrap,html.lite .marquee-wrap,
+html.lite .modal-overlay,html.lite #cartOverlay,html.lite #policyModal,html.lite #trackModal,html.lite #productModal,
+html.lite #orderDetailModal,html.lite #successModal,html.lite #searchOverlay,html.lite #toast{
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;}
+html.lite .modal-overlay,html.lite #cartOverlay,html.lite #searchOverlay{background-color:rgba(0,0,0,.72);}
+html.lite *{scroll-behavior:auto!important;}
+</style>
 </body>
 </html>
