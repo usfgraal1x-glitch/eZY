@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+/* Site-wide safety net, registered first so it's in place before any <img>
+   below starts loading: dozens of icons/photos are loaded from a relative
+   "images/" folder. If that folder isn't deployed next to index.html (or a
+   request just fails), the browser shows its default broken-image glyph
+   plus the alt text, which spills out of rounded icon badges and other
+   fixed-size slots and makes the whole layout look broken. This hides the
+   glyph while KEEPING the element's box (so layout doesn't jump), and
+   waits a beat first so any image-specific fallback already in the page
+   (e.g. the PS Plus icon swap) gets a chance to run and win. */
+document.addEventListener('error', function(e){
+  var el = e.target;
+  if(!el || el.tagName !== 'IMG' || el.dataset.ezyBrokenGuard) return;
+  setTimeout(function(){
+    if(el.naturalWidth === 0){
+      el.dataset.ezyBrokenGuard = '1';
+      el.style.visibility = 'hidden';
+    }
+  }, 60);
+}, true);
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="trustpilot-one-time-domain-verification-id" content="0f00e3a6-39f1-4c17-9fae-8eb6c94c1657"/>
@@ -401,7 +422,7 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 }
 .price-row:hover{background:rgba(255,184,140,0.06);border-color:rgba(255,184,140,0.25);}
 .pr-l{display:flex;align-items:center;gap:0.7rem;}
-.pr-icon{font-size:1.1rem;width:24px;text-align:center;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.pr-icon{font-size:1.1rem;width:24px;text-align:center;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 /* ── INLINE ICON IMAGES (replacing emojis) ── */
 .icon-img{
   width:22px;height:22px;object-fit:contain;
@@ -5575,7 +5596,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
 }
 .home-cat-badge{
   width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;
-  border:1px solid rgba(255,255,255,.12);flex-shrink:0;
+  border:1px solid rgba(255,255,255,.12);flex-shrink:0;overflow:hidden;
 }
 .home-cat-tile .home-cat-icon{width:28px;height:28px;}
 .home-cat-tile .home-cat-label{
@@ -13203,11 +13224,11 @@ body.ezy-locked #toast{
       if (mq.matches){
         var down = y > lastY + 6;
         var up   = y < lastY - 6;
-        if (down && y > 220) document.body.classList.add('ezy-fabs-away');
+        if ((down && y > 220) || y < 260) document.body.classList.add('ezy-fabs-away');
         else if (up)         document.body.classList.remove('ezy-fabs-away');
         clearTimeout(idle);
         idle = setTimeout(function(){
-          document.body.classList.remove('ezy-fabs-away');
+          if (window.pageYOffset >= 260) document.body.classList.remove('ezy-fabs-away');
         }, 700);
       } else {
         document.body.classList.remove('ezy-fabs-away');
@@ -13217,6 +13238,9 @@ body.ezy-locked #toast{
     });
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); /* apply immediately on load — otherwise the FAB defaults to
+                 visible and sits directly on top of the hero/welcome text
+                 until the user's first scroll event fires. */
 
   /* Never leave them hidden while a drawer/modal is open. */
   ['openCart', 'openSearch'].forEach(function(fn){
