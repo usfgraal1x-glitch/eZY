@@ -313,12 +313,6 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
   transition:filter 0.3s;
 }
 .game-panel:hover .game-logo{filter:drop-shadow(0 0 18px rgba(0,0,0,0.9)) brightness(1.08);}
-.game-logo-sub{
-  height:32px;width:32px;
-  object-fit:contain;
-  filter:drop-shadow(0 0 8px rgba(0,0,0,0.8));
-  flex-shrink:0;
-}
 .game-header-text{display:flex;flex-direction:column;gap:0.15rem;}
 .game-header-name{
   font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:2rem;letter-spacing:0.12em;
@@ -5084,7 +5078,7 @@ img{content-visibility:auto;}
 /* ---------- Cleaner light mode ---------- */
 html[data-theme="light"] #siteNav{background:rgba(255,255,255,.94)!important;}
 html[data-theme="light"] .hero-overlay{background:linear-gradient(135deg,rgba(245,246,247,.95) 30%,rgba(245,246,247,.76) 100%)!important;}
-html[data-theme="light"] .hero-bg{filter:brightness(.72) saturate(.9)!important;}
+html[data-theme="light"] .hero-bg{filter:brightness(.62) saturate(.9)!important;}
 html[data-theme="light"] .price-row,.html[data-theme="light"] .home-cat-tile{box-shadow:0 10px 30px rgba(0,0,0,.05);}
 /* ---------- Subtle premium surfaces ---------- */
 .game-panel,.calc-box,.boost-box,.faq-item,.review-card,.feature-card{
@@ -5344,7 +5338,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
     <span class="fd-colon">:</span>
     <div class="fd-unit"><span id="fdS">32</span><small>SEC</small></div>
   </div>
-  <button onclick="event.stopPropagation();addToCart('$25 Steam Card','🎮',1700,'EGP');" class="fd-cta">GRAB DEAL →</button>
+  <button onclick="event.stopPropagation();addToCart(PN('P013'),'🎮',PZ('P013'),'EGP');" class="fd-cta">GRAB DEAL →</button>
   <button class="fd-close" onclick="document.getElementById('flash-deal-bar').style.display='none'" aria-label="Close">×</button>
 </div>
 
@@ -5418,8 +5412,6 @@ if(lite)d.classList.add('lite');}catch(e){}})();
     <div class="mi"><span class="mdot"></span>PUBG UC</div>
     <div class="mi"><span class="mdot"></span><b>2000+ Orders</b></div>
     <div class="mi"><span class="mdot"></span>Instant Delivery</div>
-    <div class="mi"><span class="mdot"></span><b>PS5 Controllers</b></div>
-    <div class="mi"><span class="mdot"></span><b>GameSir Controllers</b></div>
     <div class="mi"><span class="mdot"></span><b>Gaming Headsets</b></div>
     <div class="mi"><span class="mdot"></span>Physical Delivery</div>
     <div class="mi"><span class="mdot"></span><b>Best Prices EGP</b></div>
@@ -5568,7 +5560,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
 .home-welcome p{color:var(--muted);font-size:0.95rem;line-height:1.6;margin:0;}
 .home-cats-grid{
   display:grid;grid-template-columns:repeat(4,1fr);
-  gap:1rem;
+  gap:1.5rem;
 }
 .home-cat-tile{
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.7rem;
@@ -5600,7 +5592,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
 .home-feature .hf-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-weight:700;color:var(--gold);font-size:0.9rem;letter-spacing:0.03em;margin-bottom:0.25rem;}
 .home-feature .hf-sub{color:var(--muted);font-size:0.78rem;line-height:1.4;}
 @media(max-width:640px){
-  .home-cats-grid{grid-template-columns:repeat(2,1fr);gap:0.7rem;}
+  .home-cats-grid{grid-template-columns:repeat(2,1fr);gap:1rem;}
   .home-cat-tile{padding:1.2rem 0.5rem;}
   .home-cat-badge{width:48px;height:48px;}
 }
@@ -5720,7 +5712,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
           <span class="deal-new gold">900 EGP</span>
         </div>
         <div class="deal-social">🔥 <b>17</b> bought today</div>
-        <button class="deal-add" onclick="event.stopPropagation();addToCart('2,400 V-Bucks','⚡',900,'EGP')">
+        <button class="deal-add" onclick="event.stopPropagation();addToCart(PN('P007'),'⚡',PZ('P007'),'EGP')">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59L5.25 16c-.16.28-.25.61-.25.96C5 18.1 5.9 19 7 19h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
           Add to Cart
         </button>
@@ -5781,7 +5773,6 @@ if(lite)d.classList.add('lite');}catch(e){}})();
             <div class="game-header-name">Fortnite</div>
             <div class="game-header-sub">V-Bucks · Gift &amp; Direct</div>
           </div>
-          <span class="game-logo-sub brand-icon-mask" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="V-Bucks"></span>
         </div>
 
         <!-- ══ FORTNITE SUB-CATEGORY TABS ══ -->
@@ -6334,46 +6325,46 @@ if(lite)d.classList.add('lite');}catch(e){}})();
               <div class="calc-note">Rate: 1,000 VB = 270 L.E · Gift method · Message us to order!</div>
             </div>
             <div class="price-rows">
-              <div class="price-row" onclick="addToCart('1,000 V-Bucks Gift','⚡',270,'L.E')">
+              <div class="price-row" onclick="addToCart(PN('P001'),'⚡',PZ('P001'),'L.E')">
                 <div class="pr-l"><span class="pr-icon"><img id="ic2" src="images/icon-vbucks.png" alt="V-Bucks" style="width:26px;height:auto;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(0,229,255,0.5));" loading="lazy" decoding="async"></span><div class="pr-name">1,000 V-Bucks</div></div>
-                <div class="pr-right"><div class="pr-price red">270 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('1,000 V-Bucks Gift','⚡',270,'L.E')">+</button></div>
+                <div class="pr-right"><div class="pr-price red" data-pid="P001">270 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P001'),'⚡',PZ('P001'),'L.E')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('2,000 V-Bucks Gift','⚡',540,'L.E')">
+              <div class="price-row" onclick="addToCart(PN('P002'),'⚡',PZ('P002'),'L.E')">
                 <div class="pr-l"><span class="pr-icon"><img data-dupe-of="ic2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="V-Bucks" style="width:26px;height:auto;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(0,229,255,0.5));" loading="lazy" decoding="async"></span><div class="pr-name">2,000 V-Bucks</div></div>
-                <div class="pr-right"><div class="pr-price red">540 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('2,000 V-Bucks Gift','⚡',540,'L.E')">+</button></div>
+                <div class="pr-right"><div class="pr-price red" data-pid="P002">540 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P002'),'⚡',PZ('P002'),'L.E')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('3,000 V-Bucks Gift','⚡',810,'L.E')">
+              <div class="price-row" onclick="addToCart(PN('P003'),'⚡',PZ('P003'),'L.E')">
                 <div class="pr-l"><span class="pr-icon"><img data-dupe-of="ic2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="V-Bucks" style="width:26px;height:auto;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(0,229,255,0.5));" loading="lazy" decoding="async"></span><div class="pr-name">3,000 V-Bucks</div></div>
-                <div class="pr-right"><div class="pr-price red">810 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('3,000 V-Bucks Gift','⚡',810,'L.E')">+</button></div>
+                <div class="pr-right"><div class="pr-price red" data-pid="P003">810 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P003'),'⚡',PZ('P003'),'L.E')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('4,000 V-Bucks Gift','⚡',1080,'L.E')">
+              <div class="price-row" onclick="addToCart(PN('P004'),'⚡',PZ('P004'),'L.E')">
                 <div class="pr-l"><span class="pr-icon"><img data-dupe-of="ic2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="V-Bucks" style="width:26px;height:auto;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(0,229,255,0.5));" loading="lazy" decoding="async"></span><div class="pr-name">4,000 V-Bucks</div></div>
-                <div class="pr-right"><div class="pr-price red">1,080 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('4,000 V-Bucks Gift','⚡',1080,'L.E')">+</button></div>
+                <div class="pr-right"><div class="pr-price red" data-pid="P004">1,080 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P004'),'⚡',PZ('P004'),'L.E')">+</button></div>
               </div>
             </div>
           </div>
           <div>
             <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:var(--ic-vbucks);--icon-color:#00D4FF;" role="img" aria-label="VBucks"></span> Normal V-Bucks <span class="badge badge-gold">DIRECT</span></div>
             <div class="price-rows">
-<div class="price-row" onclick="addToCart('Crew Pack','🎯',250,'L.E')">
+<div class="price-row" onclick="addToCart(PN('P005'),'🎯',PZ('P005'),'L.E')">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img id="ic3" src="images/icon-fortnite-crew-pack.jpg" alt="Fortnite Crew" style="width:260px;height:96px;object-fit:cover;border-radius:10px;flex-shrink:0;box-shadow:0 8px 20px rgba(0,0,0,0.55);" loading="lazy" decoding="async"></span><div class="pr-name">Crew Pack <span class="sale-tag best">★ BEST SELLER</span><br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;line-height:1.5;">Battle Pass · Rocket Pass · LEGO Pass · Music Pass · OG Pass · 1,000 V-Bucks · Skin + Pickaxe + Backbling</span></div></div>
-                <div class="pr-right"><div class="pr-price gold">250 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Crew Pack','🎯',250,'L.E')">+</button></div>
+                <div class="pr-right"><div class="pr-price gold" data-pid="P005">250 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P005'),'🎯',PZ('P005'),'L.E')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('800 V-Bucks','⚡',245,'L.E')">
+              <div class="price-row" onclick="addToCart(PN('P006'),'⚡',PZ('P006'),'L.E')">
                 <div class="pr-l"><span class="pr-icon"><img data-dupe-of="ic2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="V-Bucks" style="width:26px;height:auto;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(0,229,255,0.5));" loading="lazy" decoding="async"></span><div class="pr-name">800 V-Bucks</div></div>
-                <div class="pr-right"><div class="pr-price gold">245 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('800 V-Bucks','⚡',245,'L.E')">+</button></div>
+                <div class="pr-right"><div class="pr-price gold" data-pid="P006">245 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P006'),'⚡',PZ('P006'),'L.E')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('2,400 V-Bucks','⚡',580,'L.E')">
+              <div class="price-row" onclick="addToCart(PN('P007'),'⚡',PZ('P007'),'L.E')">
                 <div class="pr-l"><span class="pr-icon"><img data-dupe-of="ic2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="V-Bucks" style="width:26px;height:auto;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(0,229,255,0.5));" loading="lazy" decoding="async"></span><div class="pr-name">2,400 V-Bucks</div></div>
-                <div class="pr-right"><div class="pr-price gold">580 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('2,400 V-Bucks','⚡',580,'L.E')">+</button></div>
+                <div class="pr-right"><div class="pr-price gold" data-pid="P007">580 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P007'),'⚡',PZ('P007'),'L.E')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('4,500 V-Bucks','⚡',880,'L.E')">
+              <div class="price-row" onclick="addToCart(PN('P008'),'⚡',PZ('P008'),'L.E')">
                 <div class="pr-l"><span class="pr-icon"><img data-dupe-of="ic2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="V-Bucks" style="width:26px;height:auto;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(0,229,255,0.5));" loading="lazy" decoding="async"></span><div class="pr-name">4,500 V-Bucks</div></div>
-                <div class="pr-right"><div class="pr-price gold">880 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('4,500 V-Bucks','⚡',880,'L.E')">+</button></div>
+                <div class="pr-right"><div class="pr-price gold" data-pid="P008">880 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P008'),'⚡',PZ('P008'),'L.E')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('12,500 V-Bucks','⚡',1945,'L.E')">
+              <div class="price-row" onclick="addToCart(PN('P009'),'⚡',PZ('P009'),'L.E')">
                 <div class="pr-l"><span class="pr-icon"><img data-dupe-of="ic2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="V-Bucks" style="width:26px;height:auto;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(0,229,255,0.5));" loading="lazy" decoding="async"></span><div class="pr-name">12,500 V-Bucks <span class="sale-tag value">BEST VALUE</span></div></div>
-                <div class="pr-right"><div class="pr-price gold">1,945 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('12,500 V-Bucks','⚡',1945,'L.E')">+</button></div>
+                <div class="pr-right"><div class="pr-price gold" data-pid="P009">1,945 L.E</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P009'),'⚡',PZ('P009'),'L.E')">+</button></div>
               </div>
               
             </div>
@@ -6448,12 +6439,12 @@ if(lite)d.classList.add('lite');}catch(e){}})();
               <div class="calc-note">Rate: $1 = 68 EGP · Any amount available · Message us!</div>
             </div>
             <div class="price-rows" style="max-width:560px;">
-              <div class="price-row" onclick="addToCart('$5 Steam Card','🎮',340,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$5 Steam Card</div></div><div class="pr-right"><div class="pr-price blue">340 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('$5 Steam Card','🎮',340,'EGP')">+</button></div></div>
-              <div class="price-row" onclick="addToCart('$10 Steam Card','🎮',680,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$10 Steam Card</div></div><div class="pr-right"><div class="pr-price blue">680 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('$10 Steam Card','🎮',680,'EGP')">+</button></div></div>
-              <div class="price-row" onclick="addToCart('$20 Steam Card','🎮',1360,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$20 Steam Card</div></div><div class="pr-right"><div class="pr-price blue">1,360 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('$20 Steam Card','🎮',1360,'EGP')">+</button></div></div>
-              <div class="price-row" onclick="addToCart('$25 Steam Card','🎮',1700,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$25 Steam Card</div></div><div class="pr-right"><div class="pr-price blue">1,700 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('$25 Steam Card','🎮',1700,'EGP')">+</button></div></div>
-              <div class="price-row" onclick="addToCart('$50 Steam Card','🎮',3400,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$50 Steam Card</div></div><div class="pr-right"><div class="pr-price blue">3,400 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('$50 Steam Card','🎮',3400,'EGP')">+</button></div></div>
-              <div class="price-row" onclick="addToCart('$100 Steam Card','🎮',6800,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$100 Steam Card</div></div><div class="pr-right"><div class="pr-price blue">6,800 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('$100 Steam Card','🎮',6800,'EGP')">+</button></div></div>
+              <div class="price-row" onclick="addToCart(PN('P010'),'🎮',PZ('P010'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$5 Steam Card</div></div><div class="pr-right"><div class="pr-price blue" data-pid="P010">340 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P010'),'🎮',PZ('P010'),'EGP')">+</button></div></div>
+              <div class="price-row" onclick="addToCart(PN('P011'),'🎮',PZ('P011'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$10 Steam Card</div></div><div class="pr-right"><div class="pr-price blue" data-pid="P011">680 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P011'),'🎮',PZ('P011'),'EGP')">+</button></div></div>
+              <div class="price-row" onclick="addToCart(PN('P012'),'🎮',PZ('P012'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$20 Steam Card</div></div><div class="pr-right"><div class="pr-price blue" data-pid="P012">1,360 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P012'),'🎮',PZ('P012'),'EGP')">+</button></div></div>
+              <div class="price-row" onclick="addToCart(PN('P013'),'🎮',PZ('P013'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$25 Steam Card</div></div><div class="pr-right"><div class="pr-price blue" data-pid="P013">1,700 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P013'),'🎮',PZ('P013'),'EGP')">+</button></div></div>
+              <div class="price-row" onclick="addToCart(PN('P014'),'🎮',PZ('P014'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$50 Steam Card</div></div><div class="pr-right"><div class="pr-price blue" data-pid="P014">3,400 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P014'),'🎮',PZ('P014'),'EGP')">+</button></div></div>
+              <div class="price-row" onclick="addToCart(PN('P015'),'🎮',PZ('P015'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span></span><div class="pr-name">$100 Steam Card</div></div><div class="pr-right"><div class="pr-price blue" data-pid="P015">6,800 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P015'),'🎮',PZ('P015'),'EGP')">+</button></div></div>
             </div>
           </div>
         </div>
@@ -6518,25 +6509,25 @@ if(lite)d.classList.add('lite');}catch(e){}})();
               <div class="price-row" onclick="event.stopPropagation()">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img data-dupe-of="ic4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="PS Plus" style="height:22px;width:auto;border-radius:4px;" loading="lazy" decoding="async"></span><div class="pr-name">PS Plus Essential – 1 Month</div></div>
                 <div class="pr-right"><div class="acc-type-group" onclick="event.stopPropagation()">
-                  <button class="acc-opt" title="1 Month PS5 Primary" onclick="event.stopPropagation();addToCart('PS Plus Essential 1 Month (PS5 Primary)','🟦',525,'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue">525 EGP</span></button>
-                  <button class="acc-opt" title="1 Month PS4 Primary" onclick="event.stopPropagation();addToCart('PS Plus Essential 1 Month (PS4 Primary)','🟦',300,'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold">300 EGP</span></button>
-                  <button class="acc-opt acc-opt-sec" title="1 Month Secondary" onclick="event.stopPropagation();addToCart('PS Plus Essential 1 Month (Secondary)','🟦',125,'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price">125 EGP</span></button>
+                  <button class="acc-opt" title="1 Month PS5 Primary" onclick="event.stopPropagation();addToCart(PN('P020'),'🟦',PZ('P020'),'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue" data-pid="P020">525 EGP</span></button>
+                  <button class="acc-opt" title="1 Month PS4 Primary" onclick="event.stopPropagation();addToCart(PN('P026'),'🟦',PZ('P026'),'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold" data-pid="P026">300 EGP</span></button>
+                  <button class="acc-opt acc-opt-sec" title="1 Month Secondary" onclick="event.stopPropagation();addToCart(PN('P021'),'🟦',PZ('P021'),'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price" data-pid="P021">125 EGP</span></button>
                 </div></div>
               </div>
               <div class="price-row" onclick="event.stopPropagation()">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img data-dupe-of="ic4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="PS Plus" style="height:22px;width:auto;border-radius:4px;" loading="lazy" decoding="async"></span><div class="pr-name">PS Plus Essential – 3 Months</div></div>
                 <div class="pr-right"><div class="acc-type-group" onclick="event.stopPropagation()">
-                  <button class="acc-opt" title="3 Months PS5 Primary" onclick="event.stopPropagation();addToCart('PS Plus Essential 3 Months (PS5 Primary)','🟦',1025,'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue">1,025 EGP</span></button>
-                  <button class="acc-opt" title="3 Months PS4 Primary" onclick="event.stopPropagation();addToCart('PS Plus Essential 3 Months (PS4 Primary)','🟦',550,'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold">550 EGP</span></button>
-                  <button class="acc-opt acc-opt-sec" title="3 Months Secondary" onclick="event.stopPropagation();addToCart('PS Plus Essential 3 Months (Secondary)','🟦',250,'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price">250 EGP</span></button>
+                  <button class="acc-opt" title="3 Months PS5 Primary" onclick="event.stopPropagation();addToCart(PN('P022'),'🟦',PZ('P022'),'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue" data-pid="P022">1,025 EGP</span></button>
+                  <button class="acc-opt" title="3 Months PS4 Primary" onclick="event.stopPropagation();addToCart(PN('P027'),'🟦',PZ('P027'),'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold" data-pid="P027">550 EGP</span></button>
+                  <button class="acc-opt acc-opt-sec" title="3 Months Secondary" onclick="event.stopPropagation();addToCart(PN('P023'),'🟦',PZ('P023'),'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price" data-pid="P023">250 EGP</span></button>
                 </div></div>
               </div>
               <div class="price-row" onclick="event.stopPropagation()">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img data-dupe-of="ic4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="PS Plus" style="height:22px;width:auto;border-radius:4px;" loading="lazy" decoding="async"></span><div class="pr-name">PS Plus Essential – 1 Year <span class="sale-tag value">BEST VALUE</span></div></div>
                 <div class="pr-right"><div class="acc-type-group" onclick="event.stopPropagation()">
-                  <button class="acc-opt" title="1 Year PS5 Primary" onclick="event.stopPropagation();addToCart('PS Plus Essential 1 Year (PS5 Primary)','🟦',2200,'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue">2,200 EGP</span></button>
-                  <button class="acc-opt" title="1 Year PS4 Primary" onclick="event.stopPropagation();addToCart('PS Plus Essential 1 Year (PS4 Primary)','🟦',825,'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold">825 EGP</span></button>
-                  <button class="acc-opt acc-opt-sec" title="1 Year Secondary" onclick="event.stopPropagation();addToCart('PS Plus Essential 1 Year (Secondary)','🟦',575,'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price">575 EGP</span></button>
+                  <button class="acc-opt" title="1 Year PS5 Primary" onclick="event.stopPropagation();addToCart(PN('P024'),'🟦',PZ('P024'),'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue" data-pid="P024">2,200 EGP</span></button>
+                  <button class="acc-opt" title="1 Year PS4 Primary" onclick="event.stopPropagation();addToCart(PN('P028'),'🟦',PZ('P028'),'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold" data-pid="P028">825 EGP</span></button>
+                  <button class="acc-opt acc-opt-sec" title="1 Year Secondary" onclick="event.stopPropagation();addToCart(PN('P025'),'🟦',PZ('P025'),'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price" data-pid="P025">575 EGP</span></button>
                 </div></div>
               </div>
               <div class="mice-tier-divider">
@@ -6546,42 +6537,42 @@ if(lite)d.classList.add('lite');}catch(e){}})();
               <div class="price-row" onclick="event.stopPropagation()">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img data-dupe-of="ic4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="PS Plus" style="height:22px;width:auto;border-radius:4px;" loading="lazy" decoding="async"></span><div class="pr-name">PS Plus Extra – 1 Month</div></div>
                 <div class="pr-right"><div class="acc-type-group" onclick="event.stopPropagation()">
-                  <button class="acc-opt" title="1 Month PS5 Primary" onclick="event.stopPropagation();addToCart('PS Plus Extra 1 Month (PS5 Primary)','🟦',650,'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue">650 EGP</span></button>
-                  <button class="acc-opt" title="1 Month PS4 Primary" onclick="event.stopPropagation();addToCart('PS Plus Extra 1 Month (PS4 Primary)','🟦',350,'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold">350 EGP</span></button>
-                  <button class="acc-opt acc-opt-sec" title="1 Month Secondary" onclick="event.stopPropagation();addToCart('PS Plus Extra 1 Month (Secondary)','🟦',250,'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price">250 EGP</span></button>
+                  <button class="acc-opt" title="1 Month PS5 Primary" onclick="event.stopPropagation();addToCart(PN('P029'),'🟦',PZ('P029'),'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue" data-pid="P029">650 EGP</span></button>
+                  <button class="acc-opt" title="1 Month PS4 Primary" onclick="event.stopPropagation();addToCart(PN('P188'),'🟦',PZ('P188'),'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold" data-pid="P188">350 EGP</span></button>
+                  <button class="acc-opt acc-opt-sec" title="1 Month Secondary" onclick="event.stopPropagation();addToCart(PN('P189'),'🟦',PZ('P189'),'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price" data-pid="P189">250 EGP</span></button>
                 </div></div>
               </div>
               <div class="price-row" onclick="event.stopPropagation()">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img data-dupe-of="ic4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="PS Plus" style="height:22px;width:auto;border-radius:4px;" loading="lazy" decoding="async"></span><div class="pr-name">PS Plus Extra – 3 Months</div></div>
                 <div class="pr-right"><div class="acc-type-group" onclick="event.stopPropagation()">
-                  <button class="acc-opt" title="3 Months PS5 Primary" onclick="event.stopPropagation();addToCart('PS Plus Extra 3 Months (PS5 Primary)','🟦',1450,'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue">1,450 EGP</span></button>
-                  <button class="acc-opt" title="3 Months PS4 Primary" onclick="event.stopPropagation();addToCart('PS Plus Extra 3 Months (PS4 Primary)','🟦',750,'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold">750 EGP</span></button>
-                  <button class="acc-opt acc-opt-sec" title="3 Months Secondary" onclick="event.stopPropagation();addToCart('PS Plus Extra 3 Months (Secondary)','🟦',500,'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price">500 EGP</span></button>
+                  <button class="acc-opt" title="3 Months PS5 Primary" onclick="event.stopPropagation();addToCart(PN('P030'),'🟦',PZ('P030'),'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue" data-pid="P030">1,450 EGP</span></button>
+                  <button class="acc-opt" title="3 Months PS4 Primary" onclick="event.stopPropagation();addToCart(PN('P190'),'🟦',PZ('P190'),'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold" data-pid="P190">750 EGP</span></button>
+                  <button class="acc-opt acc-opt-sec" title="3 Months Secondary" onclick="event.stopPropagation();addToCart(PN('P191'),'🟦',PZ('P191'),'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price" data-pid="P191">500 EGP</span></button>
                 </div></div>
               </div>
               <div class="price-row" onclick="event.stopPropagation()">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img data-dupe-of="ic4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="PS Plus" style="height:22px;width:auto;border-radius:4px;" loading="lazy" decoding="async"></span><div class="pr-name">PS Plus Extra – 1 Year <span class="sale-tag value">BEST VALUE</span></div></div>
                 <div class="pr-right"><div class="acc-type-group" onclick="event.stopPropagation()">
-                  <button class="acc-opt" title="1 Year PS5 Primary" onclick="event.stopPropagation();addToCart('PS Plus Extra 1 Year (PS5 Primary)','🟦',2950,'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue">2,950 EGP</span></button>
-                  <button class="acc-opt" title="1 Year PS4 Primary" onclick="event.stopPropagation();addToCart('PS Plus Extra 1 Year (PS4 Primary)','🟦',1100,'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold">1,100 EGP</span></button>
-                  <button class="acc-opt acc-opt-sec" title="1 Year Secondary" onclick="event.stopPropagation();addToCart('PS Plus Extra 1 Year (Secondary)','🟦',1050,'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price">1,050 EGP</span></button>
+                  <button class="acc-opt" title="1 Year PS5 Primary" onclick="event.stopPropagation();addToCart(PN('P031'),'🟦',PZ('P031'),'EGP')"><span class="acc-opt-lbl">PS5 Primary</span><span class="acc-opt-price blue" data-pid="P031">2,950 EGP</span></button>
+                  <button class="acc-opt" title="1 Year PS4 Primary" onclick="event.stopPropagation();addToCart(PN('P192'),'🟦',PZ('P192'),'EGP')"><span class="acc-opt-lbl">PS4 Primary</span><span class="acc-opt-price gold" data-pid="P192">1,100 EGP</span></button>
+                  <button class="acc-opt acc-opt-sec" title="1 Year Secondary" onclick="event.stopPropagation();addToCart(PN('P193'),'🟦',PZ('P193'),'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price" data-pid="P193">1,050 EGP</span></button>
                 </div></div>
               </div>
               <div class="mice-tier-divider">
                 <div class="mice-tier-title">PS Plus Deluxe <span class="badge badge-gold">PS5 ONLY</span></div>
                 <div class="mice-tier-desc">1 / 3 / 12 months · Full access</div>
               </div>
-              <div class="price-row" onclick="addToCart('PS Plus Deluxe 1 Month','🟦',800,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P194'),'🟦',PZ('P194'),'EGP')">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img data-dupe-of="ic4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="PS Plus" style="height:22px;width:auto;border-radius:4px;" loading="lazy" decoding="async"></span><div class="pr-name">PS Plus Deluxe – 1 Month</div></div>
-                <div class="pr-right"><div class="pr-price blue">800 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('PS Plus Deluxe 1 Month','🟦',800,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P194">800 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P194'),'🟦',PZ('P194'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('PS Plus Deluxe 3 Months','🟦',1850,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P195'),'🟦',PZ('P195'),'EGP')">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img data-dupe-of="ic4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="PS Plus" style="height:22px;width:auto;border-radius:4px;" loading="lazy" decoding="async"></span><div class="pr-name">PS Plus Deluxe – 3 Months</div></div>
-                <div class="pr-right"><div class="pr-price blue">1,850 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('PS Plus Deluxe 3 Months','🟦',1850,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P195">1,850 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P195'),'🟦',PZ('P195'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('PS Plus Deluxe 1 Year','🟦',3850,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P196'),'🟦',PZ('P196'),'EGP')">
                 <div class="pr-l"><span class="pr-icon" style="width:auto;"><img data-dupe-of="ic4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="PS Plus" style="height:22px;width:auto;border-radius:4px;" loading="lazy" decoding="async"></span><div class="pr-name">PS Plus Deluxe – 1 Year <span class="sale-tag value">BEST VALUE</span></div></div>
-                <div class="pr-right"><div class="pr-price blue">3,850 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('PS Plus Deluxe 1 Year','🟦',3850,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P196">3,850 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P196'),'🟦',PZ('P196'),'EGP')">+</button></div>
               </div>
             </div>
           </div>
@@ -6630,12 +6621,12 @@ if(lite)d.classList.add('lite');}catch(e){}})();
             </div>
             <div class="rp" id="rp-gc">
               <div class="price-rows" style="max-width:560px;">
-                <div class="price-row" onclick="addToCart('40 Robux Gift Card','🧱',100,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">40 Robux</div></div><div class="pr-right"><div class="pr-price green">100 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('40 Robux Gift Card','🧱',100,'EGP')">+</button></div></div>
-                <div class="price-row" onclick="addToCart('80 Robux Gift Card','🧱',150,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">80 Robux</div></div><div class="pr-right"><div class="pr-price green">150 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('80 Robux Gift Card','🧱',150,'EGP')">+</button></div></div>
-                <div class="price-row" onclick="addToCart('400 Robux Gift Card','🧱',500,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">400 Robux</div></div><div class="pr-right"><div class="pr-price green">500 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('400 Robux Gift Card','🧱',500,'EGP')">+</button></div></div>
-                <div class="price-row" onclick="addToCart('800 Robux Gift Card','🧱',900,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">800 Robux</div></div><div class="pr-right"><div class="pr-price green">900 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('800 Robux Gift Card','🧱',900,'EGP')">+</button></div></div>
-                <div class="price-row" onclick="addToCart('1,700 Robux Gift Card','🧱',1600,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">1,700 Robux</div></div><div class="pr-right"><div class="pr-price green">1,600 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('1,700 Robux Gift Card','🧱',1600,'EGP')">+</button></div></div>
-                <div class="price-row" onclick="addToCart('4,500 Robux Gift Card','🧱',4200,'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">4,500 Robux <span class="sale-tag value">BEST VALUE</span></div></div><div class="pr-right"><div class="pr-price green">4,200 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('4,500 Robux Gift Card','🧱',4200,'EGP')">+</button></div></div>
+                <div class="price-row" onclick="addToCart(PN('P032'),'🧱',PZ('P032'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">40 Robux</div></div><div class="pr-right"><div class="pr-price green" data-pid="P032">100 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P032'),'🧱',PZ('P032'),'EGP')">+</button></div></div>
+                <div class="price-row" onclick="addToCart(PN('P033'),'🧱',PZ('P033'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">80 Robux</div></div><div class="pr-right"><div class="pr-price green" data-pid="P033">150 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P033'),'🧱',PZ('P033'),'EGP')">+</button></div></div>
+                <div class="price-row" onclick="addToCart(PN('P034'),'🧱',PZ('P034'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">400 Robux</div></div><div class="pr-right"><div class="pr-price green" data-pid="P034">500 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P034'),'🧱',PZ('P034'),'EGP')">+</button></div></div>
+                <div class="price-row" onclick="addToCart(PN('P035'),'🧱',PZ('P035'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">800 Robux</div></div><div class="pr-right"><div class="pr-price green" data-pid="P035">900 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P035'),'🧱',PZ('P035'),'EGP')">+</button></div></div>
+                <div class="price-row" onclick="addToCart(PN('P036'),'🧱',PZ('P036'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">1,700 Robux</div></div><div class="pr-right"><div class="pr-price green" data-pid="P036">1,600 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P036'),'🧱',PZ('P036'),'EGP')">+</button></div></div>
+                <div class="price-row" onclick="addToCart(PN('P037'),'🧱',PZ('P037'),'EGP')"><div class="pr-l"><span class="pr-icon"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/roblox.svg');--icon-color:#e8311a;" role="img" aria-label="Roblox"></span></span><div class="pr-name">4,500 Robux <span class="sale-tag value">BEST VALUE</span></div></div><div class="pr-right"><div class="pr-price green" data-pid="P037">4,200 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P037'),'🧱',PZ('P037'),'EGP')">+</button></div></div>
               </div>
             </div>
           </div>
@@ -6688,34 +6679,34 @@ if(lite)d.classList.add('lite');}catch(e){}})();
           <div>
             <div class="price-block-title"><span style="margin-right:4px;">🚀</span> Rocket League Credits <span class="badge" style="background:rgba(245,166,35,0.15);border:1px solid rgba(245,166,35,0.4);color:#F5A623;">CREDITS</span></div>
             <div class="credit-tier-grid">
-              <div class="credit-tier-card" onclick="addToCart('500 Credits','🚀',250,'EGP')">
+              <div class="credit-tier-card" onclick="addToCart(PN('P197'),'🚀',PZ('P197'),'EGP')">
                 <div class="credit-amount">500</div>
                 <div class="credit-label">Credits</div>
-                <div class="credit-price">250 EGP</div>
+                <div class="credit-price" data-pid="P197">250 EGP</div>
               </div>
-              <div class="credit-tier-card" onclick="addToCart('1,100 Credits','🚀',450,'EGP')">
+              <div class="credit-tier-card" onclick="addToCart(PN('P198'),'🚀',PZ('P198'),'EGP')">
                 <div class="credit-bonus">+10%</div>
                 <div class="credit-amount">1,100</div>
                 <div class="credit-label">Credits</div>
-                <div class="credit-price">450 EGP</div>
+                <div class="credit-price" data-pid="P198">450 EGP</div>
               </div>
-              <div class="credit-tier-card" onclick="addToCart('3,000 Credits','🚀',850,'EGP')">
+              <div class="credit-tier-card" onclick="addToCart(PN('P199'),'🚀',PZ('P199'),'EGP')">
                 <div class="credit-bonus">+20%</div>
                 <div class="credit-amount">3,000</div>
                 <div class="credit-label">Credits</div>
-                <div class="credit-price">850 EGP</div>
+                <div class="credit-price" data-pid="P199">850 EGP</div>
                 <div class="credit-tag">★ BEST SELLER</div>
               </div>
-              <div class="credit-tier-card tier-top" onclick="addToCart('6,500 Credits','🚀',1500,'EGP')">
+              <div class="credit-tier-card tier-top" onclick="addToCart(PN('P200'),'🚀',PZ('P200'),'EGP')">
                 <div class="credit-bonus">+30%</div>
                 <div class="credit-amount">6,500</div>
                 <div class="credit-label">Credits</div>
-                <div class="credit-price">1,500 EGP</div>
+                <div class="credit-price" data-pid="P200">1,500 EGP</div>
                 <div class="credit-tag" style="color:#00E676;">BEST VALUE</div>
               </div>
             </div>
             <div class="price-rows" style="max-width:560px;">
-              <div class="price-row" onclick="addToCart('Rocket Pass — 1 Month','🚀',250,'EGP')"><div class="pr-l"><span class="pr-icon">🚀</span><div class="pr-name">Rocket Pass <span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">1 Month</span></div></div><div class="pr-right"><div class="pr-price amber">250 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Rocket Pass — 1 Month','🚀',250,'EGP')">+</button></div></div>
+              <div class="price-row" onclick="addToCart(PN('P201'),'🚀',PZ('P201'),'EGP')"><div class="pr-l"><span class="pr-icon">🚀</span><div class="pr-name">Rocket Pass <span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">1 Month</span></div></div><div class="pr-right"><div class="pr-price amber" data-pid="P201">250 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P201'),'🚀',PZ('P201'),'EGP')">+</button></div></div>
             </div>
           </div>
         </div>
@@ -6745,10 +6736,10 @@ if(lite)d.classList.add('lite');}catch(e){}})();
                   <button class="acc-opt acc-opt-sec" title="Secondary" onclick="event.stopPropagation();addToCart('GTA VI (Secondary)','🎮',2500,'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price gold">2,500 EGP</span></button>
                 </div></div>
               </div>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20GTA%20Ultimate%20Edition%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+              <div class="price-row" onclick="askItemPrice('GTA Ultimate Edition')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">GTA Ultimate Edition</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
               <div class="price-row" onclick="event.stopPropagation()">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4080220/05d419a45653a1299ce46d13dbff4533fa076c1c/header.jpg" alt="FC27 Ultimate Edition" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex" title="Not yet released on Steam">🗓️</span></span><div class="pr-name">FC27 Ultimate Edition<br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">Primary &amp; Secondary</span></div></div>
                 <div class="pr-right"><div class="acc-type-group" onclick="event.stopPropagation()">
@@ -6763,220 +6754,220 @@ if(lite)d.classList.add('lite');}catch(e){}})();
                   <button class="acc-opt acc-opt-sec" title="Secondary" onclick="event.stopPropagation();addToCart('FC27 Standard Edition (Secondary)','🎮',1450,'EGP')"><span class="acc-opt-lbl">Secondary</span><span class="acc-opt-price gold">1,450 EGP</span></button>
                 </div></div>
               </div>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20FC%2026%20(PS4%20/%20PS5)%20(PS4/PS5)" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+              <div class="price-row" onclick="askItemPrice('FC 26 (PS4 / PS5)')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3405690/2d96aa1b06e453cd62dae9029d412f19e61932c3/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">FC 26 (PS4 / PS5)</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Marvel%27s%20Spider-Man%202%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Marvel\'s Spider-Man 2')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2651280/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Marvel's Spider-Man 2</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Spider-Man%20Remastered%20%2B%20Miles%20Morales%20Bundle%20%28PS5%29%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Spider-Man Remastered + Miles Morales Bundle (PS5)')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1817070/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🕸️</span></span><div class="pr-name">Spider-Man Remastered + Miles Morales Bundle (PS5)</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Ghost%20of%20Tsushima%20Director%27s%20Cut%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Ghost of Tsushima Director\'s Cut')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2215430/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🗡️</span></span><div class="pr-name">Ghost of Tsushima Director's Cut</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20God%20of%20War%20Ragnar%C3%B6k%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('God of War Ragnarök')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2322010/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">⚔️</span></span><div class="pr-name">God of War Ragnarök</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Kingdom%20Come%3A%20Deliverance%20II%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Kingdom Come: Deliverance II')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1771300/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🏰</span></span><div class="pr-name">Kingdom Come: Deliverance II</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20WWE%2026%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('WWE 26')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3717070/6e590c37107f7306ab9e42cc07d2aa92327625d1/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🥊</span></span><div class="pr-name">WWE 26</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Ghost%20of%20Yotei%20DLC%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Ghost of Yotei DLC')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://image.api.playstation.com/vulcan/ap/rnd/202607/2723/6b25d115aa9c67253d90d788cac632064dcc9d5b68abc2bc.png" alt="Ghost of Yotei DLC" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🗡️</span></span><div class="pr-name">Ghost of Yotei DLC</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
             </div>
             <br>
             <div class="price-block-title">🌍 Open World &amp; Action Hits <span class="badge badge-blue">PS4/PS5</span></div>
             <div class="price-rows">
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20GTA%20V%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+              <div class="price-row" onclick="askItemPrice('GTA V')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">GTA V</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Red%20Dead%20Redemption%202%20(PS4/PS5)" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Red Dead Redemption 2')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Red Dead Redemption 2</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20The%20Witcher%203%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('The Witcher 3')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🧙</span></span><div class="pr-name">The Witcher 3</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Hogwarts%20Legacy%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Hogwarts Legacy')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/990080/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🪄</span></span><div class="pr-name">Hogwarts Legacy</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Sekiro%3A%20Shadows%20Die%20Twice%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Sekiro: Shadows Die Twice')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/814380/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🥷</span></span><div class="pr-name">Sekiro: Shadows Die Twice</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Far%20Cry%206%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Far Cry 6')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2369390/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Far Cry 6</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Uncharted%204%20Collection%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Uncharted 4 Collection')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1659420/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Uncharted 4 Collection</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Batman%20Arkham%20Collection%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Batman Arkham Collection')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/208650/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Batman Arkham Collection</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Tomb%20Raider%20Trilogy%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Tomb Raider Trilogy')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/203160/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Tomb Raider Trilogy</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20ARK%3A%20Survival%20Ascended%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('ARK: Survival Ascended')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2399830/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">ARK: Survival Ascended</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Detroit%3A%20Become%20Human%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Detroit: Become Human')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1222140/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Detroit: Become Human</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
             </div>
             <br>
           </div>
           <div>
             <div class="price-block-title">💀 Horror &amp; Survival <span class="badge badge-blue">PS4/PS5</span></div>
             <div class="price-rows">
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Resident%20Evil%20Requiem%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+              <div class="price-row" onclick="askItemPrice('Resident Evil Requiem')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3764200/ce5437442768e38eb575f205ab9397d0264017b0/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">👹</span></span><div class="pr-name">Resident Evil Requiem</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Resident%20Evil%204%20Remake%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Resident Evil 4 Remake')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">👹</span></span><div class="pr-name">Resident Evil 4 Remake</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Resident%20Evil%208%20Village%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Resident Evil 8 Village')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1196590/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">👹</span></span><div class="pr-name">Resident Evil 8 Village</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20The%20Last%20of%20Us%20Part%20I%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('The Last of Us Part I')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">The Last of Us Part I</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Dying%20Light%20The%20Beast%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Dying Light The Beast')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2694490/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">👹</span></span><div class="pr-name">Dying Light The Beast</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Dying%20Light%202%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Dying Light 2')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">👹</span></span><div class="pr-name">Dying Light 2</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Elden%20Ring%20Nightreign%20Deluxe%20Edition%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Elden Ring Nightreign Deluxe Edition')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2622380/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🛡️</span></span><div class="pr-name">Elden Ring Nightreign Deluxe Edition</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Little%20Nightmares%20III%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Little Nightmares III')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1392860/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">👹</span></span><div class="pr-name">Little Nightmares III</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20REANIMAL%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('REANIMAL')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2129530/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">👹</span></span><div class="pr-name">REANIMAL</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
             </div>
             <br>
             <div class="price-block-title">🗡️ Assassin's Creed Collection <span class="badge badge-gold">SERIES</span></div>
             <div class="price-rows">
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Assassin%27s%20Creed%20Mirage%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+              <div class="price-row" onclick="askItemPrice('Assassin\'s Creed Mirage')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/3035570/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🗡️</span></span><div class="pr-name">Assassin's Creed Mirage</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Assassin%27s%20Creed%20Valhalla%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Assassin\'s Creed Valhalla')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🗡️</span></span><div class="pr-name">Assassin's Creed Valhalla</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Assassin%27s%20Creed%20Origins%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Assassin\'s Creed Origins')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/582160/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🗡️</span></span><div class="pr-name">Assassin's Creed Origins</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Assassin%27s%20Creed%20Odyssey%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Assassin\'s Creed Odyssey')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/812140/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🗡️</span></span><div class="pr-name">Assassin's Creed Odyssey</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
             </div>
             <br>
             <div class="price-block-title">🏎️ Sports, Racing &amp; Fighting <span class="badge badge-blue">PS4/PS5</span></div>
             <div class="price-rows">
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Gran%20Turismo%207%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+              <div class="price-row" onclick="askItemPrice('Gran Turismo 7')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://image.api.playstation.com/vulcan/ap/rnd/202109/1321/y7iyxoBE8VKotN89QCFhLgLM.png" alt="Gran Turismo 7" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🏎️</span></span><div class="pr-name">Gran Turismo 7</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20The%20Crew%20Motorfest%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('The Crew Motorfest')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2698940/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🏎️</span></span><div class="pr-name">The Crew Motorfest</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Need%20for%20Speed%20Payback%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Need for Speed Payback')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1262580/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🏎️</span></span><div class="pr-name">Need for Speed Payback</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Crash%20Team%20Racing%20%2B%20Bandicoot%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Crash Team Racing + Bandicoot')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/741820/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🏎️</span></span><div class="pr-name">Crash Team Racing + Bandicoot</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20TEKKEN%208%20(PS4/PS5)" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('TEKKEN 8')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1778820/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">TEKKEN 8</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Mortal%20Kombat%201%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Mortal Kombat 1')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1971870/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🥊</span></span><div class="pr-name">Mortal Kombat 1</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Mortal%20Kombat%2011%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Mortal Kombat 11')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/976310/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🥊</span></span><div class="pr-name">Mortal Kombat 11</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20UFC%205%20Ultimate%20Edition%20(PS4/PS5)" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('UFC 5 Ultimate Edition')">
                 <div class="pr-l"><span class="pr-icon"><span class="game-cover-fallback" style="display:flex">🥊</span></span><div class="pr-name">UFC 5 Ultimate Edition</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
             </div>
             <br>
             <div class="price-block-title">🔫 Shooters &amp; Co-op <span class="badge badge-blue">PS4/PS5</span></div>
             <div class="price-rows">
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Battlefield%206%20(PS4/PS5)" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+              <div class="price-row" onclick="askItemPrice('Battlefield 6')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Battlefield 6</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Call%20of%20Duty%20Black%20Ops%207%20Cross-Gen%20(PS4/PS5)" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Call of Duty Black Ops 7 Cross-Gen')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3606480/d7041a15f572f7702d5f4bc97e498cd3e1cc62e2/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Call of Duty Black Ops 7 Cross-Gen</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Hitman%203%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Hitman 3')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1659040/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Hitman 3</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Black%20Ops%203%20%2B%20Zombies%20Mod%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Black Ops 3 + Zombies Mod')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/311210/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">Black Ops 3 + Zombies Mod</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Rainbow%20Six%20Siege%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Rainbow Six Siege')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/359550/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎯</span></span><div class="pr-name">Rainbow Six Siege</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20It%20Takes%20Two%20(PS4%20&amp;%20PS5)%20(PS4/PS5)" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('It Takes Two (PS4 &amp; PS5)')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1426210/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">It Takes Two (PS4 &amp; PS5)</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20A%20Way%20Out%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('A Way Out')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1222700/header.jpg" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🎮</span></span><div class="pr-name">A Way Out</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
-              <a class="price-row" href="https://wa.me/201211057733?text=I%20want%20to%20order%20Minecraft%20%28PS4/PS5%29" target="_blank" style="text-decoration:none;" rel="noopener noreferrer">
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
+              <div class="price-row" onclick="askItemPrice('Minecraft')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://store-images.s-microsoft.com/image/apps.53095.13850085746326678.06e2dc5c-7997-46e9-a8e6-0e48b57cb13b.419e3c9d-9dd3-4a28-a9f3-a12350215871?q=90&w=400&h=600" alt="Minecraft" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">⛏️</span></span><div class="pr-name">Minecraft</div></div>
-                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="add-btn" title="WhatsApp" aria-label="WhatsApp">💬</button></div>
-              </a>
+                <div class="pr-right"><div class="pr-price blue" style="font-size:0.75rem;">Ask Price</div><button class="ask-chat-btn" type="button" title="Ask in chat" aria-label="Ask about price in chat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><circle cx="8.6" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="12.2" cy="11.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.8" cy="11.6" r="1" fill="currentColor" stroke="none"/></svg></button></div>
+              </div>
             </div>
             <br>
           </div>
@@ -7000,33 +6991,33 @@ if(lite)d.classList.add('lite');}catch(e){}})();
           <div>
             <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/steam.svg');--icon-color:#c7d5e0;" role="img" aria-label="Steam"></span> PC Steam Games <span class="badge badge-red">HOT DEALS</span></div>
             <div class="price-rows" style="max-width:700px;">
-              <div class="price-row" onclick="addToCart('Battlefield 6 (Steam)','🖥️',3563,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P119'),'🖥️',PZ('P119'),'EGP')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg" alt="Battlefield 6" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🖥️</span></span><div class="pr-name">Battlefield 6<span class="sale-tag">SALE</span><br><span style="font-size:0.777rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;"><s style="color:var(--muted);font-size:0.75rem;">3,499</s> 3,563 EGP</span></div></div>
-                <div class="pr-right"><div class="pr-price blue">3,563 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Battlefield 6 (Steam)','🖥️',3563,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P119">3,563 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P119'),'🖥️',PZ('P119'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('FC 26 (Steam)','🖥️',1200,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P120'),'🖥️',PZ('P120'),'EGP')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3405690/2d96aa1b06e453cd62dae9029d412f19e61932c3/header.jpg" alt="FC 26" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🖥️</span></span><div class="pr-name">FC 26<span class="sale-tag">SALE</span><br><span style="font-size:0.777rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;"><s style="color:var(--muted);font-size:0.75rem;">3,500</s> 1,200 EGP</span></div></div>
-                <div class="pr-right"><div class="pr-price blue">1,200 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('FC 26 (Steam)','🖥️',1200,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P120">1,200 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P120'),'🖥️',PZ('P120'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('FC 27 (Steam)','🖥️',2200,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P125'),'🖥️',PZ('P125'),'EGP')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/4080220/header.jpg" alt="FC 27" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🖥️</span></span><div class="pr-name">FC 27</div></div>
-                <div class="pr-right"><div class="pr-price gold">2,200 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('FC 27 (Steam)','🖥️',2200,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price gold" data-pid="P125">2,200 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P125'),'🖥️',PZ('P125'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('GTA V (Steam)','🖥️',1018,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P121'),'🖥️',PZ('P121'),'EGP')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="GTA V" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🖥️</span></span><div class="pr-name">GTA V<span class="sale-tag">SALE</span><br><span style="font-size:0.777rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;"><s style="color:var(--muted);font-size:0.75rem;">1,500</s> 1,018 EGP</span></div></div>
-                <div class="pr-right"><div class="pr-price blue">1,018 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('GTA V (Steam)','🖥️',1018,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P121">1,018 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P121'),'🖥️',PZ('P121'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('Red Dead Redemption 2 (Steam)','🖥️',763.50,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P122'),'🖥️',PZ('P122'),'EGP')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg" alt="RDR2" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🖥️</span></span><div class="pr-name">Red Dead Redemption 2<span class="sale-tag">SALE</span><br><span style="font-size:0.777rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;"><s style="color:var(--muted);font-size:0.75rem;">2,400</s> 763.50 EGP</span></div></div>
-                <div class="pr-right"><div class="pr-price blue">763.50 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Red Dead Redemption 2 (Steam)','🖥️',763.50,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P122">763.50 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P122'),'🖥️',PZ('P122'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('RUST (Steam)','🖥️',916.20,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P123'),'🖥️',PZ('P123'),'EGP')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/252490/header.jpg" alt="RUST" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🖥️</span></span><div class="pr-name">RUST<span class="sale-tag">SALE</span><br><span style="font-size:0.777rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;"><s style="color:var(--muted);font-size:0.75rem;">1,799</s> 916.20 EGP</span></div></div>
-                <div class="pr-right"><div class="pr-price blue">916.20 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('RUST (Steam)','🖥️',916.20,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P123">916.20 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P123'),'🖥️',PZ('P123'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('SQUAD (Steam)','🖥️',1272.50,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P124'),'🖥️',PZ('P124'),'EGP')">
                 <div class="pr-l"><span class="pr-icon"><img class="game-cover-thumb" src="https://cdn.cloudflare.steamstatic.com/steam/apps/393380/header.jpg" alt="SQUAD" onerror="this.style.display='none';this.nextSibling.style.display='flex'" decoding="async" loading="lazy"><span class="game-cover-fallback" style="display:flex">🖥️</span></span><div class="pr-name">SQUAD<span class="sale-tag">SALE</span><br><span style="font-size:0.777rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;"><s style="color:var(--muted);font-size:0.75rem;">1,499</s> 1,272.50 EGP</span></div></div>
-                <div class="pr-right"><div class="pr-price blue">1,272.50 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('SQUAD (Steam)','🖥️',1272.50,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P124">1,272.50 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P124'),'🖥️',PZ('P124'),'EGP')">+</button></div>
               </div>
             </div>
             <br>
@@ -7096,97 +7087,97 @@ if(lite)d.classList.add('lite');}catch(e){}})();
           <div>
             <div class="price-block-title">💻 Software & Subscriptions <span class="badge badge-amber">INSTANT DELIVERY</span></div>
             <div class="price-rows" style="max-width:800px;">
-              <div class="price-row" onclick="addToCart('CapCut Pro – 1 Month','🎬',199,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P125'),'🎬',PZ('P125'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#0d0d0d;">
                     <img src="images/icon-capcut.png" alt="CapCut Pro" loading="lazy" decoding="async">
                   </span>
                   <div class="pr-name">CapCut Pro – 1 Month<span class="sale-tag">SALE</span><br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">Video Editing · <s>699</s> EGP</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price amber">199 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('CapCut Pro – 1 Month','🎬',199,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price amber" data-pid="P125">199 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P125'),'🎬',PZ('P125'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('ChatGPT Plus – 1 Month','🤖',350,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P126'),'🤖',PZ('P126'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#0d0d0d;">
                     <img src="images/icon-chatgpt.png" alt="ChatGPT Plus" loading="lazy" decoding="async">
                   </span>
                   <div class="pr-name">ChatGPT Plus – 1 Month<span class="sale-tag">SALE</span><br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">AI Assistant · <s>1,300</s> EGP</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price amber">350 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('ChatGPT Plus – 1 Month','🤖',350,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price amber" data-pid="P126">350 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P126'),'🤖',PZ('P126'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('Microsoft 365 Pro Plus Lifetime','📊',599,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P127'),'📊',PZ('P127'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#0d0d0d;">
                     <img src="images/icon-ms365.png" alt="Microsoft 365" loading="lazy" decoding="async">
                   </span>
                   <div class="pr-name">Microsoft 365 Pro Plus – Lifetime<span class="sale-tag">BEST</span><br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">Word · Excel · PowerPoint · Teams</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price gold">599 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Microsoft 365 Pro Plus Lifetime','📊',599,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price gold" data-pid="P127">599 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P127'),'📊',PZ('P127'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('Windows 10 / 11 Activation Key','🪟',249,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P128'),'🪟',PZ('P128'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#0d0d0d;">
                     <img src="images/icon-windows.png" alt="Windows Activation" loading="lazy" decoding="async">
                   </span>
                   <div class="pr-name">Windows 10 / 11 Activation Key<br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">Operating System · Instant Delivery</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price blue">249 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Windows 10 / 11 Activation Key','🪟',249,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P128">249 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P128'),'🪟',PZ('P128'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('Adobe Creative Cloud – 1 Month','🎨',450,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P129'),'🎨',PZ('P129'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#0d0d0d;">
                     <img src="images/icon-adobe.png" alt="Adobe Creative Cloud" loading="lazy" decoding="async">
                   </span>
                   <div class="pr-name">Adobe Creative Cloud – 1 Month<span class="sale-tag">HOT</span><br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">Photoshop · Illustrator · Premiere</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price red">450 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Adobe Creative Cloud – 1 Month','🎨',450,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price red" data-pid="P129">450 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P129'),'🎨',PZ('P129'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('Spotify Premium – 1 Month','🎵',120,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P130'),'🎵',PZ('P130'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#0d0d0d;">
                     <img src="images/icon-spotify.png" alt="Spotify Premium" loading="lazy" decoding="async">
                   </span>
                   <div class="pr-name">Spotify Premium – 1 Month<br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">Music Streaming · No Ads</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price green">120 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Spotify Premium – 1 Month','🎵',120,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price green" data-pid="P130">120 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P130'),'🎵',PZ('P130'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('Netflix Premium – 1 Month','📺',250,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P131'),'📺',PZ('P131'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#0d0d0d;">
                     <img src="images/icon-netflix.png" alt="Netflix Premium" loading="lazy" decoding="async">
                   </span>
                   <div class="pr-name">Netflix Premium – 1 Month<br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">4K · HDR · 4 Screens</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price red">250 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Netflix Premium – 1 Month','📺',250,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price red" data-pid="P131">250 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P131'),'📺',PZ('P131'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('NordVPN – 1 Month','🔒',180,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P132'),'🔒',PZ('P132'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#0d0d0d;">
                     <img src="images/icon-nordvpn.png" alt="NordVPN" loading="lazy" decoding="async">
                   </span>
                   <div class="pr-name">NordVPN – 1 Month<br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">VPN · Privacy · Streaming</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price blue">180 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('NordVPN – 1 Month','🔒',180,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P132">180 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P132'),'🔒',PZ('P132'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('Yango Play 1 Month','🎬',95,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P185'),'🎬',PZ('P185'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#0d0d0d;">
                     <img src="images/icon-yangoplay.png" alt="Yango Play" loading="lazy" decoding="async">
                   </span>
                   <div class="pr-name">Yango Play – 1 Month<br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">Subscriptions · Direct Activation</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price gold">95 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Yango Play 1 Month','🎬',95,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price gold" data-pid="P185">95 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P185'),'🎬',PZ('P185'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('Watch It 1 Month','📺',140,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P186'),'📺',PZ('P186'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#0d0d0d;">
                     <img src="images/icon-watchit.png" alt="Watch It" loading="lazy" decoding="async">
                   </span>
                   <div class="pr-name">Watch It – 1 Month<br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">Subscriptions · Direct Activation</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price amber">140 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Watch It 1 Month','📺',140,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price amber" data-pid="P186">140 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P186'),'📺',PZ('P186'),'EGP')">+</button></div>
               </div>
-              <div class="price-row" onclick="addToCart('Shahid 1 Month','📺',100,'EGP')">
+              <div class="price-row" onclick="addToCart(PN('P187'),'📺',PZ('P187'),'EGP')">
                 <div class="pr-l">
                   <span class="app-icon" style="background:#00A9E0;">
                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -7197,7 +7188,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
                   </span>
                   <div class="pr-name">Shahid – 1 Month<br><span style="font-size:0.774rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;">Subscriptions · Direct Activation</span></div>
                 </div>
-                <div class="pr-right"><div class="pr-price blue">100 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart('Shahid 1 Month','📺',100,'EGP')">+</button></div>
+                <div class="pr-right"><div class="pr-price blue" data-pid="P187">100 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P187'),'📺',PZ('P187'),'EGP')">+</button></div>
               </div>
               <div class="price-row" onclick="addToCart('Xbox Game Pass Ultimate – 10 Months','🎮',1200,'EGP')">
                 <div class="pr-l">
@@ -7228,13 +7219,11 @@ if(lite)d.classList.add('lite');}catch(e){}})();
     <div style="position:absolute;bottom:0;right:0;width:3px;height:180px;background:linear-gradient(to top,#FF4655,transparent);z-index:5;"></div>
 
     <div class="game-panel-header">
-      <!-- Custom Valorant Logo SVG -->
-      <svg width="120" height="46" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;filter:drop-shadow(0 0 16px rgba(255,70,85,0.6));">
-        <!-- V shape icon -->
-        <polygon points="0,4 18,4 30,36 42,4 60,4 30,56" fill="#FF4655"/>
-        <!-- VALORANT text -->
-        <text x="68" y="44" font-family="Arial Black,sans-serif" font-weight="900" font-size="32" fill="#FFFFFF" letter-spacing="2">VALORANT</text>
-      </svg>
+      <!-- Stacked Valorant logo: V mark above wordmark -->
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:0.35rem;flex-shrink:0;">
+        <span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/valorant.svg');--icon-color:#FF4655;width:34px;height:34px;filter:drop-shadow(0 0 16px rgba(255,70,85,0.6));" role="img" aria-label="Valorant"></span>
+        <span style="font-family:'Arial Black',sans-serif;font-weight:900;font-size:1.3rem;letter-spacing:0.12em;color:#FFFFFF;line-height:1;">VALORANT</span>
+      </div>
       <div class="game-header-text">
         <div class="game-header-name" style="background:linear-gradient(135deg,#FF4655,#FF8C94,#FF4655);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:hero-text-shimmer 4s linear infinite;background-size:300% 100%;">VALORANT POINTS</div>
         <div class="game-header-sub" style="color:rgba(255,70,85,0.6);">VP — In-game Currency · Egypt Prices</div>
@@ -7252,7 +7241,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
         <div class="vp-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.7rem;">
 
           <!-- 475 VP -->
-          <div class="vp-card" onclick="addToCart('475 VP — Valorant Points','VP',240,'EGP')">
+          <div class="vp-card" onclick="addToCart(PN('P179'),'VP',PZ('P179'),'EGP')">
             <div class="vp-card-price">240 EGP</div>
             <div class="vp-card-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M2 7l10-5 10 5-10 5L2 7z" fill="#FF4655"/><path d="M2 7v10l10 5V12L2 7z" fill="#c73040"/><path d="M22 7v10l-10 5V12l10-5z" fill="#e94f5c"/></svg></div>
             <div class="vp-card-amount">475</div>
@@ -7262,7 +7251,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
           </div>
 
           <!-- 1000 VP — BEST SELLER -->
-          <div class="vp-card" onclick="addToCart('1000 VP — Valorant Points','VP',480,'EGP')">
+          <div class="vp-card" onclick="addToCart(PN('P180'),'VP',PZ('P180'),'EGP')">
             <div class="vp-card-price">480 EGP</div>
             <div class="vp-card-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M2 7l10-5 10 5-10 5L2 7z" fill="#FF4655"/><path d="M2 7v10l10 5V12L2 7z" fill="#c73040"/><path d="M22 7v10l-10 5V12l10-5z" fill="#e94f5c"/></svg></div>
             <div class="vp-card-amount">1,000</div>
@@ -7272,7 +7261,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
           </div>
 
           <!-- 2050 VP — BEST SELLER -->
-          <div class="vp-card" onclick="addToCart('2050 VP — Valorant Points','VP',960,'EGP')">
+          <div class="vp-card" onclick="addToCart(PN('P181'),'VP',PZ('P181'),'EGP')">
             <div class="vp-card-price">960 EGP</div>
             <div class="vp-card-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M2 7l10-5 10 5-10 5L2 7z" fill="#FF4655"/><path d="M2 7v10l10 5V12L2 7z" fill="#c73040"/><path d="M22 7v10l-10 5V12l10-5z" fill="#e94f5c"/></svg></div>
             <div class="vp-card-amount">2,050</div>
@@ -7282,7 +7271,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
           </div>
 
           <!-- 3650 VP -->
-          <div class="vp-card" onclick="addToCart('3650 VP — Valorant Points','VP',1700,'EGP')">
+          <div class="vp-card" onclick="addToCart(PN('P182'),'VP',PZ('P182'),'EGP')">
             <div class="vp-card-price">1,700 EGP</div>
             <div class="vp-card-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M2 7l10-5 10 5-10 5L2 7z" fill="#FF4655"/><path d="M2 7v10l10 5V12L2 7z" fill="#c73040"/><path d="M22 7v10l-10 5V12l10-5z" fill="#e94f5c"/></svg></div>
             <div class="vp-card-amount">3,650</div>
@@ -7292,7 +7281,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
           </div>
 
           <!-- 5350 VP — featured / best value, matches highlighted card in reference -->
-          <div class="vp-card vp-card-featured" onclick="addToCart('5350 VP — Valorant Points','VP',2400,'EGP')">
+          <div class="vp-card vp-card-featured" onclick="addToCart(PN('P183'),'VP',PZ('P183'),'EGP')">
             <div class="vp-card-price">2,400 EGP</div>
             <div class="vp-card-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M2 7l10-5 10 5-10 5L2 7z" fill="#FF4655"/><path d="M2 7v10l10 5V12L2 7z" fill="#c73040"/><path d="M22 7v10l-10 5V12l10-5z" fill="#e94f5c"/></svg></div>
             <div class="vp-card-amount">5,350</div>
@@ -7302,7 +7291,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
           </div>
 
           <!-- 11000 VP -->
-          <div class="vp-card" onclick="addToCart('11000 VP — Valorant Points','VP',4850,'EGP')">
+          <div class="vp-card" onclick="addToCart(PN('P184'),'VP',PZ('P184'),'EGP')">
             <div class="vp-card-price">4,850 EGP</div>
             <div class="vp-card-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M2 7l10-5 10 5-10 5L2 7z" fill="#FF4655"/><path d="M2 7v10l10 5V12L2 7z" fill="#c73040"/><path d="M22 7v10l-10 5V12l10-5z" fill="#e94f5c"/></svg></div>
             <div class="vp-card-amount">11,000</div>
@@ -8837,6 +8826,51 @@ function injectProductSchema(list){
 }
 injectProductSchema(products);
 
+/* ═══════════════════════ LIVE CATALOG SYNC ═══════════════════════
+   The per-game price tables (Rocket League, PS Plus, gift cards, etc.)
+   are static HTML for layout/design reasons, but every row that has a
+   matching entry in the admin "products" catalog is tagged with
+   data-pid="Pxxx" and its "Add to cart" call uses PN()/PZ() below
+   instead of a baked-in name/price. That means: whatever is currently
+   in the `products` array — whether that's the local fallback list or
+   whatever was last loaded from Supabase — is always what gets added
+   to the cart and always what's shown on the page, with no reload
+   needed. Rows for items the admin panel doesn't manage (full PS/Steam
+   game accounts, Xbox Game Pass, etc.) are untouched and keep working
+   exactly as before. */
+function PN(id){ var p = products.find(function(x){ return x.id === id; }); return p ? p.name : ''; }
+function PZ(id){ var p = products.find(function(x){ return x.id === id; }); return p ? p.price : 0; }
+function fmtCatalogPrice(n){
+  var num = Number(n) || 0;
+  var isWhole = Math.round(num) === num;
+  return num.toLocaleString('en-US', isWhole ? {maximumFractionDigits:0} : {minimumFractionDigits:2,maximumFractionDigits:2});
+}
+function syncCatalogPrices(){
+  document.querySelectorAll('[data-pid]').forEach(function(el){
+    var p = products.find(function(x){ return x.id === el.getAttribute('data-pid'); });
+    if(!p) return;
+    var suffix = / L\.E\s*$/.test(el.textContent) ? ' L.E' : ' EGP';
+    el.textContent = fmtCatalogPrice(p.price) + suffix;
+  });
+}
+/* Runs for every visitor (not just logged-in admins) so a price/name
+   change saved in Supabase shows up on the storefront itself, not only
+   inside the admin dashboard. Silent on failure: if there's no backend
+   configured, or the fetch fails, the page simply keeps the local
+   fallback catalog that's already baked into the page. */
+async function loadPublicCatalog(){
+  syncCatalogPrices();
+  if(typeof BACKEND_CONFIGURED === 'undefined' || !BACKEND_CONFIGURED || typeof sb === 'undefined') return;
+  try{
+    var res = await sb.from('products').select('*').order('id');
+    if(!res.error && res.data && res.data.length){
+      products = res.data.map(function(p){ return Object.assign({}, p, {desc: p.description}); });
+      syncCatalogPrices();
+    }
+  } catch(e){ /* keep local fallback catalog silently */ }
+}
+document.addEventListener('DOMContentLoaded', loadPublicCatalog);
+
 let orders = [];
 
 /* Pull the latest products + orders from Supabase into the arrays above */
@@ -9270,6 +9304,7 @@ async function submitProductForm(e){
   renderProducts();
   renderKPIs();
   refreshOverviewExtras();
+  syncCatalogPrices();
 }
 
 /* ═══════════════════════ ORDERS ═══════════════════════ */
@@ -10163,7 +10198,9 @@ function closeTrackOrder() {
 // visits. Routed to the general_chat_messages table (not order_messages,
 // whose order_id is a real foreign key into `orders` and would reject a
 // made-up id) — see isGuestChatId() below.
-function openSupportChat() {
+// `prefill`, if given, is dropped into the chat input (not auto-sent) so
+// the visitor can review/edit before hitting Send — used by askItemPrice().
+function openSupportChat(prefill) {
   let gid = null;
   try { gid = localStorage.getItem('ezyGuestChatId'); } catch (e) {}
   if (!gid) {
@@ -10176,6 +10213,19 @@ function openSupportChat() {
   document.getElementById('trackResult').innerHTML = '';
   document.getElementById('trackModal').classList.add('open', 'general-mode');
   startTrackChat(gid);
+  if (prefill) {
+    const input = document.getElementById('trackChatInput');
+    if (input) { input.value = prefill; input.focus(); }
+  }
+}
+
+// "Ask Price" rows (games with no fixed/listed price) used to deep-link out
+// to WhatsApp. They now open the same on-site support chat as the nav's
+// "Chat with support" button, with the question pre-filled so the visitor
+// just has to hit Send — and it lands in the admin's existing Chats inbox
+// (loadGeneralChats) exactly like any other support conversation.
+function askItemPrice(itemLabel) {
+  openSupportChat("Hi, what's the price for " + itemLabel + '?');
 }
 
 async function trackOrder() {
@@ -11081,7 +11131,15 @@ window.addEventListener('load', function(){
     window.scrollTo(0,0);
   }
   function routeFromHash(){
-    if(location.hash === '#admin') enterAdminPanel(); else exitAdminPanel();
+    // Only switch views when the admin state actually changes. Previously every
+    // hash change (#products, #why, #contact, #policy...) ran exitAdminPanel(),
+    // whose scrollTo(0,0) undid the browser's jump to the section, so every
+    // nav link needed a second click (the 2nd click didn't change the hash).
+    var app = document.getElementById('adminApp');
+    var adminOpen = !!app && !app.classList.contains('hidden') && app.style.display !== 'none';
+    if(location.hash === '#admin'){ if(!adminOpen) enterAdminPanel(); }
+    else if(adminOpen){ exitAdminPanel(); }
+    else { var st = document.getElementById('storeApp'); if(st && st.style.display === 'none') st.style.display = ''; }
   }
   window.addEventListener('hashchange', routeFromHash);
   document.addEventListener('DOMContentLoaded', routeFromHash);
@@ -12238,7 +12296,7 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
   html[data-theme="light"] .game-bg-overlay{
     background:linear-gradient(to right,rgba(245,246,247,0.95) 45%,rgba(245,246,247,0.55) 100%)!important;
   }
-  html[data-theme="light"] .game-bg{filter:brightness(0.85) saturate(1.05)!important;}
+  html[data-theme="light"] .game-bg{filter:brightness(0.7) saturate(1.05)!important;}
 
   /* Product / deal / review / "why us" cards */
   html[data-theme="light"] .deal-card{background:var(--bg2)!important;border:1px solid var(--border)!important;}
@@ -13483,5 +13541,337 @@ html.lite #orderDetailModal,html.lite #successModal,html.lite #searchOverlay,htm
 html.lite .modal-overlay,html.lite #cartOverlay,html.lite #searchOverlay{background-color:rgba(0,0,0,.72);}
 html.lite *{scroll-behavior:auto!important;}
 </style>
+<style id="ezy-hero-btns">
+/* Hero buttons: peach theme, stacked (Shop Now on top, View Cart below) */
+.hero-btns{display:grid!important;grid-template-columns:1fr;gap:.8rem;width:fit-content;max-width:100%;}
+.hero-btns .btn-primary,.hero-btns .btn-sec{justify-content:center;width:100%;border-radius:12px!important;}
+/* Shop Now: solid peach. Same look on the home "Shop Now" button. */
+.hero-btns .btn-primary,.home-cta-row .btn-primary{background:var(--gold)!important;color:#1a0f08!important;border:1px solid var(--gold)!important;}
+.hero-btns .btn-primary:hover,.home-cta-row .btn-primary:hover{background:var(--gold2,var(--gold))!important;box-shadow:0 0 28px rgba(255,184,140,.45)!important;}
+/* View Cart / See All Products: peach outline */
+.hero-btns .btn-sec,.home-cta-row .btn-sec{border-color:var(--gold)!important;color:var(--gold)!important;background:transparent!important;}
+.hero-btns .btn-sec:hover,.home-cta-row .btn-sec:hover{border-color:var(--gold)!important;color:var(--gold)!important;background:rgba(255,184,140,.12)!important;}
+.hero-btns .btn-sec svg{color:var(--gold)!important;}
+@media(max-width:768px){.hero-btns{width:100%;}}
+</style>
+
+<style>
+/* ══ ASK PRICE ROW — chat icon + spacing polish ══
+   The 💬 emoji on a metallic .add-btn looked like a stray sticker and had
+   no relationship to the "Ask Price" pill next to it. Now: a crisp SVG
+   chat bubble on a soft peach glass tile, same height as the pill, that
+   fills solid peach when the card is hovered (the whole card is clickable). */
+.ask-chat-btn{
+  -webkit-appearance:none;appearance:none;
+  position:relative;flex-shrink:0;
+  width:38px;height:38px;min-height:0;padding:0;margin:0;
+  display:inline-flex;align-items:center;justify-content:center;
+  border-radius:12px!important;
+  color:var(--gold);
+  background:linear-gradient(145deg,rgba(255,184,140,0.20),rgba(255,184,140,0.06));
+  border:1px solid rgba(255,184,140,0.42);
+  box-shadow:0 2px 10px rgba(0,0,0,0.30),inset 0 1px 0 rgba(255,255,255,0.10);
+  cursor:pointer;touch-action:manipulation;
+  transition:transform .22s cubic-bezier(.34,1.56,.64,1),background .2s ease,color .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.ask-chat-btn svg{display:block;transition:transform .22s cubic-bezier(.34,1.56,.64,1);}
+.ask-chat-btn:hover,
+.price-row:hover .ask-chat-btn{
+  color:#2A1B0C;
+  background:linear-gradient(145deg,#FFD9BE,#FFB88C);
+  border-color:#FFB88C;
+  box-shadow:0 6px 18px rgba(255,184,140,0.40),inset 0 1px 0 rgba(255,255,255,0.55);
+  transform:translateY(-1px);
+}
+.ask-chat-btn:hover svg,
+.price-row:hover .ask-chat-btn svg{transform:scale(1.08) rotate(-4deg);}
+.ask-chat-btn:active{transform:scale(.93)!important;}
+.ask-chat-btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+html[data-theme="light"] .ask-chat-btn{
+  color:#B4581F;
+  background:linear-gradient(145deg,rgba(255,184,140,0.34),rgba(255,184,140,0.12));
+  border-color:rgba(214,120,60,0.45);
+  box-shadow:0 2px 8px rgba(0,0,0,0.08),inset 0 1px 0 rgba(255,255,255,0.7);
+}
+html[data-theme="light"] .ask-chat-btn:hover,
+html[data-theme="light"] .price-row:hover .ask-chat-btn{color:#2A1B0C;background:linear-gradient(145deg,#FFD9BE,#FFB88C);border-color:#FFB88C;}
+
+/* "Ask Price" pill — match the icon's height so the pair reads as one control */
+.pr-right:has(.ask-chat-btn) .pr-price{
+  display:inline-flex;align-items:center;justify-content:center;
+  height:38px;box-sizing:border-box;padding:0 1.05rem!important;
+  border-radius:999px!important;white-space:nowrap;
+  letter-spacing:.04em;font-weight:700;
+}
+
+/* Game cards — more breathing room (PS Games / Steam Games) */
+#tab-psgames .price-rows,
+#tab-steamgames .price-rows{gap:1.25rem 1.1rem!important;}
+#tab-psgames .price-row,
+#tab-steamgames .price-row{display:flex;flex-direction:column;}
+#tab-psgames .pr-name,
+#tab-steamgames .pr-name{
+  padding:0.85rem 0.9rem 0.2rem!important;
+  line-height:1.35;min-height:2.7em;
+}
+#tab-psgames .pr-right,
+#tab-steamgames .pr-right{
+  margin-top:auto;
+  padding:0.85rem 0.9rem 1rem!important;
+  gap:0.7rem!important;
+  flex-wrap:nowrap;
+}
+#tab-psgames .acc-type-group,
+#tab-steamgames .acc-type-group{gap:0.6rem;}
+#tab-psgames .acc-opt,
+#tab-steamgames .acc-opt{padding:0.4rem 0.8rem;}
+
+@media (max-width:767px){
+  .ask-chat-btn{width:42px;height:42px;}
+  .pr-right:has(.ask-chat-btn) .pr-price{height:42px;padding:0 0.85rem!important;}
+  #tab-psgames .price-rows,
+  #tab-steamgames .price-rows{gap:1rem .85rem!important;}
+  #tab-psgames .pr-right,
+  #tab-steamgames .pr-right{padding:0.75rem 0.75rem 0.9rem!important;gap:0.5rem!important;}
+}
+@media (prefers-reduced-motion:reduce){
+  .ask-chat-btn,.ask-chat-btn svg{transition:none;}
+}
+</style>
+
+<style id="ezy-psplus-colors">
+/* ══ PS PLUS PANEL — silver, matching the PSN Card widget ══
+   Same palette as the PSN card box: dark panel, #B8C2CC→#E8ECF0 silver
+   gradient, light-grey text, silver buttons. Secondary keeps the store-wide
+   green so it stays recognisable. */
+.ps-plus-luxury{
+  /* neutral charcoal like the PSN card box — the old navy/blue tint was the mismatch */
+  background:linear-gradient(160deg,#1E1F21 0%,#171819 45%,#121213 100%)!important;
+  border:1px solid rgba(184,194,204,0.32)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05),0 10px 30px rgba(0,0,0,0.35);
+}
+.ps-plus-luxury .price-row{background:rgba(255,255,255,0.025)!important;border-color:rgba(255,255,255,0.06)!important;}
+.ps-plus-luxury .price-row:hover{background:rgba(184,194,204,0.06)!important;}
+.ps-plus-luxury::before{
+  background:linear-gradient(90deg,transparent,rgba(184,194,204,0.9) 20%,rgba(184,194,204,0.9) 80%,transparent);
+}
+.ps-plus-luxury .price-block-title{
+  background:linear-gradient(135deg,#B8C2CC,#E8ECF0);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  border-bottom-color:rgba(184,194,204,0.28);
+}
+.ps-plus-luxury .badge{
+  background:linear-gradient(135deg,#B8C2CC,#E8ECF0)!important;color:#14161A!important;
+  -webkit-text-fill-color:#14161A!important;border:none!important;font-weight:800;
+}
+.ps-plus-luxury .mice-tier-divider{border-top-color:rgba(184,194,204,0.20);}
+.ps-plus-luxury .mice-tier-title{color:#E8ECF0;}
+.ps-plus-luxury .mice-tier-desc{color:#9AA3AD;}
+.ps-plus-luxury .pr-name{color:#E8ECF0;}
+.ps-plus-luxury .sale-tag{
+  background:linear-gradient(135deg,#B8C2CC,#E8ECF0)!important;color:#14161A!important;
+  -webkit-text-fill-color:#14161A;border:none;font-weight:800;
+}
+.ps-plus-luxury .sale-tag.value{
+  background:linear-gradient(135deg,#34D27B,#7CF2A6)!important;color:#04210F!important;
+  -webkit-text-fill-color:#04210F;box-shadow:0 0 10px rgba(52,210,123,0.30);
+}
+
+/* plan buttons */
+.ps-plus-luxury .acc-opt{
+  border-radius:10px;background:rgba(0,0,0,0.30);border:1px solid rgba(184,194,204,0.32);
+}
+.ps-plus-luxury .acc-opt .acc-opt-price{color:#E8ECF0!important;font-weight:800;text-shadow:none;}
+.ps-plus-luxury .acc-opt .acc-opt-lbl{color:#B8C2CC!important;}
+.ps-plus-luxury .acc-opt:hover{
+  background:rgba(184,194,204,0.14);border-color:#B8C2CC;
+  box-shadow:0 4px 16px rgba(184,194,204,0.20);
+}
+/* PS4 Primary — a step quieter than PS5 */
+.ps-plus-luxury .acc-opt:has(.acc-opt-price.gold){border-color:rgba(184,194,204,0.22);}
+.ps-plus-luxury .acc-opt:has(.acc-opt-price.gold) .acc-opt-lbl{color:#9AA3AD!important;}
+/* Secondary — green */
+.ps-plus-luxury .acc-opt-sec{background:rgba(74,222,128,0.07);border-color:rgba(74,222,128,0.34);}
+.ps-plus-luxury .acc-opt-sec .acc-opt-lbl{color:#5BE39A!important;}
+.ps-plus-luxury .acc-opt-sec:hover{
+  background:rgba(74,222,128,0.16);border-color:#4ADE80;
+  box-shadow:0 4px 16px rgba(74,222,128,0.20);
+}
+/* Deluxe (PS5-only) price pill + add button */
+.ps-plus-luxury .pr-right > .pr-price{
+  background:rgba(0,0,0,0.35);color:#E8ECF0;border:1px solid rgba(184,194,204,0.35);
+  text-shadow:none;box-shadow:none!important;font-weight:800;
+}
+.ps-plus-luxury .add-btn{
+  background-image:linear-gradient(135deg,#B8C2CC,#E8ECF0)!important;
+  color:#14161A!important;border:none!important;
+  box-shadow:0 4px 16px rgba(184,194,204,0.30)!important;
+}
+/* row icon */
+.ps-plus-luxury .pr-icon img{height:30px!important;width:30px!important;object-fit:contain;border-radius:8px!important;}
+
+html[data-theme="light"] .ps-plus-luxury .mice-tier-title,
+html[data-theme="light"] .ps-plus-luxury .pr-name{color:#14161A;}
+html[data-theme="light"] .ps-plus-luxury .mice-tier-desc{color:#5A626B;}
+html[data-theme="light"] .ps-plus-luxury .acc-opt .acc-opt-price{color:#14161A!important;}
+html[data-theme="light"] .ps-plus-luxury .acc-opt .acc-opt-lbl{color:#3A4048!important;}
+html[data-theme="light"] .ps-plus-luxury .acc-opt:has(.acc-opt-price.gold) .acc-opt-lbl{color:#5A626B!important;}
+html[data-theme="light"] .ps-plus-luxury .acc-opt-sec .acc-opt-lbl{color:#15803D!important;}
+html[data-theme="light"] .ps-plus-luxury .pr-right > .pr-price{color:#14161A;}
+
+/* brief glow on a price the moment the admin changes it */
+@keyframes ezyPriceFlash{
+  0%{box-shadow:0 0 0 0 rgba(255,184,140,0.9);transform:scale(1.12);filter:brightness(1.45);}
+  100%{box-shadow:0 0 0 10px rgba(255,184,140,0);transform:scale(1);filter:brightness(1);}
+}
+.ezy-price-flash{animation:ezyPriceFlash 1.3s ease-out;}
+@media (prefers-reduced-motion:reduce){.ezy-price-flash{animation:none;}}
+</style>
+
+<script id="ezy-live-catalog">
+/* ══ 1. PS Plus icon fallback ══
+   images/icon-ps-plus.jpg 404s when the images folder isn't deployed next to
+   the page, which left the big "PS Plus" alt text in every row. If the file
+   fails, swap in an inline badge instead. */
+(function(){
+  var FB = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">'+
+    '<stop offset="0" stop-color="#2F6BFF"/><stop offset="1" stop-color="#0A2C8C"/></linearGradient></defs>'+
+    '<rect width="64" height="64" rx="14" fill="url(#g)"/>'+
+    '<text x="25" y="43" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="26" fill="#fff" text-anchor="middle">PS</text>'+
+    '<path d="M49 15v18M40 24h18" stroke="#FFD23F" stroke-width="5" stroke-linecap="round"/></svg>');
+  document.querySelectorAll('#ic4, img[data-dupe-of="ic4"]').forEach(function(img){
+    function swap(){ if(img.getAttribute('data-psp-fb')) return; img.setAttribute('data-psp-fb','1'); img.src = FB; }
+    img.addEventListener('error', swap);
+    if(img.complete && img.naturalWidth === 0 && !/^data:/.test(img.src)) swap();
+  });
+})();
+
+/* ══ 2. Live prices ══
+   Admin price edits now reach every open storefront without a reload:
+   - Supabase Realtime on public.products (INSERT / UPDATE / DELETE)
+   - fallback: re-fetch every 15s while Realtime isn't connected, and on
+     tab focus / reconnect, so it still works if Realtime isn't enabled.
+   Also links the PUBG UC rows and Valorant VP cards to the admin catalog
+   (they were hard-coded, so admin edits never reached them). */
+(function(){
+  if(typeof products === 'undefined') return;
+
+  var PUBG_MAP = {'pubg-60uc':'P038','pubg-325uc':'P039','pubg-660uc':'P040','pubg-1800uc':'P041','pubg-3850uc':'P042','pubg-8100uc':'P043','pubg-15200uc':'P044'};
+
+  document.querySelectorAll('.pr-price[data-pkey]').forEach(function(el){
+    var pid = PUBG_MAP[el.getAttribute('data-pkey')];
+    if(pid) el.setAttribute('data-pid', pid);
+  });
+  document.querySelectorAll('.vp-card').forEach(function(card){
+    var m = (card.getAttribute('onclick') || '').match(/PZ\('(P\d+)'\)/);
+    var pe = card.querySelector('.vp-card-price');
+    if(m && pe && !pe.hasAttribute('data-pid')) pe.setAttribute('data-pid', m[1]);
+  });
+
+  var _origGetPrice = window.getPrice;
+  window.getPrice = function(key, fallback){
+    var pid = PUBG_MAP[key];
+    if(pid){
+      var p = products.find(function(x){ return x.id === pid; });
+      if(p && !isNaN(Number(p.price))) return Number(p.price);
+    }
+    return _origGetPrice ? _origGetPrice(key, fallback) : fallback;
+  };
+
+  function normalise(row){
+    var p = Object.assign({}, row, {desc: row.description});
+    if(p.price != null && !isNaN(Number(p.price))) p.price = Number(p.price);
+    return p;
+  }
+
+  function syncAndFlash(){
+    var els = Array.prototype.slice.call(document.querySelectorAll('[data-pid]'));
+    var before = els.map(function(e){ return e.textContent; });
+    if(typeof syncCatalogPrices === 'function') syncCatalogPrices();
+    els.forEach(function(e, i){
+      if(e.textContent !== before[i]){
+        e.classList.remove('ezy-price-flash'); void e.offsetWidth; e.classList.add('ezy-price-flash');
+      }
+    });
+  }
+
+  // Items already in the cart follow the new price (only ones that were still
+  // at the old catalog price, so hard-coded items are never touched).
+  function refreshCart(prev){
+    if(typeof cart === 'undefined' || !Array.isArray(cart) || !cart.length) return;
+    var changed = false;
+    cart.forEach(function(it){
+      var old = prev.find(function(p){ return p.name === it.name; });
+      if(!old || Number(old.price) !== Number(it.price)) return;
+      var now = products.find(function(p){ return p.id === old.id; });
+      if(!now) return;
+      if(now.name !== it.name){ it.name = now.name; changed = true; }
+      if(Number(now.price) !== Number(it.price)){ it.price = Number(now.price); changed = true; }
+    });
+    if(changed){
+      try{ saveCartToStorage(); }catch(e){}
+      try{ updateCartUI(); }catch(e){}
+    }
+  }
+
+  function afterChange(prev){
+    syncAndFlash();
+    refreshCart(prev);
+    try{ if(typeof renderProducts === 'function') renderProducts(); }catch(e){}
+    try{ if(typeof renderKPIs === 'function') renderKPIs(); }catch(e){}
+  }
+
+  function onRealtime(payload){
+    var prev = products.slice();
+    if(payload.eventType === 'DELETE'){
+      var id = payload.old && payload.old.id;
+      if(!id) return;
+      products = products.filter(function(p){ return p.id !== id; });
+    } else {
+      var row = payload.new;
+      if(!row || !row.id) return;
+      var np = normalise(row);
+      var i = products.findIndex(function(p){ return p.id === row.id; });
+      if(i > -1) products[i] = Object.assign({}, products[i], np); else products.push(np);
+    }
+    afterChange(prev);
+  }
+
+  var lastFetch = 0, live = false, channel = null;
+  function refetch(force){
+    var now = Date.now();
+    if(!force && now - lastFetch < 3000) return;
+    lastFetch = now;
+    if(typeof sb === 'undefined' || !sb) return;
+    sb.from('products').select('*').order('id').then(function(res){
+      if(res.error || !res.data || !res.data.length) return;
+      var prev = products.slice();
+      products = res.data.map(normalise);
+      afterChange(prev);
+    }, function(){});
+  }
+
+  function start(){
+    if(typeof BACKEND_CONFIGURED === 'undefined' || !BACKEND_CONFIGURED || typeof sb === 'undefined' || !sb) return;
+    try{
+      if(sb.channel && !channel){
+        channel = sb.channel('storefront-products-live')
+          .on('postgres_changes', {event:'*', schema:'public', table:'products'}, onRealtime)
+          .subscribe(function(status){
+            live = (status === 'SUBSCRIBED');
+            if(live) refetch(true);   // catch anything missed while connecting
+          });
+      }
+    }catch(e){}
+    setInterval(function(){ if(!live && !document.hidden) refetch(); }, 15000);
+    document.addEventListener('visibilitychange', function(){ if(!document.hidden) refetch(); });
+    window.addEventListener('focus', function(){ refetch(); });
+    window.addEventListener('online', function(){ refetch(true); });
+  }
+
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
 </body>
 </html>
