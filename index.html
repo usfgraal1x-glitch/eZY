@@ -13901,5 +13901,133 @@ html[data-theme="light"] .ps-plus-luxury .pr-right > .pr-price{color:#14161A;}
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
 </script>
+<style id="ezy-v78-mobile-final">
+/* ═══ eZy v78 — MOBILE FINAL LAYER (last in cascade, ≤767px only) ═══
+   Fixes clipped "+" buttons / price boxes, truncated names, sticky tab
+   bar freeze, oversized header, panel padding. */
+@media (max-width:767px){
+  html,body{max-width:100%;overflow-x:hidden}
+  img,svg,video{max-width:100%}
+
+  /* ── header: compact ── */
+  .site-topbar{padding:.25rem .7rem!important;row-gap:0!important;min-height:0!important;flex-wrap:nowrap!important}
+  .site-topbar .nav-currency-btn{height:28px!important;min-height:28px!important;padding:0 .5rem!important}
+  .stb-theme{padding:2px!important}
+  .stb-theme-btn{width:30px!important;height:26px!important;min-height:0!important}
+  #siteNav{height:54px!important;padding-top:0!important}
+  #siteNav .nav-tool,#siteNav .cart-btn,#siteNav .ham,#siteNav .search-nav-btn,#siteNav .nav-avatar{height:40px!important;min-height:40px!important}
+  #siteNav .search-nav-btn,#siteNav .nav-avatar,#siteNav .ham{min-width:40px!important;width:40px!important}
+  #siteNav img#ic1{height:26px!important}
+
+  /* ── spacing: more room for content ── */
+  .game-panel{padding:.7rem .55rem!important}
+  section{padding-left:.75rem!important;padding-right:.75rem!important}
+
+  /* ── tab bar: only the icon strip sticks ── */
+  .tabs-wrap{position:static!important}
+  .tabs-scroll-wrap{position:sticky;top:var(--ezy-hdr,94px);z-index:60;background:var(--bg,#0b0b10)}
+
+  /* ── generic price rows: icon | name+price | button ── */
+  html body .price-rows{gap:.5rem!important}
+  html body .price-row{
+    display:grid!important;
+    grid-template-columns:auto minmax(0,1fr) auto!important;
+    grid-template-areas:"icon name btn" "icon price btn"!important;
+    align-items:center!important;
+    column-gap:.7rem!important;row-gap:.3rem!important;
+    padding:.7rem .7rem!important;min-height:64px;
+    overflow:hidden;
+  }
+  html body .price-row .pr-l,html body .price-row .pr-right{display:contents!important}
+  html body .price-row .pr-l>:first-child{grid-area:icon!important;width:46px!important;height:46px!important;border-radius:12px!important;flex:none}
+  html body .price-row .app-icon{width:46px!important;height:46px!important;border-radius:12px!important}
+  html body .price-row .app-icon img{padding:7px!important}
+  html body .price-row .pr-icon{width:46px!important;height:46px!important}
+  html body .price-row .pr-name{
+    grid-area:name!important;min-width:0!important;white-space:normal!important;
+    overflow:visible!important;text-overflow:clip!important;display:block!important;
+    -webkit-line-clamp:unset!important;overflow-wrap:anywhere;
+    font-size:.9rem!important;line-height:1.3!important;padding:0!important;margin:0!important;
+  }
+  html body .price-row .pr-price{grid-area:price!important;justify-self:start;font-size:.82rem!important;white-space:nowrap;margin:0!important}
+  html body .price-row .add-btn,
+  html body .price-row .ask-chat-btn{grid-area:btn!important;width:44px!important;height:44px!important;min-width:44px!important;flex:none;margin:0!important}
+  html body .price-row .pr-right:has(.ask-chat-btn) .pr-price{height:auto!important;padding:.15rem .6rem!important}
+
+  /* ── rows with multiple price options (PS Plus / PSN / PS Games) ── */
+  html body .price-row:has(.acc-type-group){
+    grid-template-columns:auto minmax(0,1fr)!important;
+    grid-template-areas:"icon name" "opts opts"!important;
+  }
+  html body .price-row:has(.acc-type-group) .pr-right{display:block!important;grid-area:opts!important;min-width:0}
+  html body .acc-type-group{
+    display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:.4rem!important;width:100%!important;flex-wrap:nowrap!important;
+  }
+  html body .acc-opt{
+    min-width:0!important;width:100%!important;padding:.4rem .25rem!important;
+    flex-direction:column!important;align-items:center!important;justify-content:center!important;
+    text-align:center;box-sizing:border-box;
+  }
+  html body .acc-opt-lbl{font-size:.62rem!important;letter-spacing:.03em!important;line-height:1.15}
+  html body .acc-opt-price{font-size:.8rem!important;white-space:nowrap;line-height:1.2}
+  html body .acc-opt-price br{display:none}
+
+  /* ── PS Games / Steam Games: 2-col cards ── */
+  #tab-psgames .price-rows,#tab-steamgames .price-rows{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.65rem!important;align-items:stretch!important;
+  }
+  #tab-psgames .price-row,#tab-steamgames .price-row{
+    display:flex!important;flex-direction:column!important;align-items:stretch!important;
+    padding:0!important;min-height:0!important;margin:0!important;transform:none!important;
+  }
+  #tab-psgames .price-row .pr-l,#tab-steamgames .price-row .pr-l{display:flex!important;flex-direction:column!important}
+  #tab-psgames .price-row .pr-right,#tab-steamgames .price-row .pr-right{
+    display:flex!important;flex-wrap:wrap!important;align-items:center;gap:.4rem!important;
+    margin-top:auto!important;padding:.5rem .5rem .6rem!important;
+  }
+  #tab-psgames .price-row .pr-l>:first-child,#tab-steamgames .price-row .pr-l>:first-child{width:100%!important;height:auto!important;border-radius:0!important}
+  #tab-psgames .pr-name,#tab-steamgames .pr-name{
+    font-size:.78rem!important;padding:.55rem .55rem 0!important;min-height:2.6em;
+    display:-webkit-box!important;-webkit-line-clamp:3!important;-webkit-box-orient:vertical;overflow:hidden!important;
+  }
+  #tab-psgames .price-row .pr-price,#tab-steamgames .price-row .pr-price{font-size:.8rem!important;justify-self:auto}
+  #tab-psgames .price-row .pr-right:has(.ask-chat-btn) .pr-price{flex:1 1 auto;text-align:center;padding:.5rem .4rem!important;height:auto!important;border-radius:999px!important}
+  #tab-psgames .price-row .ask-chat-btn,#tab-steamgames .price-row .add-btn{width:40px!important;height:40px!important;min-width:40px!important}
+  #tab-psgames .acc-type-group,#tab-steamgames .acc-type-group{grid-template-columns:1fr!important;width:100%!important}
+  #tab-psgames .acc-opt,#tab-steamgames .acc-opt{
+    flex-direction:row!important;justify-content:space-between!important;padding:.4rem .5rem!important;gap:.3rem;
+  }
+  #tab-psgames .price-row:has(.acc-type-group) .pr-right,#tab-steamgames .price-row:has(.acc-type-group) .pr-right{display:block!important}
+
+  /* PS Plus panel keeps its own header row */
+  .ps-plus-luxury{padding:.9rem .6rem 1rem!important}
+
+  /* touch: no sticky hover transforms */
+  @media (hover:none){
+    .add-btn:hover,.price-row:hover,.ask-chat-btn:hover{transform:none!important}
+  }
+}
+@media (max-width:359px){
+  #tab-psgames .acc-opt,#tab-steamgames .acc-opt{flex-direction:column!important;align-items:flex-start!important}
+  html body .acc-opt-lbl{font-size:.56rem!important}
+  html body .price-row .pr-name{font-size:.84rem!important}
+}
+</style>
+<script id="ezy-v78-hdr">
+(function(){
+  function set(){
+    var h=document.getElementById('fixedHeaderWrap'), s=document.getElementById('topbarSpacer');
+    if(!h) return;
+    var px=h.offsetHeight;
+    document.documentElement.style.setProperty('--ezy-hdr',px+'px');
+    if(s && window.innerWidth<=767) s.style.height=px+'px';
+  }
+  window.addEventListener('resize',set);window.addEventListener('load',set);
+  document.addEventListener('DOMContentLoaded',set);
+  if(window.ResizeObserver){var h=document.getElementById('fixedHeaderWrap'); if(h) new ResizeObserver(set).observe(h);}
+  set();setTimeout(set,600);
+})();
+</script>
 </body>
 </html>
