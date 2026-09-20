@@ -2881,10 +2881,14 @@ footer::before {
   }
 
   /* Tabs — horizontal scroll, premium feel */
+  /* top matches #fixedHeaderWrap's real height (topbar 66px + nav 60px = 126px)
+     so the sticky pill row docks just below the fixed header instead of
+     tucking underneath it — was 52px (leftover from before the topbar/
+     #fixedHeaderWrap existed), which hid ~74px of the row under the header. */
   .tabs-wrap {
     padding: 0 !important;
     position: sticky;
-    top: 52px;
+    top: 126px;
     z-index: 50;
     background: rgba(18,18,18,0.97);
     backdrop-filter: blur(20px);
@@ -5259,10 +5263,10 @@ if(lite)d.classList.add('lite');}catch(e){}})();
 
 <!-- NAV -->
 <nav id="siteNav" aria-label="Primary navigation">
-  <div style="display:flex;align-items:center;gap:1rem;">
+  <div style="display:flex;align-items:center;gap:0.6rem;">
+    <button class="ham" id="ham" onclick="toggleHam()" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
     <div class="logo" style="display:flex;align-items:center;"><img id="ic1" alt="eZy" src="images/logo-ezy-gold.png" style="height:30px;width:auto;object-fit:contain;" loading="eager" decoding="async"></div>
   </div>
-  <button class="ham" id="ham" onclick="toggleHam()" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   <div class="nav-links">
     <a href="#home">Home</a>
     <a href="#products">Products</a>
