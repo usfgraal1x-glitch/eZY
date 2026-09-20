@@ -14003,6 +14003,22 @@ html[data-theme="light"] .ps-plus-luxury .pr-right > .pr-price{color:#14161A;}
   /* PS Plus panel keeps its own header row */
   .ps-plus-luxury{padding:.9rem .6rem 1rem!important}
 
+  /* ── slider dots: were 44px-tall pills (global button min-height) ── */
+  html body .vb-dots{gap:8px!important;margin-top:.9rem!important;min-height:0}
+  html body .vb-dot{width:8px!important;height:8px!important;min-height:0!important;min-width:0!important;max-width:8px;padding:0!important;border-radius:50%!important;flex:none}
+  html body .vb-dot.active{width:22px!important;max-width:22px;border-radius:4px!important}
+
+  /* ── badges inside names (BEST SELLER / BEST VALUE): own tidy line ── */
+  html body .price-row .pr-name .sale-tag{
+    display:inline-block!important;margin:.2rem .35rem .1rem 0!important;padding:.12rem .4rem!important;
+    line-height:1.25!important;font-size:.62rem!important;letter-spacing:.05em!important;white-space:nowrap;vertical-align:middle;
+  }
+  html body .price-row .pr-name{line-height:1.4!important}
+  html body .price-row .pr-name>span[style]{display:block;margin-top:.15rem;line-height:1.35}
+  /* banner images (Crew Pack / Mainframe) squared into the icon slot without squashing */
+  html body .price-row .pr-icon{width:52px!important;height:52px!important;display:block!important;overflow:hidden;border-radius:12px}
+  html body .price-row .pr-icon img[style*="width:260px"]{width:52px!important;height:52px!important;object-fit:cover!important;border-radius:12px!important}
+
   /* touch: no sticky hover transforms */
   @media (hover:none){
     .add-btn:hover,.price-row:hover,.ask-chat-btn:hover{transform:none!important}
