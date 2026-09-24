@@ -491,9 +491,9 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 .acc-opt:hover{background:rgba(255,184,140,0.12);border-color:var(--border-gold);transform:translateY(-1px);}
 .acc-opt-lbl{font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;}
 .acc-opt-price{font-size:0.85rem;font-weight:700;}
-.acc-opt-sec .acc-opt-lbl{color:#25D366;}
-.acc-opt-sec{border-color:rgba(37,211,102,0.25);}
-.acc-opt-sec:hover{background:rgba(37,211,102,0.12);border-color:rgba(37,211,102,0.4);}
+.acc-opt-sec .acc-opt-lbl{color:var(--muted);}
+.acc-opt-sec{border-color:var(--border);}
+.acc-opt-sec:hover{background:rgba(255,184,140,0.12);border-color:var(--border-gold);}
 .pr-price{
   font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:0.06em;
   padding:0.2rem 0.75rem;border-radius:2px;flex-shrink:0;
@@ -3843,9 +3843,9 @@ body {
 .ps-plus-luxury .acc-opt .acc-opt-lbl{color:#b9a26a;}
 .ps-plus-luxury .acc-opt .acc-opt-price.blue,
 .ps-plus-luxury .acc-opt .acc-opt-price.gold{color:#E8ECF0;}
-.ps-plus-luxury .acc-opt-sec{border-color:rgba(37,211,102,0.28);}
-.ps-plus-luxury .acc-opt-sec:hover{background:rgba(37,211,102,0.12);border-color:rgba(37,211,102,0.5);}
-.ps-plus-luxury .acc-opt-sec .acc-opt-lbl{color:#5fd694;}
+.ps-plus-luxury .acc-opt-sec{border-color:rgba(184,194,204,0.28);}
+.ps-plus-luxury .acc-opt-sec:hover{background:rgba(184,194,204,0.12);border-color:rgba(184,194,204,0.5);}
+.ps-plus-luxury .acc-opt-sec .acc-opt-lbl{color:#B8C2CC;}
 @media(max-width:768px){.ps-plus-luxury{padding:1.1rem 1rem 1.3rem;}}
 
 /* ── FEATURED SPOTLIGHT ── */
@@ -4475,6 +4475,10 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   #adminApp .border-hair{border-color:var(--a-border);}
   #adminApp .text-muted{color:var(--a-muted);}
   #adminApp .text-muted-dim{color:var(--a-muted-dim);}
+  #adminApp .rev-cur-toggle{display:inline-flex;border:1px solid var(--a-border);border-radius:999px;padding:2px;gap:2px;background:rgba(255,255,255,0.03);}
+  #adminApp .rev-cur-btn{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:.04em;color:var(--a-muted);background:transparent;border:none;border-radius:999px;padding:2px 8px;cursor:pointer;transition:background .15s,color .15s;}
+  #adminApp .rev-cur-btn:hover{color:var(--a-text);}
+  #adminApp .rev-cur-btn.active{background:var(--a-green);color:#04120b;}
   #adminApp .accent-green{color:var(--a-green);}
   #adminApp .accent-cyan{color:var(--a-cyan);}
 
@@ -6837,7 +6841,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
           <div>
             <div class="price-block-title"><span style="margin-right:4px;">🚀</span> Rocket League Credits <span class="badge" style="background:rgba(245,166,35,0.15);border:1px solid rgba(245,166,35,0.4);color:#F5A623;">CREDITS</span></div>
             <div class="credit-tier-grid">
-              <div class="credit-tier-card tier-top" onclick="addToCart(PN('P197'),'🚀',PZ('P197'),'EGP')">
+              <div class="credit-tier-card" onclick="addToCart(PN('P197'),'🚀',PZ('P197'),'EGP')">
                 <div class="credit-bonus" style="background:rgba(255,255,255,0.14);color:#E8ECF0;">BASE</div>
                 <div class="credit-amount">500</div>
                 <div class="credit-label">Credits</div>
@@ -8283,7 +8287,13 @@ if(lite)d.classList.add('lite');}catch(e){}})();
             <div class="bg-card border border-hair rounded-lg p-5 relative overflow-hidden">
               <div class="flex items-start justify-between">
                 <div>
-                  <div class="font-mono text-[0.77rem] uppercase tracking-widest text-muted mb-1">Total Revenue</div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <div class="font-mono text-[0.77rem] uppercase tracking-widest text-muted">Total Revenue</div>
+                    <div class="rev-cur-toggle" role="group" aria-label="Switch revenue currency">
+                      <button type="button" id="revCurBtnEGP" class="rev-cur-btn active" onclick="setDashRevenueCurrency('EGP')">EGP</button>
+                      <button type="button" id="revCurBtnUSD" class="rev-cur-btn" onclick="setDashRevenueCurrency('USD')">USD</button>
+                    </div>
+                  </div>
                   <div class="font-display text-3xl font-bold accent-green" id="kpiRevenue">—</div>
                 </div>
                 <div class="w-9 h-9 rounded-lg bg-[color:var(--a-green-dim)] flex items-center justify-center accent-green">
@@ -8609,6 +8619,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
         <div class="odc-panel">
           <h4>Payment Details</h4>
           <div class="odc-row"><span>Order Price</span><span id="odcTotal" style="font-weight:700;"></span></div>
+          <div class="odc-row"><span>Currency</span><span id="odcCurrency" style="font-weight:700;"></span></div>
           <div class="odc-row"><span>Paid via</span><span id="odcMethod" style="font-weight:700;">—</span></div>
           <div id="odcProofRow" class="odc-row" style="display:none;"><span>Payment Proof</span><a id="odcProofLink" href="#" target="_blank" rel="noopener noreferrer" class="accent-cyan">View</a></div>
         </div>
@@ -8725,6 +8736,18 @@ function escItems(items){
   return arr.map(function(i){
     return esc(typeof i === 'object' && i !== null ? (i.name || JSON.stringify(i)) : i);
   }).join(', ');
+}
+/* Same normalization as escItems, but returns an array of escaped item
+   strings (one per item) instead of a single comma-joined string — used
+   in the Order Detail panel so multi-item orders are listed vertically,
+   one item per line, rather than run together on one line. */
+function escItemsList(items){
+  var arr = Array.isArray(items) ? items
+          : (typeof items === 'string' ? (function(){ try { var j=JSON.parse(items); return Array.isArray(j)?j:[items]; } catch(e){ return [items]; } })()
+          : (items ? [items] : []));
+  return arr.map(function(i){
+    return esc(typeof i === 'object' && i !== null ? (i.name || JSON.stringify(i)) : i);
+  });
 }
 
 /* ═══════════════════════ AUTH ═══════════════════════ */
@@ -9201,11 +9224,22 @@ document.addEventListener('click', function(e){
 });
 
 /* ═══════════════════════ HELPERS ═══════════════════════ */
-function fmtMoney(v){
-  const sym = settings.currency === 'USD' ? '$' : 'EGP';
-  const rate = settings.currency === 'USD' ? (1/49) : 1; // rough demo conversion
+function fmtMoneyIn(v, cur){
+  const sym = cur === 'USD' ? '$' : 'EGP';
+  const rate = cur === 'USD' ? (1/49) : 1; // rough demo conversion
   const val = Math.round(v * rate);
-  return settings.currency === 'USD' ? (sym + val.toLocaleString()) : (val.toLocaleString() + ' ' + sym);
+  return cur === 'USD' ? (sym + val.toLocaleString()) : (val.toLocaleString() + ' ' + sym);
+}
+function fmtMoney(v){
+  return fmtMoneyIn(v, settings.currency);
+}
+/* Flips the one store-wide currency display setting (settings.currency) —
+   used by the Total Revenue toggle on the dashboard, and kept in sync with
+   the dropdown on the Settings page so there's only one "currency" a person
+   has to think about. Re-renders everything currency touches, including
+   the Order Detail panel if one happens to be open right now. */
+function setDashRevenueCurrency(cur){
+  setCurrency(cur);
 }
 
 function statusBadge(status){
@@ -9824,10 +9858,23 @@ function saveAnnouncementText(){
 }
 function setCurrency(val){
   settings.currency = val;
+  const egpBtn = document.getElementById('revCurBtnEGP');
+  const usdBtn = document.getElementById('revCurBtnUSD');
+  if (egpBtn) egpBtn.classList.toggle('active', val === 'EGP');
+  if (usdBtn) usdBtn.classList.toggle('active', val === 'USD');
+  const sel = document.getElementById('currencySelect');
+  if (sel) sel.value = val;
   renderKPIs();
   renderProducts();
   renderOrders();
   renderRecentOrders();
+  // Keep a currently-open Order Detail panel in step, since its Order
+  // Price / Currency rows would otherwise keep showing whatever currency
+  // was active when the panel was first opened.
+  if (typeof ocdOrderId !== 'undefined' && ocdOrderId && !(String(ocdOrderId).indexOf('GUEST-') === 0)) {
+    const openOrder = orders.find(x => x.id === ocdOrderId);
+    if (openOrder) renderOrderDetailShell(openOrder);
+  }
   toast('Currency display set to ' + val, 'info');
 }
 function saveLowStockThreshold(val){
@@ -10331,12 +10378,15 @@ document.addEventListener('DOMContentLoaded', function () {
 // schema note above sendTrackChatImage below), so the moment anyone — the
 // customer or the admin — opens the chat for this order reference, the
 // payment screenshot is already sitting there.
-function payProofCaption(method, total) {
+function payProofCaption(method, total, cur) {
   var m = method ? String(method).trim() : '';
   var t = (total || total === 0) ? (Number(total).toLocaleString() + ' EGP') : '';
-  return m ? (' — paid via ' + m + (t ? ' · ' + t : '')) : '';
+  // The buyer's chosen display currency + the total in that currency, e.g.
+  // " · shown as ~$41.70 USD". EGP orders need no extra text.
+  var c = (cur && cur.code && cur.code !== 'EGP' && cur.text) ? (' · shown as ' + cur.text) : '';
+  return m ? (' — paid via ' + m + (t ? ' · ' + t : '') + c) : '';
 }
-async function uploadPaymentProof(orderRef, file, payMethod, payTotal) {
+async function uploadPaymentProof(orderRef, file, payMethod, payTotal, payCur) {
   if (!BACKEND_CONFIGURED) return;
   if (!file) {
     // No screenshot attached — still tell support how the customer paid.
@@ -10344,7 +10394,7 @@ async function uploadPaymentProof(orderRef, file, payMethod, payTotal) {
       try {
         await sb.from('order_messages').insert({
           order_id: orderRef, sender: 'buyer',
-          message: '💳 No screenshot attached' + payProofCaption(payMethod, payTotal)
+          message: '💳 No screenshot attached' + payProofCaption(payMethod, payTotal, payCur)
         });
       } catch (e) { console.error('Could not post payment note:', e); }
     }
@@ -10364,7 +10414,7 @@ async function uploadPaymentProof(orderRef, file, payMethod, payTotal) {
       const { error: msgError } = await sb.from('order_messages').insert({
         order_id: orderRef,
         sender: 'buyer',
-        message: '📸 Payment screenshot' + payProofCaption(payMethod, payTotal),
+        message: '📸 Payment screenshot' + payProofCaption(payMethod, payTotal, payCur),
         attachment_url: publicUrl
       });
       if (msgError) console.error('Could not auto-post payment screenshot into order chat:', msgError);
@@ -10410,6 +10460,7 @@ function sendOrder() {
   const orderRefForProof = currentOrderRef;
   const payMethodForProof = selectedPayment;
   const payTotalForProof = getTotal();
+  const payCurForProof = (typeof window.ezyOrderCurrency === 'function') ? window.ezyOrderCurrency(payTotalForProof) : null;
 
   // Send order emails (owner notification + optional customer confirmation),
   // in the background.
@@ -10440,7 +10491,7 @@ function sendOrder() {
       // Only upload the screenshot (and auto-post it into the order chat) once
       // the order row actually exists — order_messages.order_id and
       // orders.payment_proof both depend on this row being there first.
-      uploadPaymentProof(orderRefForProof, proofFile, payMethodForProof, payTotalForProof);
+      uploadPaymentProof(orderRefForProof, proofFile, payMethodForProof, payTotalForProof, payCurForProof);
     });
   }
 
@@ -10824,6 +10875,35 @@ function renderGuestChatShell(id) {
   document.getElementById('odcCompleteCard').innerHTML = '';
   document.getElementById('odcRightCol').style.display = 'none';
 }
+// Payment note format (posted at checkout): "… paid via InstaPay · 2,160 EGP · shown as ~$41.70 USD"
+// Returns {method, egp, cur:{code,text}|null}, or null if it isn't a payment note.
+function parsePayNote(msg) {
+  var m = /paid via\s+(.+?)\s*·\s*(.+)$/i.exec(msg || '');
+  if (!m) return null;
+  var rest = m[2], cur = null;
+  var c = /\s*·\s*shown as\s+(\S.*?)\s+([A-Z]{3})\s*$/.exec(rest);
+  if (c) { cur = { code: c[2], text: c[1] + ' ' + c[2] }; rest = rest.slice(0, c.index); }
+  return { method: m[1], egp: rest, cur: cur };
+}
+// Which display currency each order's buyer had selected, read from the chat's
+// payment note. Cached so re-rendering the panel doesn't lose it.
+const ORDER_PAY_CUR = {};
+const PAY_CUR_LABELS = { USD: 'USD ($)', EUR: 'EUR (€)', GBP: 'GBP (£)' };
+function renderOrderPayment(o) {
+  const cur = ORDER_PAY_CUR[o.id];
+  const egp = fmtMoneyIn(o.total, 'EGP');
+  const totalEl = document.getElementById('odcTotal');
+  const curEl = document.getElementById('odcCurrency');
+  if (cur && cur.code !== 'EGP') {
+    curEl.textContent = PAY_CUR_LABELS[cur.code] || cur.code;
+    // Show the price in the buyer's currency, with the EGP amount they actually
+    // transfer alongside (that's the figure to match against InstaPay/Telda/etc).
+    totalEl.innerHTML = esc(cur.text) + ' <span style="font-weight:500;opacity:.6;font-size:.8em;">(' + esc(egp) + ')</span>';
+  } else {
+    curEl.textContent = 'EGP';
+    totalEl.textContent = egp;
+  }
+}
 function renderOrderDetailShell(o) {
   document.getElementById('odcRightCol').style.display = 'flex';
   document.getElementById('odcTitle').textContent = Array.isArray(o.items) && o.items.length ? String(o.items[0]).slice(0, 40) : ('Order ' + o.id);
@@ -10831,11 +10911,13 @@ function renderOrderDetailShell(o) {
   const badge = document.getElementById('odcStatusBadge');
   badge.textContent = o.status;
   badge.className = 'odc-status ' + o.status;
-  document.getElementById('odcItems').innerHTML = `<div class="odc-row" style="border-bottom:none;flex-direction:column;align-items:flex-start;gap:.3rem;"><span>${escItems(o.items)}</span></div>`;
+  document.getElementById('odcItems').innerHTML = `<div class="odc-row" style="border-bottom:none;flex-direction:column;align-items:flex-start;gap:.35rem;">${
+    escItemsList(o.items).map(function(line){ return '<span style="display:block;">' + line + '</span>'; }).join('')
+  }</div>`;
   document.getElementById('odcBuyer').textContent = o.customer || '—';
   document.getElementById('odcPhone').textContent = o.phone || '—';
   document.getElementById('odcDate').textContent = o.date || '—';
-  document.getElementById('odcTotal').textContent = fmtMoney(o.total);
+  renderOrderPayment(o);
   document.getElementById('odcMethod').textContent = '—';
   const proofRow = document.getElementById('odcProofRow');
   if (o.payment_proof) {
@@ -10879,11 +10961,12 @@ function renderOrderChatMsgs(list) {
         const img = m.attachment_url ? `<a href="${safeUrl(m.attachment_url)}" target="_blank" rel="noopener noreferrer"><img src="${safeUrl(m.attachment_url)}" alt="Attachment" class="oc-img" decoding="async" onerror="this.style.display='none';this.parentNode.insertAdjacentText('beforeend','📷 Open photo')" ></a>` : '';
         let text = m.message ? esc(m.message) : '';
         const pm = m.message && /^(?:📸 Payment screenshot|💳 No screenshot attached)(?:\s*[—-]\s*paid via\s+(.+?)\s*·\s*(.+))?$/i.exec(m.message);
+        const pn = (pm && pm[1]) ? parsePayNote(m.message) : null;
         let cls = '';
         if (pm) {
           cls = ' oc-proof';
           text = '<span class="oc-proof-cap">' + (m.attachment_url ? '📸 Payment screenshot' : '💳 No screenshot attached') + '</span>'
-               + (pm[1] ? '<span class="oc-proof-method">💳 Paid via <b>' + esc(pm[1]) + '</b> · <b>' + esc(pm[2]) + '</b></span>'
+               + (pm[1] ? '<span class="oc-proof-method">💳 Paid via <b>' + esc(pm[1]) + '</b> · <b>' + esc(pn ? pn.egp : pm[2]) + '</b>' + (pn && pn.cur ? ' · shown as <b>' + esc(pn.cur.text) + '</b>' : '') + '</span>'
                         : '<span class="oc-proof-method oc-proof-unknown">Payment method not recorded for this order</span>');
         }
         return `<div class="oc-msg ${m.sender === 'seller' ? 'seller' : 'buyer'}${cls}">${img}${text}</div>`;
@@ -10892,14 +10975,21 @@ function renderOrderChatMsgs(list) {
   wrap.scrollTop = wrap.scrollHeight;
   var mEl = document.getElementById('odcMethod');
   if (mEl) {
-    var found = null, proofSeen = false;
+    var found = null, proofSeen = false, foundCur = null;
     list.forEach(function (m) {
       if (!m.message) return;
       var r = /paid via\s+(.+?)\s*·/i.exec(m.message);
       if (r) found = r[1];
       else if (/^📸 Payment screenshot/.test(m.message)) proofSeen = true;
+      // Only trust the auto-posted payment note for the currency.
+      if (/^(?:📸 Payment screenshot|💳 No screenshot attached)/.test(m.message)) {
+        var pn = parsePayNote(m.message);
+        if (pn && pn.cur) foundCur = pn.cur;
+      }
     });
     mEl.textContent = found || (proofSeen ? 'Not recorded' : '—');
+    var openOrder = (typeof ocdOrderId !== 'undefined' && ocdOrderId) ? orders.find(function (x) { return x.id === ocdOrderId; }) : null;
+    if (openOrder) { ORDER_PAY_CUR[openOrder.id] = foundCur; renderOrderPayment(openOrder); }
   }
 }
 async function sendOrderChatMsg() {
@@ -12392,6 +12482,19 @@ document.addEventListener('DOMContentLoaded', window.initStockUrgency);
   // one of those elements' text should call this afterward so the
   // shopper's chosen currency stays in sync instead of silently
   // reverting to EGP.
+  // Snapshot of what the shopper was looking at when they ordered: the display
+  // currency they picked and the order total converted with the same rate and
+  // formatting the storefront used. Checkout records it with the order so the
+  // admin panel can show "what currency, and what price in that currency".
+  window.ezyOrderCurrency = function(egpTotal){
+    var code = 'EGP';
+    try { code = localStorage.getItem(STORAGE_KEY) || 'EGP'; } catch(e) {}
+    if(!RATES[code]) code = 'EGP';
+    var n = Number(egpTotal);
+    if(isNaN(n)) return { code:'EGP', text:'' };
+    return { code: code, text: formatAmount(n, code, '') };
+  };
+
   window.reapplyEzyCurrency = function(){
     tagPriceElements();
     applyCurrency(localStorage.getItem(STORAGE_KEY) || 'EGP');
@@ -13827,12 +13930,12 @@ html.lite *{scroll-behavior:auto!important;}
 /* PS4 Primary — a step quieter than PS5 */
 .ps-plus-luxury .acc-opt:has(.acc-opt-price.gold){border-color:rgba(184,194,204,0.22);}
 .ps-plus-luxury .acc-opt:has(.acc-opt-price.gold) .acc-opt-lbl{color:#9AA3AD!important;}
-/* Secondary — green */
-.ps-plus-luxury .acc-opt-sec{background:rgba(74,222,128,0.07);border-color:rgba(74,222,128,0.34);}
-.ps-plus-luxury .acc-opt-sec .acc-opt-lbl{color:#5BE39A!important;}
+/* Secondary — neutral */
+.ps-plus-luxury .acc-opt-sec{background:rgba(184,194,204,0.07);border-color:rgba(184,194,204,0.28);}
+.ps-plus-luxury .acc-opt-sec .acc-opt-lbl{color:#B8C2CC!important;}
 .ps-plus-luxury .acc-opt-sec:hover{
-  background:rgba(74,222,128,0.16);border-color:#4ADE80;
-  box-shadow:0 4px 16px rgba(74,222,128,0.20);
+  background:rgba(184,194,204,0.14);border-color:#B8C2CC;
+  box-shadow:0 4px 16px rgba(184,194,204,0.20);
 }
 /* Deluxe (PS5-only) price pill + add button */
 .ps-plus-luxury .pr-right > .pr-price{
@@ -13944,7 +14047,7 @@ html.lite *{scroll-behavior:auto!important;}
 .ps-plus-luxury .acc-opt .acc-opt-lbl{font-size:0.62rem!important;letter-spacing:0.09em!important;}
 .ps-plus-luxury .acc-opt .acc-opt-price{font-size:0.95rem!important;letter-spacing:0.01em;}
 .ps-plus-luxury .acc-opt:hover{transform:translateY(-2px);}
-.ps-plus-luxury .acc-opt-sec{background:rgba(74,222,128,0.06)!important;}
+.ps-plus-luxury .acc-opt-sec{background:rgba(184,194,204,0.06)!important;}
 
 /* -- Deluxe row: bigger, badge-like price pill + matching gradient add button -- */
 .ps-plus-luxury .pr-right > .pr-price{
@@ -14019,13 +14122,13 @@ html.lite *{scroll-behavior:auto!important;}
   background:rgba(184,194,204,0.55);
 }
 .ps-plus-luxury .acc-opt:has(.acc-opt-price.gold)::before{background:rgba(154,163,173,0.4);}
-.ps-plus-luxury .acc-opt-sec::before{background:#4ADE80;}
+.ps-plus-luxury .acc-opt-sec::before{background:rgba(184,194,204,0.55);}
 .ps-plus-luxury .acc-opt .acc-opt-lbl{text-transform:uppercase;font-weight:700;}
 .ps-plus-luxury .acc-opt .acc-opt-price{
   font-variant-numeric:tabular-nums;font-size:1rem!important;font-weight:800!important;
 }
 .ps-plus-luxury .acc-opt:hover{box-shadow:0 10px 24px -8px rgba(184,194,204,0.35);}
-.ps-plus-luxury .acc-opt-sec:hover{box-shadow:0 10px 24px -8px rgba(74,222,128,0.35);}
+.ps-plus-luxury .acc-opt-sec:hover{box-shadow:0 10px 24px -8px rgba(184,194,204,0.35);}
 
 /* -- Deluxe row: cleaner price pill, squared-off add button to match cards -- */
 .ps-plus-luxury .pr-right{gap:0.6rem;}
@@ -14699,9 +14802,9 @@ body.ezy-order-open #odcRightCol{
   border-color:var(--psp-rail,#5AA7FF) !important;transform:translateY(-2px);
   box-shadow:0 8px 20px color-mix(in srgb, var(--psp-rail,#5AA7FF) 25%, transparent) !important;
 }
-.ps-plus-luxury .acc-opt-sec{background:rgba(74,222,128,0.07) !important;border-color:rgba(74,222,128,0.3) !important;}
-.ps-plus-luxury .acc-opt-sec .acc-opt-lbl{color:#5BE39A !important;}
-.ps-plus-luxury .acc-opt-sec:hover{border-color:#4ADE80 !important;box-shadow:0 8px 20px rgba(74,222,128,0.25) !important;}
+.ps-plus-luxury .acc-opt-sec{background:rgba(184,194,204,0.07) !important;border-color:rgba(184,194,204,0.3) !important;}
+.ps-plus-luxury .acc-opt-sec .acc-opt-lbl{color:#B8C2CC !important;}
+.ps-plus-luxury .acc-opt-sec:hover{border-color:#B8C2CC !important;box-shadow:0 8px 20px rgba(184,194,204,0.25) !important;}
 
 /* -- Deluxe single-price row -- */
 .ps-plus-luxury .pr-right > .pr-price{
