@@ -782,13 +782,13 @@ textarea.form-input{resize:vertical;min-height:65px;}
 /* SUCCESS */
 .success-modal{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:1200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(12px);}
 .success-modal.open{display:flex;}
-.success-box{background:var(--bg2);border:1px solid rgba(0,255,100,0.35);padding:3rem;text-align:center;max-width:360px;width:90%;border-radius:4px;}
+.success-box{background:var(--bg2);border:1px solid rgba(255,184,140,0.35);padding:3rem;text-align:center;max-width:360px;width:90%;border-radius:4px;}
 .success-icon{font-size:3.5rem;display:block;margin-bottom:1rem;animation:pop 0.5s ease;}
 @keyframes pop{0%{transform:scale(0);}80%{transform:scale(1.2);}100%{transform:scale(1);}}
-.success-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.6rem;color:#00E664;letter-spacing:0.08em;margin-bottom:0.5rem;}
+.success-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.6rem;color:var(--gold);letter-spacing:0.08em;margin-bottom:0.5rem;}
 .success-text{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;}
-.success-close{padding:0.8rem 2rem;background:#00E664;color:#000;border:none;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1rem;letter-spacing:0.15em;border-radius:2px;transition:all 0.2s;}
-.success-close:hover{box-shadow:0 0 20px rgba(0,255,100,0.4);}
+.success-close{padding:0.8rem 2rem;background:#3a2413;color:var(--gold);border:none;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1rem;letter-spacing:0.15em;border-radius:2px;transition:all 0.2s;}
+.success-close:hover{box-shadow:0 0 20px rgba(0,0,0,0.5);}
 
 @media(max-width:960px){
   #siteNav{padding:0 1.2rem;}
@@ -2254,7 +2254,8 @@ footer::before {
   color: var(--gold);
   background: rgba(255,184,140,0.06);
 }
-.mbn-icon { font-size: 1.2rem; line-height: 1; position:relative; }
+.mbn-icon { font-size: 1.2rem; line-height: 1; position:relative; display:flex; align-items:center; justify-content:center; }
+.mbn-icon svg { display:block; }
 .mbn-label { font-family:'Plus Jakarta Sans',sans-serif;font-weight:700; font-size: 0.731rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .mbn-badge{
   position:absolute;top:-6px;right:-10px;
@@ -3621,9 +3622,9 @@ body {
 
 /* ── SUCCESS MODAL — ELEVATED ── */
 .success-box {
-  border: 1px solid rgba(0,230,100,0.4) !important;
+  border: 1px solid rgba(255,184,140,0.4) !important;
   background: linear-gradient(135deg, rgba(13,13,26,0.99), rgba(18,18,18,0.99)) !important;
-  box-shadow: 0 0 60px rgba(0,230,100,0.08), 0 20px 60px rgba(0,0,0,0.8) !important;
+  box-shadow: 0 0 60px rgba(255,184,140,0.08), 0 20px 60px rgba(0,0,0,0.8) !important;
 }
 
 /* ── SCROLL PROGRESS — GOLD GRADIENT ── */
@@ -5187,19 +5188,19 @@ if(lite)d.classList.add('lite');}catch(e){}})();
 <!-- MOBILE BOTTOM NAV -->
 <div class="mobile-bottom-nav">
   <a href="#home" class="mbn-item">
-    <span class="mbn-icon" aria-hidden="true">🏠</span>
+    <span class="mbn-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"/></svg></span>
     <span class="mbn-label">Home</span>
   </a>
   <a href="#products" class="mbn-item">
-    <span class="mbn-icon" aria-hidden="true">🎮</span>
+    <span class="mbn-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 8.5h11a4 4 0 0 1 3.94 4.66l-.6 3.5a2.6 2.6 0 0 1-4.66 1.08L15 16.5H9l-1.18 1.24a2.6 2.6 0 0 1-4.66-1.08l-.6-3.5A4 4 0 0 1 6.5 8.5Z"/><path d="M8 11v3M6.5 12.5h3"/><circle cx="15.2" cy="11.6" r=".9" fill="currentColor" stroke="none"/><circle cx="17.2" cy="13.4" r=".9" fill="currentColor" stroke="none"/></svg></span>
     <span class="mbn-label">Products</span>
   </a>
   <button class="mbn-item" type="button" onclick="openSearch()">
-    <span class="mbn-icon" aria-hidden="true">🔍</span>
+    <span class="mbn-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.8" cy="10.8" r="6.3"/><path d="M20 20l-4.35-4.35"/></svg></span>
     <span class="mbn-label">Search</span>
   </button>
   <a href="#policy" class="mbn-item">
-    <span class="mbn-icon" aria-hidden="true">📋</span>
+    <span class="mbn-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5h6a1 1 0 0 1 1 1V6h1.5A1.5 1.5 0 0 1 19 7.5v11A1.5 1.5 0 0 1 17.5 20h-11A1.5 1.5 0 0 1 5 18.5v-11A1.5 1.5 0 0 1 6.5 6H8v-.5a1 1 0 0 1 1-1Z"/><path d="M9 4.5h6V6a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1v-1.5Z"/><path d="m9 13 2 2 4-4"/></svg></span>
     <span class="mbn-label">Policy</span>
   </a>
 </div>
@@ -6342,7 +6343,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
                   (rarity ? '<div class="fn-shop-rarity">' + escapeHtml(rarity) + '</div>' : '') +
                   '<div class="fn-shop-price"><span class="fn-vbucks-icon">V</span>' + price + '</div>' +
                   '<div class="fn-shop-le-price">≈' + lePrice + ' L.E</div>' +
-                  '<button class="fn-shop-add-btn" title="Add to cart" aria-label="Add to cart" data-item-name="' + escapeHtml(name) + '" data-item-price="' + lePrice + '">+ Add to Cart</button>' +
+                  '<button class="fn-shop-add-btn" title="Add to cart" aria-label="Add to cart" data-item-name="' + escapeHtml(name) + '" data-item-price="' + lePrice + '" data-item-vb="' + price + '">+ Add to Cart</button>' +
                   '</div>';
               }).join('');
               grid.innerHTML = html || '<div class="fn-shop-error">No items to show today.</div>';
@@ -6544,20 +6545,20 @@ if(lite)d.classList.add('lite');}catch(e){}})();
         </div>
         <div class="game-panel-inner" style="grid-template-columns:1fr 1fr;">
           <div>
-            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/playstation.svg');--icon-color:#ffffff;" role="img" aria-label="PSN"></span> PlayStation Network Cards <span class="badge" style="background:linear-gradient(135deg,#B8C2CC,#E8ECF0);color:#14161A;font-weight:700;">USA · KSA · UK</span></div>
-            <div class="psn-picker" style="max-width:560px;border:1px solid rgba(184,194,204,0.4);border-radius:10px;padding:1.3rem;background:linear-gradient(160deg,rgba(184,194,204,0.06),rgba(0,0,0,0.2));box-shadow:0 8px 28px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,184,140,0.1);">
+            <div class="price-block-title"><span class="icon-img brand-icon-mask" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/playstation.svg');--icon-color:#ffffff;" role="img" aria-label="PSN"></span> PlayStation Network Cards <span class="badge" style="background:linear-gradient(135deg,#5AA7FF,#8FD3FF);color:#04101F;font-weight:700;">USA · KSA · UK</span></div>
+            <div class="psn-picker" style="max-width:560px;border:1px solid rgba(90,140,255,0.35);border-radius:14px;padding:1.3rem;background:linear-gradient(160deg,rgba(90,140,255,0.07),rgba(0,0,0,0.25));box-shadow:0 8px 28px rgba(0,0,0,0.4),0 0 40px rgba(90,140,255,0.08),inset 0 1px 0 rgba(255,255,255,0.06);">
               <div style="display:flex;gap:0.8rem;margin-bottom:1rem;">
                 <div style="flex:1;">
-                  <label style="display:block;margin-bottom:0.4rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-weight:600;letter-spacing:0.08em;font-size:0.72rem;color:#E8ECF0;text-transform:uppercase;">// Region</label>
-                  <select id="psnRegion" class="form-input" onchange="updatePsnPrice()" style="border:1px solid rgba(184,194,204,0.35);background:rgba(0,0,0,0.35);">
+                  <label style="display:block;margin-bottom:0.4rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-weight:600;letter-spacing:0.08em;font-size:0.72rem;color:#EAF3FF;text-transform:uppercase;">// Region</label>
+                  <select id="psnRegion" class="form-input" onchange="updatePsnPrice()" style="border:1px solid rgba(90,140,255,0.35);background:rgba(0,0,0,0.35);">
                     <option value="USA">USA (USD)</option>
                     <option value="KSA">KSA (SAR)</option>
                     <option value="UK">UK (GBP)</option>
                   </select>
                 </div>
                 <div style="flex:1;">
-                  <label style="display:block;margin-bottom:0.4rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-weight:600;letter-spacing:0.08em;font-size:0.72rem;color:#E8ECF0;text-transform:uppercase;">// Amount</label>
-                  <select id="psnAmount" class="form-input" onchange="updatePsnPrice()" style="border:1px solid rgba(184,194,204,0.35);background:rgba(0,0,0,0.35);">
+                  <label style="display:block;margin-bottom:0.4rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-weight:600;letter-spacing:0.08em;font-size:0.72rem;color:#EAF3FF;text-transform:uppercase;">// Amount</label>
+                  <select id="psnAmount" class="form-input" onchange="updatePsnPrice()" style="border:1px solid rgba(90,140,255,0.35);background:rgba(0,0,0,0.35);">
                     <option value="10">10</option>
                     <option value="20">20</option>
                     <option value="30">30</option>
@@ -6571,16 +6572,17 @@ if(lite)d.classList.add('lite');}catch(e){}})();
                   </select>
                 </div>
               </div>
-              <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(184,194,204,0.4),transparent);margin-bottom:1rem;"></div>
+              <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(90,140,255,0.4),transparent);margin-bottom:1rem;"></div>
               <div style="display:flex;justify-content:space-between;align-items:center;">
-                <div id="psnPriceDisplay" style="font-size:1.3rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-weight:700;letter-spacing:0.03em;background:linear-gradient(135deg,#B8C2CC,#E8ECF0);-webkit-background-clip:text;background-clip:text;color:transparent;">550 EGP</div>
-                <button style="width:auto;height:auto;border-radius:6px;padding:0.7rem 1.4rem;background:linear-gradient(135deg,#B8C2CC,#E8ECF0);color:#14161A;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-weight:700;letter-spacing:0.06em;font-size:0.85rem;white-space:nowrap;border:none;cursor:pointer;flex-shrink:0;box-shadow:0 4px 16px rgba(184,194,204,0.3);" onclick="addPsnCardToCart()">+ ADD TO CART</button>
+                <div id="psnPriceDisplay" style="font-size:1.3rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-weight:700;letter-spacing:0.03em;background:linear-gradient(135deg,#5AA7FF,#8FD3FF);-webkit-background-clip:text;background-clip:text;color:transparent;">550 EGP</div>
+                <button style="width:auto;height:auto;border-radius:10px;padding:0.7rem 1.4rem;background:linear-gradient(135deg,#5AA7FF,#8FD3FF);color:#04101F;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-weight:700;letter-spacing:0.06em;font-size:0.85rem;white-space:nowrap;border:none;cursor:pointer;flex-shrink:0;box-shadow:0 4px 16px rgba(90,140,255,0.35);" onclick="addPsnCardToCart()">+ ADD TO CART</button>
               </div>
             </div>
           </div>
           <div class="ps-plus-luxury">
             <div class="price-block-title">PS Plus <img id="ic4" src="images/icon-ps-plus.jpg" alt="PS Plus" style="height:34px;width:auto;border-radius:6px;box-shadow:0 4px 12px rgba(0,58,181,0.5);vertical-align:middle;margin-left:0.5rem;" loading="lazy" decoding="async"> <span class="badge badge-blue">SUBSCRIPTION</span></div>
             <div class="price-rows" style="max-width:560px;">
+              <div class="psp-tier-card psp-tier-essential">
               <div class="mice-tier-divider">
                 <div class="mice-tier-title">PS Plus Essential <span class="sale-tag">SALE</span></div>
                 <div class="mice-tier-desc">PS5 Primary · PS4 Primary · Secondary</div>
@@ -6621,6 +6623,9 @@ if(lite)d.classList.add('lite');}catch(e){}})();
                 </div>
               </div>
 
+              </div>
+
+              <div class="psp-tier-card psp-tier-extra">
               <div class="mice-tier-divider">
                 <div class="mice-tier-title">PS Plus Extra</div>
                 <div class="mice-tier-desc">PS5 Primary · PS4 Primary · Secondary</div>
@@ -6661,6 +6666,9 @@ if(lite)d.classList.add('lite');}catch(e){}})();
                 </div>
               </div>
 
+              </div>
+
+              <div class="psp-tier-card psp-tier-deluxe">
               <div class="mice-tier-divider">
                 <div class="mice-tier-title">PS Plus Deluxe <span class="badge badge-gold">PS5 ONLY</span></div>
                 <div class="mice-tier-desc">Full access</div>
@@ -6687,6 +6695,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
                   <div class="pr-l"><span class="pr-icon" style="width:auto;"><img data-dupe-of="ic4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==" alt="PS Plus" style="height:22px;width:auto;border-radius:4px;" loading="lazy" decoding="async"></span><div class="pr-name">PS Plus Deluxe – 1 Year <span class="sale-tag value">BEST VALUE</span></div></div>
                   <div class="pr-right"><div class="pr-price blue" data-pid="P196">3,850 EGP</div><button class="add-btn" title="Add to cart" aria-label="Add to cart" onclick="event.stopPropagation();addToCart(PN('P196'),'🟦',PZ('P196'),'EGP')">+</button></div>
                 </div>
+              </div>
               </div>
             </div>
             <style>
@@ -8010,7 +8019,7 @@ if(lite)d.classList.add('lite');}catch(e){}})();
 <!-- SUCCESS -->
 <div class="success-modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle" aria-hidden="true" tabindex="-1">
   <div class="success-box">
-    <span class="success-icon" style="font-size:0;"><svg width="56" height="56" viewBox="0 0 24 24" style="display:inline-block;"><circle cx="12" cy="12" r="11" fill="rgba(0,230,100,0.15)" stroke="#00E664" stroke-width="1.5"/><path d="M7 12l4 4 6-7" stroke="#00E664" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="success-icon" style="font-size:0;"><svg width="56" height="56" viewBox="0 0 24 24" style="display:inline-block;"><circle cx="12" cy="12" r="11" fill="rgba(255,184,140,0.15)" stroke="#FFB88C" stroke-width="1.5"/><path d="M7 12l4 4 6-7" stroke="#FFB88C" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     <div class="success-title" id="successTitle">ORDER SENT!</div>
     <div class="success-text">Your order has been received!<br>We'll confirm and deliver within minutes.<br><br>Thank you for choosing eZy 🐆</div>
     <button type="button" class="success-ref" id="successRef" onclick="copyOrderRef()" aria-label="Copy order reference">
@@ -8195,13 +8204,13 @@ if(lite)d.classList.add('lite');}catch(e){}})();
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
               <span id="adminNotifDot" class="absolute -top-1.5 -right-1.5 rounded-full bg-[color:var(--a-danger)]" style="display:none;"></span>
             </button>
-            <div id="adminNotifPanel" class="hidden absolute right-0 mt-2 w-72 bg-card border border-hair rounded-lg shadow-xl overflow-hidden fade-in" style="max-height:22rem;overflow-y:auto;z-index:50;">
-              <div id="adminNotifHeader" class="px-4 py-2.5 border-b border-hair flex items-center justify-between">
-                <div class="font-mono text-[0.72rem] uppercase tracking-widest text-muted">Notifications</div>
-                <button type="button" id="adminNotifClearBtn" onclick="clearAdminNotifs()" class="font-mono text-[0.7rem]">Clear</button>
+            <div id="adminNotifPanel" class="hidden absolute right-0 mt-2 w-96 bg-card border border-hair rounded-lg shadow-xl overflow-hidden fade-in" style="max-height:26rem;overflow-y:auto;z-index:50;">
+              <div id="adminNotifHeader" class="px-5 py-3 border-b border-hair flex items-center justify-between">
+                <div class="font-mono text-[0.78rem] uppercase tracking-widest text-muted">Notifications</div>
+                <button type="button" id="adminNotifClearBtn" onclick="clearAdminNotifs()" class="font-mono text-[0.75rem]">Clear</button>
               </div>
               <div id="adminNotifList"></div>
-              <div id="adminNotifEmpty" class="px-4 py-6 text-center text-xs" style="color:var(--a-muted);">No new orders yet.</div>
+              <div id="adminNotifEmpty" class="px-5 py-7 text-center text-sm" style="color:var(--a-muted);">No new orders yet.</div>
             </div>
           </div>
 
@@ -8408,6 +8417,10 @@ if(lite)d.classList.add('lite');}catch(e){}})();
             <button onclick="setOrderFilter('Processing')" data-of="Processing" class="of-btn font-display tracking-wide px-4 py-1.5 rounded-full border border-hair text-sm">Processing</button>
             <button onclick="setOrderFilter('Delivered')" data-of="Delivered" class="of-btn font-display tracking-wide px-4 py-1.5 rounded-full border border-hair text-sm">Delivered</button>
             <button onclick="setOrderFilter('Cancelled')" data-of="Cancelled" class="of-btn font-display tracking-wide px-4 py-1.5 rounded-full border border-hair text-sm">Cancelled</button>
+            <button onclick="resetAllOrders()" title="Permanently delete every order — use at the start of the month" class="font-display tracking-wide px-4 py-1.5 rounded-full border text-sm flex items-center gap-1.5" style="border-color:rgba(255,84,119,0.35); color:var(--a-danger);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"/><path d="M19 6l-1 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 6"/></svg>
+              Reset Orders
+            </button>
             <div class="relative ml-auto w-full sm:w-64">
               <svg class="absolute left-3 top-1/2 -translate-y-1/2 text-muted-dim" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
               <input id="orderSearch" type="text" placeholder="Search customer or phone…" class="w-full rounded pl-8 pr-3 py-1.5 text-sm" oninput="renderOrders()">
@@ -9550,6 +9563,28 @@ async function updateOrderStatus(id, status){
   renderKPIs();
   renderRecentOrders();
   refreshOverviewExtras();
+}
+
+/* Wipes every order — meant to be pressed once at the start of each
+   month to clear out the previous month's history. Deletes from the
+   `orders` table in Supabase (when connected) and empties the local
+   list + notification bell state so nothing stale lingers in the UI. */
+async function resetAllOrders(){
+  if(!confirm('Reset ALL orders? This permanently deletes every order currently in the admin panel — this cannot be undone.')) return;
+  if(!confirm('Are you absolutely sure? Type OK to confirm you want to wipe the entire order history.')) return;
+  if(BACKEND_CONFIGURED){
+    const { error } = await sb.from('orders').delete().neq('id', '__none__');
+    if(error){ toast('Could not reset orders: ' + error.message, 'error'); return; }
+  }
+  orders = [];
+  adminNotifs = [];
+  try{ seenOrderIds.clear(); saveSeenOrderIds(); }catch(_){}
+  renderOrders();
+  renderKPIs();
+  renderRecentOrders();
+  refreshOverviewExtras();
+  renderAdminNotifs();
+  toast('All orders have been reset', 'success');
   toast('Order ' + id + ' marked as ' + status);
   if (typeof ocdOrderId !== 'undefined' && ocdOrderId === id) renderOrderDetailShell(o);
 
@@ -9664,9 +9699,9 @@ function renderAdminNotifs(){
   if (!list) return;
   if (empty) empty.hidden = adminNotifs.length > 0;
   list.innerHTML = adminNotifs.map(n =>
-    `<button type="button" onclick="openOrderDetail('${escAttr(n.id)}');closeAdminNotifPanel();" class="admin-notif-row w-full text-left px-4 py-2.5 text-sm border-b border-hair block">
+    `<button type="button" onclick="openOrderDetail('${escAttr(n.id)}');closeAdminNotifPanel();" class="admin-notif-row w-full text-left px-5 py-3.5 text-[0.92rem] border-b border-hair block">
       <div class="admin-notif-title font-semibold">🛒 New order ${esc(n.id)}</div>
-      <div class="admin-notif-sub text-[0.77rem] font-mono">${esc(n.customer || 'Customer')} · ${esc(n.total)}</div>
+      <div class="admin-notif-sub text-[0.85rem] font-mono">${esc(n.customer || 'Customer')} · ${esc(n.total)}</div>
     </button>`
   ).join('');
 }
@@ -9835,7 +9870,7 @@ let hasFortniteItem = false;
 let vipProcessing = false;
 const VIP_PROCESSING_FEE = 50;
 function isFortniteItemName(name, type) {
-  return type === 'fortnite' || /fortnite|v-?bucks/i.test(name || '');
+  return type === 'fortnite' || type === 'fortniteGift' || /fortnite|v-?bucks/i.test(name || '');
 }
 
 function initGearSortOrder(panel) {
@@ -9876,11 +9911,18 @@ function getPrice(key, fallback) {
   } catch (e) {}
   return fallback;
 }
-function addToCart(name, icon, price, currency, type) {
+function addToCart(name, icon, price, currency, type, vbAmount) {
   const isPhysical = type === 'physical';
   const isFortnite = isFortniteItemName(name, type);
+  // Items added from the live Fortnite item-shop "Gifts" tab are paid for
+  // in V-Bucks (gifted to the customer's account) but their name is just
+  // the cosmetic's name (e.g. "Renegade Raider") with no V-Bucks mention —
+  // flag them, and keep the actual VB amount, so the order can be labeled
+  // clearly (e.g. "Renegade Raider (1,500 V-Bucks Gift)") for the admin.
+  const isGiftSkin = type === 'fortniteGift';
+  const giftVb = isGiftSkin ? (vbAmount || 0) : 0;
   const ex = cart.find(i => i.name === name);
-  if (ex) { ex.qty++; } else { cart.push({id: Date.now(), name, icon, price, currency, qty: 1, isPhysical, isFortnite}); }
+  if (ex) { ex.qty++; } else { cart.push({id: Date.now(), name, icon, price, currency, qty: 1, isPhysical, isFortnite, isGiftSkin, giftVb}); }
   if (isPhysical) { hasPhysicalItem = true; }
   if (isFortnite) { hasFortniteItem = true; }
   saveCartToStorage();
@@ -10076,7 +10118,8 @@ document.addEventListener('click', function(e){
   e.stopPropagation();
   const name = btn.dataset.itemName;
   const price = parseFloat(btn.dataset.itemPrice) || 0;
-  if (name) addToCart(name, '⚡', price, 'L.E', 'fortnite');
+  const vbAmount = parseFloat(btn.dataset.itemVb) || 0;
+  if (name) addToCart(name, '⚡', price, 'L.E', 'fortniteGift', vbAmount);
   const original = btn.textContent;
   btn.classList.add('just-added');
   btn.textContent = '✓ Added';
@@ -10388,7 +10431,7 @@ function sendOrder() {
       customer: document.getElementById('custName').value.trim(),
       phone: document.getElementById('custPhone').value.trim(),
       email: document.getElementById('custEmail').value.trim(),
-      items: cart.map(i => `${i.name} x${i.qty}`),
+      items: cart.map(i => `${i.name}${i.isGiftSkin ? ` (${i.giftVb.toLocaleString()} V-Bucks Gift)` : ''} x${i.qty}`),
       total: getTotal(),
       status: 'Pending',
       date: new Date().toISOString().slice(0,10)
@@ -13426,15 +13469,14 @@ body.ezy-locked #toast{
   opacity: 0.85;
 }
 .success-ref-icon .icon-check{ display: none; }
-/* Copied state: swap the icon and tint green, matching the order-sent
-   success color already used elsewhere in this modal. */
+/* Copied state: tint peach, matching the order-sent modal's theme. */
 .success-ref.copied{
-  border-color: rgba(0,230,100,0.5) !important;
-  background: rgba(0,230,100,0.08) !important;
+  border-color: rgba(255,184,140,0.5) !important;
+  background: rgba(255,184,140,0.08) !important;
 }
 .success-ref.copied .success-ref-code,
-.success-ref.copied .success-ref-label{ color: #00E664; }
-.success-ref.copied .success-ref-icon{ color: #00E664; }
+.success-ref.copied .success-ref-label{ color: var(--gold); }
+.success-ref.copied .success-ref-icon{ color: var(--gold); }
 .success-ref.copied .icon-copy{ display: none; }
 .success-ref.copied .icon-check{ display: inline-flex; }
 .success-ref-hint{
@@ -14448,17 +14490,20 @@ body.ezy-order-open #odcRightCol{
   margin-top:.5rem !important;
   padding:1rem 1.5rem !important;
   border-radius:10px !important;
-  background:linear-gradient(135deg,#0b3320 0%,#00E664 48%,#9CFFCF 78%,#00C853 100%) !important;
-  border:1px solid rgba(180,255,214,0.55) !important;
-  box-shadow:0 6px 22px rgba(0,230,100,0.3), inset 0 1px 0 rgba(255,255,255,0.45) !important;
-  color:#04140b !important;
+  /* Darker/muted than GO TO ORDER CHAT on purpose — DONE is the secondary
+     action, so it should read as the quieter of the two, not compete. */
+  background:linear-gradient(135deg,#2A1B0C 0%,#6B4426 55%,#8C5A34 100%) !important;
+  border:1px solid rgba(255,184,140,0.3) !important;
+  box-shadow:0 6px 18px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+  color:var(--gold) !important;
   font-weight:800 !important;
   letter-spacing:0.22em !important;
   transition:transform .2s ease, box-shadow .2s ease !important;
 }
 .success-close:hover{
   transform:translateY(-2px) !important;
-  box-shadow:0 10px 30px rgba(0,230,100,0.45), inset 0 1px 0 rgba(255,255,255,0.55) !important;
+  box-shadow:0 10px 26px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.12) !important;
+  border-color:rgba(255,184,140,0.5) !important;
 }
 .success-close:active{transform:translateY(0) !important;}
 </style>
@@ -14524,5 +14569,161 @@ body.ezy-order-open #odcRightCol{
   100%{box-shadow:0 0 0 2px var(--a-bg-panel),0 0 0 0 rgba(255,84,119,0);}
 }
 </style>
+<style id="ezy-psplus-v101-signature">
+/* ══════════════════════════════════════════════════════════════════════
+   v101 — PS PLUS: full redesign, new theme.
+   Everything above this block (ezy-psplus-colors / v98-luxury / earlier
+   passes) is superseded here — this is the one true PS Plus theme now.
+   Concept: "PS Signature" — deep indigo-navy glass panel with a
+   PlayStation-blue glow identity (instead of the old flat silver), each
+   tier now its own separated card with a coloured rail that steps up in
+   status — blue (Essential) → cyan (Extra) → gold (Deluxe, the exclusive
+   PS5-only top tier) — so the hierarchy reads at a glance.
+   ══════════════════════════════════════════════════════════════════════ */
+
+.ps-plus-luxury{
+  background:
+    radial-gradient(ellipse 130% 70% at 15% -10%, rgba(56,130,246,0.16) 0%, transparent 55%),
+    radial-gradient(ellipse 100% 60% at 100% 110%, rgba(255,184,140,0.08) 0%, transparent 50%),
+    linear-gradient(165deg,#0C1220 0%,#0A0E17 45%,#07090F 100%) !important;
+  border:1px solid rgba(90,140,255,0.28) !important;
+  border-radius:20px !important;
+  padding:1.7rem 1.6rem 1.9rem !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 24px 60px rgba(0,0,0,0.5),
+    0 0 60px rgba(56,130,246,0.08) !important;
+  position:relative;
+}
+.ps-plus-luxury::before{
+  height:2px !important;
+  background:linear-gradient(90deg,transparent,#5AA7FF 20%,#8FD3FF 50%,#5AA7FF 80%,transparent) !important;
+  background-size:200% 100%;
+  animation:ezyPspSeamBlue 6s linear infinite;
+  opacity:1 !important;
+}
+@keyframes ezyPspSeamBlue{0%{background-position:0% 0;}100%{background-position:-200% 0;}}
+@media(prefers-reduced-motion:reduce){.ps-plus-luxury::before{animation:none;}}
+
+/* -- Header -- */
+.ps-plus-luxury .price-block-title{
+  font-size:1.55rem !important;letter-spacing:0.14em !important;
+  background:linear-gradient(120deg,#EAF3FF 0%,#8FC3FF 45%,#5AA7FF 65%,#EAF3FF 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;-webkit-text-fill-color:transparent !important;
+  border-bottom:1px solid rgba(90,140,255,0.25) !important;
+  padding-bottom:1rem !important;margin-bottom:1.1rem !important;
+}
+.ps-plus-luxury .price-block-title img{filter:drop-shadow(0 0 10px rgba(90,140,255,0.55));}
+.ps-plus-luxury .badge{
+  background:linear-gradient(135deg,#5AA7FF,#8FD3FF) !important;color:#04101F !important;
+  -webkit-text-fill-color:#04101F !important;border:none !important;font-weight:800 !important;
+  border-radius:999px !important;letter-spacing:0.05em;padding:0.32rem 0.75rem !important;
+}
+
+/* -- Tier cards -- */
+.ps-plus-luxury .psp-tier-card{
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.07);
+  border-left:3px solid var(--psp-rail,#5AA7FF);
+  border-radius:14px;
+  padding:1.15rem 1.15rem 1.3rem;
+  margin-bottom:1.1rem;
+  transition:border-color .25s ease, background .25s ease, transform .25s ease;
+}
+.ps-plus-luxury .psp-tier-card:last-child{margin-bottom:0;}
+.ps-plus-luxury .psp-tier-card:hover{background:rgba(255,255,255,0.035);}
+.ps-plus-luxury .psp-tier-essential{--psp-rail:#5AA7FF;}
+.ps-plus-luxury .psp-tier-extra{--psp-rail:#5AA7FF;}
+.ps-plus-luxury .psp-tier-deluxe{--psp-rail:#5AA7FF;}
+
+.ps-plus-luxury .mice-tier-divider{border-top:none !important;padding:0 0 0.6rem !important;margin-top:0 !important;}
+.ps-plus-luxury .mice-tier-title{
+  font-size:1.08rem !important;letter-spacing:0.08em !important;font-weight:800 !important;
+  display:flex !important;align-items:center;gap:0.5rem;color:#EAF3FF !important;
+}
+.ps-plus-luxury .mice-tier-title::before{
+  content:'';width:8px;height:8px;border-radius:50%;flex-shrink:0;
+  background:var(--psp-rail,#5AA7FF);
+  box-shadow:0 0 10px var(--psp-rail,#5AA7FF);
+}
+.ps-plus-luxury .mice-tier-desc{color:#7C8AA3 !important;letter-spacing:0.04em !important;font-size:0.75rem !important;}
+.ps-plus-luxury .sale-tag{
+  background:linear-gradient(135deg,#5AA7FF,#8FD3FF) !important;color:#04101F !important;
+  -webkit-text-fill-color:#04101F !important;border:none !important;font-weight:800 !important;border-radius:999px !important;
+}
+.ps-plus-luxury .sale-tag.value{
+  background:linear-gradient(135deg,#34D27B,#7CF2A6) !important;color:#04210F !important;
+  -webkit-text-fill-color:#04210F !important;box-shadow:0 0 10px rgba(52,210,123,0.35) !important;border-radius:999px !important;
+}
+.ps-plus-luxury .badge-gold{background:linear-gradient(135deg,#5AA7FF,#8FD3FF) !important;color:#04101F !important;-webkit-text-fill-color:#04101F !important;}
+
+/* -- Duration selector: PS-blue glow when active -- */
+.ps-plus-luxury .ps-plus-duration-select{gap:0.5rem !important;margin:0.7rem 0 0.95rem !important;}
+.ps-plus-luxury .psp-dur-btn{
+  position:relative;overflow:hidden;
+  background:rgba(255,255,255,0.03) !important;
+  border:1px solid rgba(255,255,255,0.1) !important;
+  color:#7C8AA3 !important;
+  padding:0.6rem 0.55rem !important;border-radius:10px !important;
+  transition:all .22s cubic-bezier(.22,1,.36,1) !important;
+}
+.ps-plus-luxury .psp-dur-btn:hover{
+  border-color:rgba(90,140,255,0.5) !important;color:#EAF3FF !important;background:rgba(90,140,255,0.08) !important;
+}
+.ps-plus-luxury .psp-tier-card .psp-dur-btn.active{
+  background:linear-gradient(135deg,var(--psp-rail,#5AA7FF),#EAF3FF) !important;
+  border-color:transparent !important;color:#04101F !important;font-weight:800 !important;
+  box-shadow:0 6px 18px color-mix(in srgb, var(--psp-rail,#5AA7FF) 45%, transparent),inset 0 1px 0 rgba(255,255,255,0.6) !important;
+}
+.ps-plus-luxury .psp-tier-deluxe .psp-dur-btn.active{color:#04101F !important;}
+.ps-plus-luxury .psp-dur-btn.active .sale-tag.value{
+  background:rgba(4,16,31,0.85) !important;color:#EAF3FF !important;-webkit-text-fill-color:#EAF3FF !important;box-shadow:none !important;
+}
+
+/* -- Price row / cards -- */
+.ps-plus-luxury .price-row{background:transparent !important;border:none !important;padding:0 !important;}
+.ps-plus-luxury .pr-name{color:#EAF3FF !important;font-weight:700 !important;}
+.ps-plus-luxury .pr-icon img{height:28px !important;width:28px !important;object-fit:contain;border-radius:7px !important;}
+
+.ps-plus-luxury .acc-type-group{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:0.55rem !important;}
+.ps-plus-luxury .acc-type-group .acc-opt:nth-child(3){grid-column:auto !important;}
+.ps-plus-luxury .acc-opt{
+  padding:0.65rem 0.4rem !important;border-radius:11px !important;
+  background:rgba(0,0,0,0.35) !important;
+  border:1px solid rgba(255,255,255,0.08) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);
+}
+.ps-plus-luxury .acc-opt .acc-opt-lbl{color:#7C8AA3 !important;font-size:0.62rem !important;letter-spacing:0.08em !important;}
+.ps-plus-luxury .acc-opt .acc-opt-price{color:#EAF3FF !important;font-size:0.95rem !important;font-weight:800 !important;text-shadow:none !important;}
+.ps-plus-luxury .acc-opt:hover{
+  border-color:var(--psp-rail,#5AA7FF) !important;transform:translateY(-2px);
+  box-shadow:0 8px 20px color-mix(in srgb, var(--psp-rail,#5AA7FF) 25%, transparent) !important;
+}
+.ps-plus-luxury .acc-opt-sec{background:rgba(74,222,128,0.07) !important;border-color:rgba(74,222,128,0.3) !important;}
+.ps-plus-luxury .acc-opt-sec .acc-opt-lbl{color:#5BE39A !important;}
+.ps-plus-luxury .acc-opt-sec:hover{border-color:#4ADE80 !important;box-shadow:0 8px 20px rgba(74,222,128,0.25) !important;}
+
+/* -- Deluxe single-price row -- */
+.ps-plus-luxury .pr-right > .pr-price{
+  background:rgba(0,0,0,0.4) !important;color:#EAF3FF !important;
+  border:1px solid rgba(90,140,255,0.35) !important;
+  padding:0.5rem 1.05rem !important;border-radius:999px !important;font-weight:800 !important;
+  box-shadow:none !important;text-shadow:none !important;
+}
+.ps-plus-luxury .add-btn{
+  background-image:linear-gradient(135deg,#5AA7FF,#8FD3FF) !important;
+  color:#04101F !important;border:none !important;border-radius:10px !important;
+  box-shadow:0 4px 16px rgba(90,140,255,0.35) !important;
+}
+
+@media(max-width:600px){
+  .ps-plus-luxury{padding:1.3rem 1rem 1.5rem !important;border-radius:16px !important;}
+  .ps-plus-luxury .price-block-title{font-size:1.22rem !important;}
+  .ps-plus-luxury .psp-tier-card{padding:0.95rem 0.85rem 1.1rem;}
+  .ps-plus-luxury .acc-opt .acc-opt-lbl{font-size:0.56rem !important;}
+  .ps-plus-luxury .acc-opt .acc-opt-price{font-size:0.82rem !important;}
+}
+</style>
+
 </body>
 </html>
